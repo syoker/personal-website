@@ -1,0 +1,8 @@
+/* Google Sans Normal */
+@font-face {
+    font-family: Google Sans;
+    font-style: normal;
+    font-weight: 400;
+    src: local("Google Sans Normal"), local("GoogleSans-Normal"), url(GoogleSans-Regular.ttf), format("ttf");
+}
+
