@@ -11,12 +11,15 @@ body{
     justify-content: center;
 }
 
-.notificationPanel{
-    background-color: #F7F0E6;
-    max-width: 87.5rem;
-    margin: auto;
-    border-radius: 2rem 2rem 0rem 0rem;
-    text-align: center;
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    align-items: center;
+    gap: 1rem;
+    width: fit-content;
+    height: fit-content;
+    margin: 1rem;
 }
 
 .contentBackground {
@@ -33,11 +36,19 @@ body{
     margin: 0rem;
 }
 
-.infoContent {
+.titleContent {
     display: flex;
   
     flex-direction: column;
     gap: 1rem;
   
     align-items: center;
+}
+
+.infoPanel{
+    background-color: #F7F0E6;
+    max-width: 87.5rem;
+    margin: auto;
+    border-radius: 2rem 2rem 0rem 0rem;
+    text-align: center;
 }

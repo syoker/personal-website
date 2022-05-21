@@ -3,6 +3,22 @@
     font-family: Google Sans;
     font-style: normal;
     font-weight: 400;
-    src: local("Google Sans Normal"), local("GoogleSans-Normal"), url(GoogleSans-Regular.ttf), format("ttf");
+    src: url("GoogleSans-Regular.ttf"), format("ttf");
+}
+
+/* Google Sans Medium */
+@font-face {
+    font-family: Google Sans;
+    font-style: normal;
+    font-weight: 500;
+    src: url("GoogleSans-Medium.ttf"), format("ttf");
+}
+
+/* Google Sans Bold */
+@font-face {
+    font-family: Google Sans;
+    font-style: normal;
+    font-weight: 700;
+    src: url("GoogleSans-Bold.ttf"), format("ttf");
 }
 

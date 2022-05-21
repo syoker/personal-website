@@ -1,12 +1,17 @@
 .title{
     font-family: Google Sans;
+    font-weight: 700;
     color: #FFFFFF;
-    margin: 5rem 0rem 0rem 0rem;
+    margin: 0rem 0rem 0rem 0rem;
 }
 
 .text{
     font-family: Google Sans;
+    font-weight: 400;
     color: #21201F;
-    padding: auto;
-    margin: 1rem 1rem 1rem 1rem;
+    margin: 1rem;
+}
+
+.textFooterTitle{
+    font-family: Google Sans;
 }
