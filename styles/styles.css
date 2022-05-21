@@ -11,17 +11,6 @@ body{
     justify-content: center;
 }
 
-footer{
-    display: flex;
-    flex-direction: column;
-    background-color: aqua;
-    align-items: center;
-    gap: 1rem;
-    width: fit-content;
-    height: fit-content;
-    margin: 1rem;
-}
-
 .contentBackground {
     display: flex;
   
