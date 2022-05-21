@@ -1,7 +1,7 @@
 .title{
     font-family: Google Sans;
     color: #FFFFFF;
-    padding-top: 5rem;
+    margin: 5rem 0rem 0rem 0rem;
 }
 
 .text{
@@ -9,4 +9,5 @@
     color: #21201F;
     padding-left: 4rem;
     padding-right: 4rem;
+    margin: 1rem 1rem 1rem 1rem;
 }
