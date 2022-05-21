@@ -7,8 +7,8 @@ body{
 
 .notificationPanel{
     background-color: #F7F0E6;
-    width: 103.9rem;
-    height: 100rem;
+    max-width: 1400px;
+    margin: auto;
     border-radius: 5rem 5rem 0rem 0rem;
     text-align: center;
 }
