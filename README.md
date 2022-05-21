@@ -1,5 +1,4 @@
-# Página en HTML
-Esto es una prueba mía para ver cómo crear mi página de HTML.
+# Syoker's webpage
 
 ## Link
-- [Webpage of Syoker](https://syoker.github.io "Webpage of Syoker")
+- https://syoker.github.io
