@@ -1,24 +1,15 @@
-/* Google Sans Normal */
+/* google-sans-bold */
 @font-face {
-    font-family: Google Sans;
-    font-style: normal;
-    font-weight: 400;
-    src: url("GoogleSans-Regular.ttf"), format("ttf");
+	font-family: Google Sans;
+	font-style: normal;
+	font-weight: 700;
+	src: local("Google Sans Bold"), local("GoogleSans-Bold"), url(google-sans-bold.woff2) format("woff2");
 }
-
-/* Google Sans Medium */
+/* google-sans-regular */
 @font-face {
-    font-family: Google Sans;
-    font-style: normal;
-    font-weight: 500;
-    src: url("GoogleSans-Medium.ttf"), format("ttf");
-}
-
-/* Google Sans Bold */
-@font-face {
-    font-family: Google Sans;
-    font-style: normal;
-    font-weight: 700;
-    src: url("GoogleSans-Bold.ttf"), format("ttf");
+	font-family: Google Sans;
+	font-style: normal;
+	font-weight: 400;
+	src: local("Google Sans Regular"), local("GoogleSans-Regular"), url(google-sans-regular.woff2) format("woff2");
 }
 
