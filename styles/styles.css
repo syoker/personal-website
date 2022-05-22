@@ -39,3 +39,10 @@ footer{
     width: 1.5rem;
     height: 1.5rem;
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        filter: invert();
+        background: #121212;
+    }
+}
