@@ -1,7 +1,7 @@
 .title{
     font-family: Google Sans;
     font-weight: 700;
-    color: #21201F;
+    color: #000000;
     margin: 1rem 1rem 0rem 1rem;
     text-align: center;
 }
@@ -9,7 +9,7 @@
 .text{
     font-family: Google Sans;
     font-weight: 400;
-    color: #21201F;
+    color: #000000;
     margin: 0rem 1rem 1rem 1rem;
     text-align: center;
 }
