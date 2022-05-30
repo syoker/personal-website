@@ -1,0 +1,29 @@
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #201A19;
+    }
+
+    .footerSocialImage{
+        filter: invert();
+    }
+
+    .headerTextLogo {
+        color: #FBEEEB;
+    }
+
+    header a{
+        color: #FBEEEB;
+    }
+
+    header a:hover{
+        color: #FFDAD2;
+    }
+
+    .bodyMain__Title {
+        color: #FBEEEB;
+    }
+
+    .bodyMain__Text {
+        color: #FBEEEB;
+    }
+}

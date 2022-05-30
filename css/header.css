@@ -1,0 +1,34 @@
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-inline: 2rem;
+    margin-top: 2rem;
+}
+
+header a{
+    text-decoration: none;
+    font-weight: 600;
+    color: #201A19;
+}
+
+header a:hover {
+    color: #C00000;
+}
+
+.headerLogo {
+    width: 3rem;
+    height: 3rem;
+}
+
+.headerTextLogo {
+    font-family: Quicksand;
+    font-weight: 600;
+    color: #201A19;
+    margin-inline: 1rem;
+}
+
+.headerTextLinks {
+    font-family: Quicksand;
+    font-weight: 500;
+}

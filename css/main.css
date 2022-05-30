@@ -1,0 +1,20 @@
+.bodyMain {
+    margin-inline: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.bodyMain__Title {
+    font-family: Quicksand;
+    font-weight: 700;
+    color: #201A19;
+    text-align: center;
+}
+
+.bodyMain__Text {
+    font-family: Quicksand;
+    font-weight: 400;
+    color: #201A19;
+    text-align: center;
+}

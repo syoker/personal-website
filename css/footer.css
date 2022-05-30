@@ -1,0 +1,12 @@
+footer {
+    display: flex;
+    gap: 0.5rem;
+    margin-inline: 2rem;
+    margin-block-end: 2rem;
+    justify-content: center;
+}
+
+.footerSocialImage{
+    width: 1.5rem;
+    height: 1.5rem;
+}
