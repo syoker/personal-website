@@ -18,3 +18,14 @@
     color: #201A19;
     text-align: center;
 }
+
+.bodyMainProjects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bodyMainProjects__Images {
+    width: 10rem;
+    height: 10rem;
+}

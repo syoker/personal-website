@@ -26,4 +26,8 @@
     .bodyMain__Text {
         color: #FBEEEB;
     }
+
+    .bodyMainProjects {
+        filter: invert();
+    }
 }
