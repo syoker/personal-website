@@ -1,13 +1,13 @@
-.title{
-    font-family: Google Sans;
+.title {
+    font-family: FiraCode;
     font-weight: 700;
     color: #000000;
     margin: 1rem 1rem 0rem 1rem;
     text-align: center;
 }
 
-.text{
-    font-family: Google Sans;
+.text {
+    font-family: FiraCode;
     font-weight: 400;
     color: #000000;
     margin: 0rem 1rem 1rem 1rem;
