@@ -1,0 +1,41 @@
+/* quicksand-bold */
+@font-face {
+	font-family: Quicksand;
+	font-style: normal;
+	font-weight: 700;
+	src: local("Quicksand Bold"), local("Quicksand-Bold"), url(quicksand-bold.woff2) format("woff2"), url(quicksand-bold.woff) format("woff");
+	font-display: swap;
+}
+/* quicksand-light */
+@font-face {
+	font-family: Quicksand;
+	font-style: normal;
+	font-weight: 300;
+	src: local("Quicksand Light"), local("Quicksand-Light"), url(quicksand-light.woff2) format("woff2"), url(quicksand-light.woff) format("woff");
+	font-display: swap;
+}
+/* quicksand-medium */
+@font-face {
+	font-family: Quicksand;
+	font-style: normal;
+	font-weight: 500;
+	src: local("Quicksand Medium"), local("Quicksand-Medium"), url(quicksand-medium.woff2) format("woff2"), url(quicksand-medium.woff) format("woff");
+	font-display: swap;
+}
+/* quicksand-regular */
+@font-face {
+	font-family: Quicksand;
+	font-style: normal;
+	font-weight: 400;
+	src: local("Quicksand Regular"), local("Quicksand-Regular"), url(quicksand-regular.woff2) format("woff2"), url(quicksand-regular.woff) format("woff");
+	font-display: swap;
+}
+/* quicksand-semibold */
+@font-face {
+	font-family: Quicksand;
+	font-style: normal;
+	font-weight: 600;
+	src: local("Quicksand SemiBold"), local("Quicksand-SemiBold"), url(quicksand-semibold.woff2) format("woff2"), url(quicksand-semibold.woff) format("woff");
+	font-display: swap;
+}
+
