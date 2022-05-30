@@ -2,6 +2,9 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #FBEEEB;
+}
+
+.bodyHome {
     justify-content: space-between;
 }
 

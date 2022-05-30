@@ -27,7 +27,35 @@
         color: #FBEEEB;
     }
 
-    .bodyMainProjects {
+    .bodyMainWIP {
         filter: invert();
+    }
+
+    .marked {
+        color: #FFDAD2;
+    }
+
+    .postBlog__title {
+        color: #FBEEEB;
+    }
+
+    .postBlog__text {
+        color: #FBEEEB;
+    }
+
+    .bodyMainBlogs__title {
+        color: #FBEEEB;
+    }
+
+    .bodyMainBlogs__text {
+        color: #FBEEEB;
+    }
+
+    .postBlog {
+        border: 2px solid #4D4543;
+    }
+
+    .postBlog:hover {
+        border: 2px solid #CDCCC5;
     }
 }

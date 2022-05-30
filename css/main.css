@@ -1,4 +1,4 @@
-.bodyMain {
+.bodyMainHome {
     margin-inline: 2rem;
     display: flex;
     flex-direction: column;
@@ -19,13 +19,62 @@
     text-align: center;
 }
 
-.bodyMainProjects {
+.bodyMainWIP {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.bodyMainProjects__Images {
+.bodyMainWIP__Images {
     width: 10rem;
     height: 10rem;
+}
+
+.bodyMainBlogs {
+    margin-top: 2rem;
+    margin-inline: 2rem;
+}
+
+.postBlogDecoration {
+    text-decoration: none;
+}
+
+.postBlog {
+    margin-top: 2rem;
+    transition: border .5s;
+    border: 2px solid #CDCCC5;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.postBlog:hover {
+    border: 2px solid #333231;
+}
+
+.postBlog__title {
+    font-family: Quicksand;
+    font-weight: 500;
+    color: #201A19;
+    text-align: start;
+}
+
+.postBlog__text {
+    font-family: Quicksand;
+    font-weight: 300;
+    color: #201A19;
+    text-align: end;
+}
+
+.bodyMainBlogs__title {
+    font-family: Quicksand;
+    font-weight: 500;
+    color: #201A19;
+    text-align: start;
+}
+
+.bodyMainBlogs__text {
+    font-family: Quicksand;
+    font-weight: 300;
+    color: #201A19;
+    text-align: start;
 }

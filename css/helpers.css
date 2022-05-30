@@ -1,3 +1,8 @@
 .space {
     flex-grow: 1;
 }
+
+.marked {
+    text-decoration: underline;
+    color: #C00000;
+}
