@@ -11,6 +11,10 @@
         color: #FBEEEB;
     }
 
+    .headerLogo {
+        filter: invert();
+    }
+
     header a{
         color: #FBEEEB;
     }
