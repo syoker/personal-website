@@ -13,10 +13,11 @@ body {
 }
 
 header {
-    margin-top: 2rem;
-
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+
+    margin-top: 2rem;
 }
 
 header .image {
@@ -31,12 +32,7 @@ header .container {
 }
 
 header nav {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
     padding-bottom: 1rem;
-    gap: 0.5rem;
 }
 
 header a{

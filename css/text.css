@@ -2,16 +2,13 @@ header .text {
     font-family: Quicksand;
     font-weight: 500;
     color: #000000;
-    margin: 1rem;
-    text-align: center;
 }
 
 header .textLogo {
     font-family: Quicksand;
     font-weight: 600;
     color: #000000;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 0rem 1rem 0rem 1rem;
 }
 
 
