@@ -10,6 +10,7 @@ header a{
     text-decoration: none;
     font-weight: 600;
     color: #201A19;
+    margin-left: 0.5rem;
 }
 
 header a:hover {
