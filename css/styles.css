@@ -1,6 +1,4 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -14,10 +12,47 @@ body {
     background-color: #FCFCFC;
 }
 
-footer{
+header {
+    margin-top: 2rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header .image {
+    width: 3rem;
+    height: 3rem;
+}
+
+header .container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 1rem;
+    gap: 0.5rem;
+}
+
+header a{
+    text-decoration: none;
+    font-weight: 600;
+    color: #000000;
+}
+
+header a:hover {
+    color: #E6BE63;
+}
+
+footer {
     gap: 0.5rem;
 
-    margin: 0rem 0rem 5rem 0rem;
+    margin: 0rem 0rem 2rem 0rem;
 
     display: flex;
 }
@@ -35,7 +70,7 @@ footer{
     height: fit-content;
 }
 
-.imagePNG{
+.image{
     width: 1.5rem;
     height: 1.5rem;
 }
