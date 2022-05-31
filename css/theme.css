@@ -1,113 +1,62 @@
 @media (prefers-color-scheme: dark) {
+
+    /* Body theme */
+
     body {
         background: #201A19;
     }
 
-    .footerSocialImage {
-        filter: invert();
-    }
+    /* Header theme */
 
-    .headerTextLogo {
+    .header__decoration {
         color: #FBEEEB;
     }
 
-    .headerLogo {
-        filter: invert();
-    }
-
-    header a {
-        color: #FBEEEB;
-    }
-
-    header a:hover {
+    .header__decoration:hover {
         color: #FFDAD2;
     }
 
-    .bodyMain__Title {
+    .header__avatar {
+        filter: invert();
+    }
+    
+    /* Main theme */
+
+    .body__title {
         color: #FBEEEB;
     }
 
-    .bodyMain__Text {
+    .body__text {
         color: #FBEEEB;
     }
 
-    .bodyMainWIP {
+    .bodyhome__title {
+        color: #FBEEEB;
+    }
+
+    .bodyhome__text {
+        color: #FBEEEB;
+    }
+
+    /* Footer theme */
+
+    .footer__socialimage {
         filter: invert();
     }
 
-    .marked {
+    /* Helpers theme */
+
+    .textmarked {
         color: #FFDAD2;
     }
 
-    .postBlog__title {
-        color: #FBEEEB;
-    }
+    /* Card theme */
 
-    .postBlog__text {
-        color: #FBEEEB;
-    }
-
-    .bodyMainBlog__title {
-        color: #FBEEEB;
-    }
-
-    .bodyMainBlog__text {
-        color: #FBEEEB;
-    }
-
-    .postBlog {
+    .card {
         border: 2px solid #4D4543;
     }
 
-    .postBlog:hover {
-        border: 2px solid #CDCCC5;
-    }
-
-    /* Página de Motorola One Fusion */
-
-    .bodyblog__title {
-        color: #FBEEEB;
-    }
-
-    .bodyblog__text {
-        color: #FBEEEB;
-    }
-
-    .posts__publication {
-        border: 2px solid #4D4543;
-    }
-
-    .posts__publication:hover {
-        border: 2px solid #CDCCC5;
-    }
-
-    .publication__title {
-        color: #FBEEEB;
-    }
-
-    .publication__text {
-        color: #FBEEEB;
-    }
-
-    .publication__details {
-        color: #FBEEEB;
-    }
-
-    /* Página de proyectos */
-
-    .bodyprojects__title {
-        color: #FBEEEB;
-    }
-
-    .bodyprojects__text {
-        color: #FBEEEB;
-    }
-
-    .listprojects__card {
-        border: 2px solid #4D4543;
-    }
-
-    .listprojects__card:hover {
+    .card:hover {
         border: 2px solid #CDCCC5;
     }
 

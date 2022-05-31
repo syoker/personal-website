@@ -1,47 +1,31 @@
-header {
+.header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-inline: 2rem;
-    margin-top: 2rem;
+
+    margin: 2rem 2rem 0rem 2rem;
 }
 
-header a{
+.header__decoration {
     text-decoration: none;
-    font-weight: 600;
-    color: #201A19;
-}
 
-header a:hover {
-    color: #C00000;
-    text-decoration: underline;
-}
-
-.textLogoHover:hover {
-    text-decoration: none;
-}
-
-.gapProjects {
     margin-left: 0.5rem;
+
+    color: #201A19
 }
 
-.gapBlog {
-    margin-right: 0.5rem;
+.header__decoration:hover {
+    text-decoration: underline;
+
+    color: #C00000;
 }
 
-.headerLogo {
-    width: 3rem;
-    height: 3rem;
-}
-
-.headerTextLogo {
-    font-family: Quicksand;
-    font-weight: 600;
-    color: #201A19;
-    margin-inline: 1rem;
-}
-
-.headerTextLinks {
+.header__links {
     font-family: Quicksand;
     font-weight: 500;
+}
+
+.header__avatar {
+    width: 3rem;
+    height: 3rem;
 }

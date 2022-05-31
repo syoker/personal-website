@@ -1,229 +1,47 @@
-.bodyMainHome {
+.body {
+    margin: 2rem 2rem 0rem 2rem;
+}
+
+.body__cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.body__title {
+    font-family: Quicksand;
+    font-weight: 500;
+    text-align: start;
+
+    color: #201A19;
+    
+    margin-block-end: 0.5rem;
+}
+
+.body__text {
+    font-family: Quicksand;
+    font-weight: 300;
+    text-align: start;
+
+    color: #201A19;
+}
+
+.bodyhome {
     margin-inline: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.bodyMain__Title {
+.bodyhome__title {
     font-family: Quicksand;
     font-weight: 700;
     color: #201A19;
     text-align: center;
 }
 
-.bodyMain__Text {
+.bodyhome__text {
     font-family: Quicksand;
     font-weight: 400;
     color: #201A19;
     text-align: center;
-}
-
-.bodyMainWIP {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.bodyMainWIP__Images {
-    width: 10rem;
-    height: 10rem;
-}
-
-.bodyMainBlog {
-    margin-top: 2rem;
-    margin-inline: 2rem;
-}
-
-.postBlogDecoration {
-    text-decoration: none;
-}
-
-.categories {
-    display: flex;
-    flex-direction: column;
-}
-
-.postBlog {
-    margin-top: 1rem;
-    transition: border .5s;
-    border: 2px solid #CDCCC5;
-    border-radius: 20px;
-    padding: 1rem;
-}
-
-.postBlog:hover {
-    border: 2px solid #333231;
-}
-
-.postBlog__title {
-    font-family: Quicksand;
-    font-weight: 500;
-    color: #201A19;
-    text-align: start;
-}
-
-.postBlog__text {
-    font-family: Quicksand;
-    font-weight: 300;
-    color: #201A19;
-    text-align: end;
-}
-
-.bodyMainBlog__title {
-    font-family: Quicksand;
-    font-weight: 500;
-    color: #201A19;
-    text-align: start;
-    margin-block-end: 0.5rem;
-}
-
-.bodyMainBlog__text {
-    font-family: Quicksand;
-    font-weight: 300;
-    color: #201A19;
-    text-align: start;
-}
-
-/* Página de Motorola One Fusion */
-
-.bodyblog {
-    margin-top: 2rem;
-    margin-inline: 2rem;
-}
-
-.bodyblog__title {
-    font-family: Quicksand;
-    font-weight: 500;
-    color: #201A19;
-    text-align: start;
-    margin-block-end: 0.5rem;
-}
-
-.bodyblog__text {
-    font-family: Quicksand;
-    font-weight: 300;
-    color: #201A19;
-    text-align: justify;
-}
-
-.posts {
-    display: flex;
-    flex-direction: column;
-}
-
-.posts__publication {
-    max-width: 40rem;
-    margin-top: 1rem;
-    transition: border .5s;
-    border: 2px solid #CDCCC5;
-    border-radius: 20px;
-    padding: 1rem;
-}
-
-.posts__publication:hover {
-    border: 2px solid #333231;
-}
-
-.publication__title {
-    font-family: Quicksand;
-    font-weight: 700;
-    color: #201A19;
-    text-align: justify;
-}
-
-.publication__banner {
-    margin-top: 1rem;
-    margin-block-end: 1rem;
-    border-radius: 1rem;
-}
-
-.publication__text {
-    font-family: Quicksand;
-    font-weight: 400;
-    color: #201A19;
-    text-align: justify;
-}
-
-.publication__details {
-    margin-top: 0.5rem;
-    font-family: Quicksand;
-    font-weight: 300;
-    color: #201A19;
-    text-align: end;
-}
-
-/* Página Proyecto */
-
-.bodyprojects {
-    margin-top: 2rem;
-    margin-inline: 2rem;
-}
-
-.bodyprojects__title {
-    font-family: Quicksand;
-    font-weight: 500;
-    color: #201A19;
-    text-align: start;
-    margin-block-end: 0.5rem;
-}
-
-.bodyprojects__text {
-    font-family: Quicksand;
-    font-weight: 300;
-    color: #201A19;
-    text-align: justify;
-}
-
-.listprojects {
-    display: flex;
-    flex-direction: column;
-}
-
-.listprojects__carddecoration {
-    text-decoration: none;
-}
-
-.listprojects__card {
-    max-width: 40rem;
-    margin-top: 1rem;
-    transition: border .5s;
-    border: 2px solid #CDCCC5;
-    border-radius: 20px;
-}
-
-.listprojects__card:hover {
-    border: 2px solid #333231;
-}
-
-.card__title {
-    font-family: Quicksand;
-    font-weight: 700;
-    color: #201A19;
-    text-align: justify;
-    margin-inline: 1rem;
-    margin-block-end: 0.5rem;
-}
-
-.card__banner {
-    margin-block-end: 0.5rem;
-    border-radius: 1rem 1rem 0rem 0rem;
-}
-
-.card__text {
-    font-family: Quicksand;
-    font-weight: 400;
-    color: #201A19;
-    text-align: justify;
-    margin-inline: 1rem;
-}
-
-.card__details {
-    margin-top: 0.5rem;
-    font-family: Quicksand;
-    font-weight: 300;
-    color: #201A19;
-    text-align: end;
-    margin-inline: 1rem;
-    margin-block-end: 0.5rem;
 }

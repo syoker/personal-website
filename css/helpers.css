@@ -2,7 +2,11 @@
     flex-grow: 1;
 }
 
-.marked {
+.textmarked {
     text-decoration: underline;
     color: #C00000;
+}
+
+.textdecoration {
+    text-decoration: none;
 }

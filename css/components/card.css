@@ -1,0 +1,51 @@
+.card {
+    max-width: 40rem;
+
+    border: 2px solid #CDCCC5;
+    border-radius: 20px;
+    
+    transition: border .5s;
+
+    margin-top: 1rem;
+}
+
+.card:hover {
+    border: 2px solid #333231;
+}
+
+.card__banner {
+    border-radius: 1.1rem 1.1rem 0rem 0rem;
+
+    margin-block-end: 0.5rem;
+}
+
+.card__title {
+    font-family: Quicksand;
+    font-weight: 700;
+    text-align: justify;
+
+    color: #201A19;
+
+    margin: 0rem 1rem 0.5rem 1rem;
+}
+
+.card__text {
+    font-family: Quicksand;
+    font-weight: 400;
+    text-align: justify;
+
+    color: #201A19;
+    
+    margin-inline: 1rem;
+}
+
+.card__details {
+    font-family: Quicksand;
+    font-weight: 300;
+    text-align: end;
+
+    color: #201A19;
+
+    margin: 0.5rem 1rem 0.5rem 1rem;
+}
+

@@ -2,63 +2,83 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Projects</title>
-    <meta name="description" content="Syoker's projects" />
-    <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon" />
+  <title>Projects</title>
+  <meta name="description" content="Syoker's projects" />
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon" />
 
-    <link rel="stylesheet" href="/css/body.css" />
-    <link rel="stylesheet" href="/css/header.css" />
-    <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/footer.css" />
-    <link rel="stylesheet" href="/css/helpers.css" />
-    <link rel="stylesheet" href="/css/theme.css" />
-    <link rel="stylesheet" href="/css/resize.css" />
-    <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" href="/assets/fonts/quicksand.css" />
+  <!-- Import components -->
+  <link rel="stylesheet" href="/css/components/card.css">
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Syoker_" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://syoker.github.io/project" />
-    <meta property="og:title" content="Projects" />
-    <meta property="og:description" content="Syoker's projects" />
-    <meta property="og:image" content="" />
+  <!-- Import styles -->
+  <link rel="stylesheet" href="/css/body.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/footer.css">
+
+  <!-- Import helpers -->
+  <link rel="stylesheet" href="/css/helpers.css">
+
+  <!-- Import reset -->
+  <link rel="stylesheet" href="/css/reset.css">
+
+  <!-- Import theme -->
+  <link rel="stylesheet" href="/css/theme.css">
+
+  <!-- Import mobile/pc writer -->
+  <link rel="stylesheet" href="/css/resize.css">
+
+  <!-- Import fonts -->
+  <link rel="stylesheet" href="/assets/fonts/quicksand.css">
+
+  <!-- For social media -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@Syoker_" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://syoker.github.io/project" />
+  <meta property="og:title" content="Projects" />
+  <meta property="og:description" content="Syoker's projects" />
+  <meta property="og:image" content="" />
 </head>
 
 <body>
 
-    <header>
-        <nav class="headerLogo">
-            <a href="/">
-                <img src="/assets/img/avatar.png" alt="Syoker Logo">
-            </a>
-        </nav>
-        <nav class="space"></nav>
-        <nav class="headerTextLinks">
-            <a href="/blog" class="marked">Blog</a>
-            <a href="/project" class="gapProjects">Proyectos</a>
-        </nav>
-    </header>
+  <header class="header">
 
-    <main class="bodyMainBlog">
+    <nav class="header__avatar">
+      <a href="/">
+        <img src="/assets/img/svg/avatar.svg" alt="Syoker avatar">
+      </a>
+    </nav>
+    <nav class="space"></nav>
+    <nav class="header__links">
+      <a href="/blog/" class="header__decoration">Blog</a>
+      <a href="/project/" class="header__decoration">Proyectos</a>
+    </nav>
 
-        <h2 class="bodyMainBlog__title">Categorías</h2>
-        <h4 class="bodyMainBlog__text">En esta sección publicaré los diferentes temas de los que hago blogs, para no
-            mezclarlo todo</h4>
+  </header>
 
-        <main class="categories">
-            <a href="/blog/motorolaonefusion" class="postBlogDecoration">
-                <div class="postBlog">
-                    <h3 class="postBlog__title">Motorola One Fusion</h3>
-                </div>
-            </a>
-        </main>
+  <main class="body">
 
+    <h2 class="body__title">Categorías</h2>
+    <h4 class="body__text">En esta sección publicaré los diferentes temas de los que hago blogs, para no
+      mezclarlo todo</h4>
+
+    <main class="body__cards">
+      <a href="/blog/motorolaonefusion" class="textdecoration">
+        <div class="card">
+          <img src="/assets/img/jpg/motorola-one-fusion-banner.jpg" alt="Motorola One Fusion banner"
+            class="card__banner">
+          <h3 class="card__title">Motorola One Fusion</h3>
+          <h6 class="card__details">Posts: 6</h6>
+        </div>
+      </a>
     </main>
+
+  </main>
 
 </body>
 
