@@ -1,0 +1,14 @@
+@media (min-width: 640px) {
+    .categories {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .postBlog {
+        width: 15rem;
+    }
+
+    .postBlog__title {
+        text-align: center;
+    }
+}

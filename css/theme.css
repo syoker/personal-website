@@ -47,11 +47,11 @@
         color: #FBEEEB;
     }
 
-    .bodyMainBlogs__title {
+    .bodyMainBlog__title {
         color: #FBEEEB;
     }
 
-    .bodyMainBlogs__text {
+    .bodyMainBlog__text {
         color: #FBEEEB;
     }
 
@@ -61,5 +61,35 @@
 
     .postBlog:hover {
         border: 2px solid #CDCCC5;
+    }
+
+    /* Página de Motorola One Fusion */
+
+    .bodyblog__title {
+        color: #FBEEEB;
+    }
+
+    .bodyblog__text {
+        color: #FBEEEB;
+    }
+
+    .posts__publication {
+        border: 2px solid #4D4543;
+    }
+
+    .posts__publication:hover {
+        border: 2px solid #CDCCC5;
+    }
+
+    .publication__title {
+        color: #FBEEEB;
+    }
+
+    .publication__text {
+        color: #FBEEEB;
+    }
+
+    .publication__details {
+        color: #FBEEEB;
     }
 }
