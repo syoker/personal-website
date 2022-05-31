@@ -5,8 +5,6 @@
     border-radius: 20px;
     
     transition: border .5s;
-
-    margin-top: 1rem;
 }
 
 .card:hover {
