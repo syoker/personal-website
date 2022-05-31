@@ -21,6 +21,12 @@
     gap: 1rem;
 }
 
+.body__alone {
+    max-width: 50%;
+
+    margin-block-end: 2rem;
+}
+
 .body__cards {
     display: flex;
     flex-direction: column;

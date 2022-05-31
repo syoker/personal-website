@@ -22,6 +22,10 @@
         margin-top: 2rem;
     }
 
+    .card {
+        min-height: 21rem;
+    }
+
     .body__rowcolumn {
         flex-direction: row;
         align-items: start;
