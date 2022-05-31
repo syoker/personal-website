@@ -3,7 +3,7 @@
         background: #201A19;
     }
 
-    .footerSocialImage{
+    .footerSocialImage {
         filter: invert();
     }
 
@@ -15,11 +15,11 @@
         filter: invert();
     }
 
-    header a{
+    header a {
         color: #FBEEEB;
     }
 
-    header a:hover{
+    header a:hover {
         color: #FFDAD2;
     }
 
@@ -90,6 +90,36 @@
     }
 
     .publication__details {
+        color: #FBEEEB;
+    }
+
+    /* Página de proyectos */
+
+    .bodyprojects__title {
+        color: #FBEEEB;
+    }
+
+    .bodyprojects__text {
+        color: #FBEEEB;
+    }
+
+    .listprojects__card {
+        border: 2px solid #4D4543;
+    }
+
+    .listprojects__card:hover {
+        border: 2px solid #CDCCC5;
+    }
+
+    .card__title {
+        color: #FBEEEB;
+    }
+
+    .card__text {
+        color: #FBEEEB;
+    }
+
+    .card__details {
         color: #FBEEEB;
     }
 }
