@@ -16,8 +16,8 @@
         color: #CEF8FF;
     }
 
-    .header__avatar {
-        filter: invert();
+    .header__decorationmarked {
+        color: #CEF8FF;
     }
     
     /* Main theme */
@@ -28,6 +28,14 @@
 
     .body__text {
         color: #FFFFFF;
+    }
+
+    .body__textlinks {
+        color: #FFFFFF;
+    }
+
+    .body__textlinks:hover {
+        color: #CEF8FF;
     }
 
     .bodyhome__title {
@@ -44,27 +52,7 @@
         filter: invert();
     }
 
-    .logotipe__avatar {
-        filter: invert();
-    }
-
-    .logotipe__text {
-        color: #FFFFFF;
-    }
-    
-    .footerlinks__title {
-        filter: invert();
-    }
-
-    .footerlinks__links {
-        filter: invert();
-    }
-
     /* Helpers theme */
-
-    .textmarked {
-        color: #CEF8FF;
-    }
 
     .avatar {
         filter: invert();

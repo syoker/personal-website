@@ -36,7 +36,7 @@
 .card__text {
     font-family: Quicksand;
     font-weight: 400;
-    text-align: justify;
+    text-align: start;
 
     color: #000000;
 

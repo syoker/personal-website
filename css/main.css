@@ -22,8 +22,6 @@
 }
 
 .body__alone {
-    max-width: 50%;
-
     margin-block-end: 2rem;
 }
 
@@ -32,6 +30,20 @@
     flex-direction: column;
 
     gap: 1rem;
+}
+
+.body__textlinks {
+    font-family: Quicksand;
+    font-weight: 400;
+    text-align: start;
+
+    color: #000000;
+}
+
+.body__textlinks:hover {
+    text-decoration: underline;
+
+    color: #00BCD3;
 }
 
 .body__title {
@@ -45,7 +57,7 @@
 .body__text {
     font-family: Quicksand;
     font-weight: 400;
-    text-align: justify;
+    text-align: start;
 
     color: #000000;
 }

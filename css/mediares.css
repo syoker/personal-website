@@ -22,8 +22,20 @@
         margin-top: 2rem;
     }
 
+    .body__text {
+        text-align: justify;
+    }
+
+    .body__alone {
+        max-width: 50%;
+    }
+
+    .card__text {
+        text-align: justify;
+    }
+
     .card {
-        min-height: 21rem;
+        min-height: 22rem;
     }
 
     .body__rowcolumn {
