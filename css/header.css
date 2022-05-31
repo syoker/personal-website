@@ -11,21 +11,16 @@
 
     margin-left: 0.5rem;
 
-    color: #201A19
+    color: #000000
 }
 
 .header__decoration:hover {
     text-decoration: underline;
 
-    color: #C00000;
+    color: #00BCD3;
 }
 
 .header__links {
     font-family: Quicksand;
     font-weight: 500;
-}
-
-.header__avatar {
-    width: 3rem;
-    height: 3rem;
 }

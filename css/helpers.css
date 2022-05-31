@@ -10,3 +10,12 @@
 .textdecoration {
     text-decoration: none;
 }
+
+.bodyspace {
+    justify-content: space-between;
+}
+
+.avatar {
+    width: 3rem;
+    height: 3rem;
+}

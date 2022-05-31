@@ -1,14 +1,20 @@
 .card {
+    display: flex;
+    flex-direction: column;
+
     max-width: 40rem;
+    min-height: 20rem;
 
     border: 2px solid #CDCCC5;
     border-radius: 20px;
-    
-    transition: border .5s;
+
+    transition: all .3s;
 }
 
 .card:hover {
     border: 2px solid #333231;
+    transform: scale(1.025);
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .card__banner {
@@ -20,9 +26,9 @@
 .card__title {
     font-family: Quicksand;
     font-weight: 700;
-    text-align: justify;
+    text-align: start;
 
-    color: #201A19;
+    color: #000000;
 
     margin: 0rem 1rem 0.5rem 1rem;
 }
@@ -32,8 +38,8 @@
     font-weight: 400;
     text-align: justify;
 
-    color: #201A19;
-    
+    color: #000000;
+
     margin-inline: 1rem;
 }
 
@@ -42,8 +48,7 @@
     font-weight: 300;
     text-align: end;
 
-    color: #201A19;
+    color: #000000;
 
     margin: 0.5rem 1rem 0.5rem 1rem;
 }
-

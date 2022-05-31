@@ -1,3 +1,40 @@
 @media (min-width: 640px) {
 
+    .body {
+        flex-direction: row;
+
+        margin: 2rem 4.5rem 2rem 6rem;
+    }
+
+    .body__presentation {
+        padding-right: 2rem;
+
+        max-width: 40%;
+
+        margin-top: 2rem;
+    }
+
+    .body__cards {
+        align-items: center;
+
+        max-width: 60%;
+
+        margin-top: 2rem;
+    }
+
+    .body__rowcolumn {
+        flex-direction: row;
+        align-items: start;
+
+        max-width: 95%;
+    }
+
+    .header {
+        margin-inline: 6rem;
+    }
+
+    .bodyhome {
+        margin-inline: 5rem;
+    }
+    
 }

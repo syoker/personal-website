@@ -3,17 +3,17 @@
     /* Body theme */
 
     body {
-        background: #201A19;
+        background: #191919;
     }
 
     /* Header theme */
 
     .header__decoration {
-        color: #FBEEEB;
+        color: #FFFFFF;
     }
 
     .header__decoration:hover {
-        color: #FFDAD2;
+        color: #CEF8FF;
     }
 
     .header__avatar {
@@ -23,31 +23,51 @@
     /* Main theme */
 
     .body__title {
-        color: #FBEEEB;
+        color: #FFFFFF;
     }
 
     .body__text {
-        color: #FBEEEB;
+        color: #FFFFFF;
     }
 
     .bodyhome__title {
-        color: #FBEEEB;
+        color: #FFFFFF;
     }
 
     .bodyhome__text {
-        color: #FBEEEB;
+        color: #FFFFFF;
     }
 
     /* Footer theme */
 
-    .footer__socialimage {
+    .footer__socialimage  {
+        filter: invert();
+    }
+
+    .logotipe__avatar {
+        filter: invert();
+    }
+
+    .logotipe__text {
+        color: #FFFFFF;
+    }
+    
+    .footerlinks__title {
+        filter: invert();
+    }
+
+    .footerlinks__links {
         filter: invert();
     }
 
     /* Helpers theme */
 
     .textmarked {
-        color: #FFDAD2;
+        color: #CEF8FF;
+    }
+
+    .avatar {
+        filter: invert();
     }
 
     /* Card theme */
@@ -61,14 +81,14 @@
     }
 
     .card__title {
-        color: #FBEEEB;
+        color: #FFFFFF;
     }
 
     .card__text {
-        color: #FBEEEB;
+        color: #FFFFFF;
     }
 
     .card__details {
-        color: #FBEEEB;
+        color: #FFFFFF;
     }
 }

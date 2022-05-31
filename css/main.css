@@ -1,49 +1,70 @@
 .body {
-    margin: 2rem 2rem 0rem 2rem;
+    display: flex;
+    flex-direction: column;
+
+    margin: 2rem;
+}
+
+.body__presentation {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.5rem;
+
+    margin-block-end: 1rem;
+}
+
+.body__rowcolumn {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
 }
 
 .body__cards {
     display: flex;
     flex-direction: column;
+
+    gap: 1rem;
 }
 
 .body__title {
     font-family: Quicksand;
-    font-weight: 500;
+    font-weight: 600;
     text-align: start;
 
-    color: #201A19;
-    
-    margin-block-end: 0.5rem;
+    color: #000000;
 }
 
 .body__text {
     font-family: Quicksand;
-    font-weight: 300;
-    text-align: start;
+    font-weight: 400;
+    text-align: justify;
 
-    color: #201A19;
-
-    margin-block-end: 1rem;
+    color: #000000;
 }
 
 .bodyhome {
-    margin-inline: 2rem;
     display: flex;
     flex-direction: column;
+
     gap: 1rem;
+
+    margin-inline: 2rem;
 }
 
 .bodyhome__title {
     font-family: Quicksand;
     font-weight: 700;
-    color: #201A19;
     text-align: center;
+
+    color: #000000;
 }
 
 .bodyhome__text {
     font-family: Quicksand;
     font-weight: 400;
-    color: #201A19;
     text-align: center;
+
+    color: #000000;
 }

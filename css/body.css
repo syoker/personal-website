@@ -1,10 +1,5 @@
 body {
     display: flex;
     flex-direction: column;
-    background-color: #FBEEEB;
+    background-color: #FFFFFF;
 }
-
-.bodyHome {
-    justify-content: space-between;
-}
-
