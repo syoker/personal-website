@@ -8,6 +8,7 @@
 
 .bodyspace {
     justify-content: space-between;
+    padding-block-end: 2rem;
 }
 
 .avatar {
