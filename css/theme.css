@@ -1,64 +1,59 @@
 @media (prefers-color-scheme: dark) {
-
-    /* Body theme */
-
-    body {
-        background: #191919;
+    .body {
+        background-color: #191919;
     }
 
-    /* Header theme */
+    .bodyhome {
+        background-color: #191919;
+    }
 
-    .header__decoration {
+    h1 {
         color: #FFFFFF;
     }
 
-    .header__decoration:hover {
+    h2 {
+        color: #FFFFFF;
+    }
+
+    h3 {
+        color: #FFFFFF;
+    }
+
+    h4 {
+        color: #FFFFFF;
+    }
+
+    h5 {
+        color: #FFFFFF;
+    }
+
+    h6 {
+        color: #FFFFFF;
+    }
+
+    p {
+        color: #FFFFFF;
+    }
+
+    .adecoration {
+        color: #FFFFFF;
+    }
+
+    .adecoration:hover {
         color: #CEF8FF;
     }
 
-    .header__decorationmarked {
+    .ainpage {
         color: #CEF8FF;
     }
-    
-    /* Main theme */
-
-    .body__title {
-        color: #FFFFFF;
-    }
-
-    .body__text {
-        color: #FFFFFF;
-    }
-
-    .body__textlinks {
-        color: #FFFFFF;
-    }
-
-    .body__textlinks:hover {
-        color: #CEF8FF;
-    }
-
-    .bodyhome__title {
-        color: #FFFFFF;
-    }
-
-    .bodyhome__text {
-        color: #FFFFFF;
-    }
-
-    /* Footer theme */
-
-    .footer__socialimage  {
-        filter: invert();
-    }
-
-    /* Helpers theme */
 
     .avatar {
         filter: invert();
     }
 
-    /* Card theme */
+    .socialsvg {
+        filter: invert();
+    }
 
     .card {
         border: 2px solid #4D4543;
@@ -66,17 +61,5 @@
 
     .card:hover {
         border: 2px solid #CDCCC5;
-    }
-
-    .card__title {
-        color: #FFFFFF;
-    }
-
-    .card__text {
-        color: #FFFFFF;
-    }
-
-    .card__details {
-        color: #FFFFFF;
     }
 }

@@ -1,48 +1,27 @@
 @media (min-width: 640px) {
-
-    .body {
+    .content {
         flex-direction: row;
 
-        margin: 2rem 4.5rem 2rem 6rem;
+        padding-top: 4rem;
     }
 
-    .body__presentation {
-        padding-right: 2rem;
-
-        max-width: 40%;
-
-        margin-top: 2rem;
+    .introduction {
+        width: 40%;
     }
 
-    .body__cards {
+    .containercards {
         align-items: center;
-
         max-width: 60%;
-
-        margin-top: 2rem;
     }
 
-    .body__alone {
-        max-width: 50%;
-    }
-
-    .card {
-        min-height: 22rem;
-    }
-
-    .body__rowcolumn {
+    .containercards__rowcolumn {
         flex-direction: row;
         align-items: start;
 
         max-width: 95%;
     }
 
-    .header {
-        margin-inline: 6rem;
+    .containercards__alone {
+        max-width: 50%;
     }
-
-    .bodyhome {
-        margin-inline: 5rem;
-    }
-    
 }

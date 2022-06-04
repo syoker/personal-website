@@ -1,0 +1,43 @@
+.content {
+    display: flex;
+    flex-direction: column;
+
+    padding: 2rem 0rem 2rem 0rem;
+    
+    gap: 1rem;
+}
+
+.contenthome {
+    display: flex;
+    flex-direction: column;
+
+    padding: 2rem 0rem 2rem 0rem;
+    
+    gap: 1rem;
+}
+
+.hometext {
+    text-align: center;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.2rem;
+}
+
+.containercards {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+.containercards__rowcolumn {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+

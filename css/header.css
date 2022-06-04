@@ -1,33 +1,32 @@
 .header {
     display: flex;
     flex-direction: row;
-    align-items: center;
 
-    margin: 2rem 2rem 0rem 2rem;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.header__decoration {
+.avatar {
+    height: 3rem;
+}
+
+.adecoration {
     text-decoration: none;
 
     margin-left: 0.5rem;
 
-    color: #000000
+    color: #000000;
 }
 
-.header__decorationmarked {
+.adecoration:hover {
+    text-decoration: underline;
+
+    color: #00BCD3;
+}
+
+.ainpage {
     text-decoration: underline;
     color: #00BCD3;
 
     margin-left: 0.5rem;
-}
-
-.header__decoration:hover {
-    text-decoration: underline;
-
-    color: #00BCD3;
-}
-
-.header__links {
-    font-family: Quicksand;
-    font-weight: 500;
 }

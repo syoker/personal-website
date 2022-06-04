@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Projects</title>
+  <title>Proyectos</title>
   <meta name="description" content="Syoker's projects" />
   <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon" />
 
@@ -14,19 +14,17 @@
   <link rel="stylesheet" href="/css/components/card.css">
 
   <!-- Import styles -->
+  <link rel="stylesheet" href="/css/text.css">
   <link rel="stylesheet" href="/css/body.css">
   <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/content.css">
   <link rel="stylesheet" href="/css/footer.css">
-
-  <!-- Import helpers -->
-  <link rel="stylesheet" href="/css/helpers.css">
-
-  <!-- Import reset -->
-  <link rel="stylesheet" href="/css/reset.css">
 
   <!-- Import theme -->
   <link rel="stylesheet" href="/css/theme.css">
+
+  <!-- Import reset -->
+  <link rel="stylesheet" href="/css/reset.css">
 
   <!-- Import media responsive -->
   <link rel="stylesheet" href="/css/mediares.css">
@@ -44,7 +42,7 @@
   <meta property="og:image" content="" />
 </head>
 
-<body>
+<body class="body">
 
   <header class="header">
 
@@ -53,74 +51,75 @@
     </a>
 
     <nav class="space"></nav>
-    <nav class="header__links">
-      <a href="/blog/motorolaonefusion/" class="header__decoration">Blog</a>
-      <a href="/project/" class="header__decorationmarked">Proyectos</a>
+    <nav>
+      <a href="/blog/motorolaonefusion/" class="adecoration">Blog</a>
+      <a href="/project/" class="ainpage">Proyectos</a>
     </nav>
 
   </header>
 
-  <main class="body">
+  <main class="content">
 
-    <main class="body__presentation">
-      <h2 class="body__title">Proyectos</h2>
-      <h4 class="body__text">
-        En esta sección publicaré todos los proyectos que actualmente estoy realizando.
-        Si quieres ver el código de esta web, accede al proyecto "Syoker webpage".
-      </h4>
+    <main class="introduction">
+
+      <h2><strong>Proyectos</strong></h2>
+      <p>En esta sección publicaré todos los proyectos que actualmente estoy realizando.</p>
+      <p>Si quieres ver el código de esta web, accede al proyecto "Syoker webpage".</p>
+      
     </main>
 
-    <main class="body__cards">
+    <main class="containercards">
 
-      <main class="body__rowcolumn">
-        <a href="https://github.com/Syoker/ExtraThemedIcons" class="textdecoration">
+      <main class="containercards__rowcolumn">
+        <a href="https://github.com/Syoker/ExtraThemedIcons" class="card__textdecoration">
           <div class="card">
-            <img src="/assets/img/png/extrathemedicons.png" alt="extrathemedicons banner" class="card__banner">
-            <h3 class="card__title">Extra Themed Icons</h3>
+            <img src="/assets/img/png/extrathemedicons.png" alt="Extra Themed Icons banner" class="card__banner">
+            <h3 class="card__title"><strong>Extra Themed Icons</strong></h3>
             <h5 class="card__text">More themed icons than a normal Pixel Launcher</h5>
-            <nav class="space"></nav>
+            <div class="card__spacetext"></div>
             <h6 class="card__details">Repositorio en GitHub</h6>
           </div>
         </a>
-        <a href="https://github.com/Syoker/syoker.github.io" class="textdecoration">
+        <a href="https://github.com/Syoker/syoker.github.io" class="card__textdecoration">
           <div class="card">
-            <img src="/assets/img/png/syoker-github-io.png" alt="syoker.github.io banner" class="card__banner">
-            <h3 class="card__title">Syoker webpage</h3>
+            <img src="/assets/img/png/syoker-github-io.png" alt="Syoker webpage banner" class="card__banner">
+            <h3 class="card__title"><strong>Syoker webpage</strong></h3>
             <h5 class="card__text">Mi página web</h5>
-            <nav class="space"></nav>
+            <div class="card__spacetext"></div>
             <h6 class="card__details">Repositorio en GitHub</h6>
           </div>
         </a>
       </main>
 
-      <main class="body__rowcolumn">
-        <a href="https://github.com/Syoker/MotoExperience" class="textdecoration">
+      <main class="containercards__rowcolumn">
+        <a href="https://github.com/Syoker/MotoExperience" class="card__textdecoration">
           <div class="card">
-            <img src="/assets/img/png/motoexperience.png" alt="motoexperience banner" class="card__banner">
-            <h3 class="card__title">Moto Experience</h3>
+            <img src="/assets/img/png/motoexperience.png" alt="Moto Experience banner" class="card__banner">
+            <h3 class="card__title"><strong>Moto Experience</strong></h3>
             <h5 class="card__text">This module installs Motorola Features on Motorola One Fusion.</h5>
-            <nav class="space"></nav>
+            <div class="card__spacetext"></div>
             <h6 class="card__details">Repositorio en GitHub</h6>
           </div>
         </a>
-        <a href="https://github.com/Syoker/SmartPillboxApp" class="textdecoration">
+        <a href="https://github.com/Syoker/SmartPillboxApp" class="card__textdecoration">
           <div class="card">
-            <img src="/assets/img/png/smartpillboxapp.png" alt="smartpillboxapp banner" class="card__banner">
-            <h3 class="card__title">Smart Pillbox App</h3>
+            <img src="/assets/img/png/smartpillboxapp.png" alt="Smart Pillbox App banner" class="card__banner">
+            <h3 class="card__title"><strong>Smart Pillbox App</strong></h3>
             <h5 class="card__text">An app to manage your SmartPillbox product.</h5>
-            <nav class="space"></nav>
+            <div class="card__spacetext"></div>
             <h6 class="card__details">Repositorio en GitHub</h6>
           </div>
         </a>
       </main>
 
-      <main class="body__alone">
-        <a href="https://github.com/Syoker/NGCam7.4XML_for_MotorolaOneFusion" class="textdecoration">
+      <main class="containercards__alone">
+        <a href="https://github.com/Syoker/NGCam7.4XML_for_MotorolaOneFusion" class="card__textdecoration">
           <div class="card">
-            <img src="/assets/img/png/ngcam7-4xml_for_motorolaonefusion.png" alt="ngcam7-4xml_for_motorolaonefusion banner" class="card__banner">
-            <h3 class="card__title">NGCam 7.4 XML for Motorola One Fusion</h3>
+            <img src="/assets/img/png/ngcam7-4xml_for_motorolaonefusion.png" alt="XML for NGCam 7.4 | Astro banner"
+              class="card__banner">
+            <h3 class="card__title"><strong>XML for NGCam 7.4 | Astro</strong></h3>
             <h5 class="card__text">An XML for NGCam version 7.4 for Motorola One Fusion.</h5>
-            <nav class="space"></nav>
+            <div class="card__spacetext"></div>
             <h6 class="card__details">Repositorio en GitHub</h6>
           </div>
         </a>

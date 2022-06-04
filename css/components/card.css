@@ -23,32 +23,24 @@
     margin-block-end: 0.5rem;
 }
 
+.card__spacetext {
+    flex-grow: 1;
+}
+
 .card__title {
-    font-family: Quicksand;
-    font-weight: 700;
     text-align: start;
 
-    color: #000000;
-
-    margin: 0rem 1rem 0.5rem 1rem;
+    margin-inline: 1rem;
 }
 
 .card__text {
-    font-family: Quicksand;
-    font-weight: 400;
     text-align: start;
-
-    color: #000000;
 
     margin-inline: 1rem;
 }
 
 .card__details {
-    font-family: Quicksand;
-    font-weight: 300;
     text-align: end;
 
-    color: #000000;
-
-    margin: 0.5rem 1rem 0.5rem 1rem;
+    margin: 0rem 1rem 0.5rem 0rem;
 }
