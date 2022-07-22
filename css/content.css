@@ -7,15 +7,6 @@
     gap: 1rem;
 }
 
-.contenthome {
-    display: flex;
-    flex-direction: column;
-
-    padding: 2rem 0rem 2rem 0rem;
-    
-    gap: 1rem;
-}
-
 .hometext {
     text-align: center;
 }
@@ -41,3 +32,37 @@
     gap: 1rem;
 }
 
+/* For article */
+
+.article {
+    display: flex;
+    flex-direction: column;
+
+    padding: 2rem 0rem 2rem 0rem;
+}
+
+.article__introduction {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.2rem;
+
+    padding: 1.5rem 0rem 1.5rem 0rem;
+}
+
+.unordererlist {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+
+    padding-top: 1.5rem;
+    padding-block-end: 1.5rem;
+}
+
+code {
+    background-color: #F5F2F0;
+    padding: 0.3em;
+    border-radius: 0.3em;
+    font-family: FiraCode;
+}

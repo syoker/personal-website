@@ -1,5 +1,5 @@
 @media (min-width: 640px) {
-    .content {
+    .forcards {
         flex-direction: row;
 
         padding-top: 4rem;
@@ -11,14 +11,14 @@
 
     .containercards {
         align-items: center;
-        max-width: 60%;
+        width: 60%;
     }
 
     .containercards__rowcolumn {
         flex-direction: row;
         align-items: start;
 
-        max-width: 95%;
+        width: 95%;
     }
 
     .containercards__alone {

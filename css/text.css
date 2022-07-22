@@ -44,3 +44,15 @@ p {
     font-weight: 400;
     color: #000000;
 }
+
+ul {
+    font-family: Quicksand;
+    font-weight: 400;
+    color: #000000;
+}
+
+ol {
+    font-family: Quicksand;
+    font-weight: 400;
+    color: #000000;
+}

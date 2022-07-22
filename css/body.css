@@ -10,15 +10,6 @@
     background-color: #FFFFFF;
 }
 
-.bodyhome {
-    display: flex;
-    flex-direction: column;
+.home {
     justify-content: space-between;
-
-    margin: auto;
-
-    padding: 2rem;
-    max-width: 80rem;
-
-    background-color: #FFFFFF;
 }
