@@ -9,19 +9,12 @@
         width: 40%;
     }
 
-    .containercards {
-        align-items: center;
-        width: 60%;
+    .not {
+        width: auto;
     }
 
     .containercards__rowcolumn {
         flex-direction: row;
         align-items: start;
-
-        width: 95%;
-    }
-
-    .containercards__alone {
-        max-width: 50%;
     }
 }
