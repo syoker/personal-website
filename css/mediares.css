@@ -13,6 +13,10 @@
         width: 100%;
     }
 
+    .article__multimedia {
+        max-width: 80%;
+    }
+
     .not {
         width: auto;
     }
