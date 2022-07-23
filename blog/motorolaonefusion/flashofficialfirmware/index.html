@@ -31,6 +31,7 @@
 
   <!-- Import fonts -->
   <link rel="stylesheet" href="/assets/fonts/quicksand.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com">
 
   <!-- For social media -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -52,7 +53,7 @@
 
     <div class="space"></div>
     <nav class="header__links">
-      <a href="/blog/motorolaonefusion/" class="adecoration">Blog</a>
+      <a href="/blog/motorolaonefusion/" class="adecoration inpage">Blog</a>
       <a href="/project/" class="adecoration">Proyectos</a>
     </nav>
 
@@ -72,163 +73,205 @@
 
     <h2><strong>¿Qué necesito?</strong></h2>
 
-    <ul class="unordererlist">
+    <ul class="list">
 
       <li>
-
         <h3><strong>SDK Platform Tools</strong></h3>
-        <p>
-          Las 
-          <em>
-            SDK Platform tools de Android
-          </em>
-           son un componente del SDK de Android. Incluyen herramientas que interactúan con la plataforma de Android, como 
-          <a href="https://developer.android.com/studio/command-line/adb"><code>adb</code></a>, 
-          <a href="https://android.googlesource.com/platform/system/core/+/master/fastboot/#fastboot"><code>fastboot</code></a>
-          y 
-          <a href="https://developer.android.com/topic/performance/tracing/command-line"><code>systrace</code></a>.
+        <p>Las <em>SDK Platform tools de Android</em>
+          son un componente del SDK de Android. Incluyen herramientas que interactúan con la plataforma de Android, como
+          <a href="https://developer.android.com/studio/command-line/adb"><code class="codetext">adb</code></a>,
+          <a href="https://android.googlesource.com/platform/system/core/+/master/fastboot/#fastboot"><code
+              class="codetext">fastboot</code></a>
+          y
+          <a href="https://developer.android.com/topic/performance/tracing/command-line"><code
+              class="codetext">systrace</code></a>.
           Estas herramientas son necesarias para el desarrollo de apps para Android, o bien si quieres desbloquear el
           bootloader de tu dispositivo y actualizarlo con una nueva imagen del sistema.
         </p>
         <p>
-          Link de descarga - <a href="https://developer.android.com/studio/releases/platform-tools">SDK Platform
+          Link de descarga - <a class="link" href="https://developer.android.com/studio/releases/platform-tools">SDK
+            Platform
             Tools</a>
         </p>
-
       </li>
 
-    </ul>
+      <li>
+        <h3><strong>Motorola Drivers</strong></h3>
+        <p>Esto contiene los drivers USB para que la PC pueda reconocer su dispositivo y trabajar con él cuándo esté en
+          Bootloader o en Fastbootd.</p>
+        <p>
+          Link de descarga -
+          <a class="link"
+            href="https://motorola-global-es-latam.custhelp.com/app/answers/detail/a_id/89882">Motorola</a>
+        </p>
+      </li>
 
-    <ul>
       <li>
-        <p><strong>SDK Platform tools</strong>
-          Las <em>SDK Platform tools de Android</em> son un componente del SDK de Android. Incluyen herramientas que
-          interactúan con la plataforma de Android, como <a
-            href="https://developer.android.com/studio/command-line/adb"><code>adb</code></a>, <a
-            href="https://android.googlesource.com/platform/system/core/+/master/fastboot/#fastboot"><code>fastboot</code></a>
-          y <a href="https://developer.android.com/topic/performance/tracing/command-line"><code>systrace</code></a>.
-          Estas herramientas son necesarias para el desarrollo de apps para Android, o bien si quieres desbloquear el
-          bootloader de tu dispositivo y actualizarlo con una nueva imagen del sistema.
-          Link de descarga - <a href="https://developer.android.com/studio/releases/platform-tools">SDK Platform
-            Tools</a></p>
-      </li>
-      <li>
-        <p><strong>Motorola Drivers</strong>
-          Esto contiene los drivers USB para que la PC pueda reconocer su dispositivo y trabajar con él cuándo esté en
-          Bootloader o en Fastbootd.
-          Link de descarga - <a
-            href="https://motorola-global-es-latam.custhelp.com/app/answers/detail/a_id/89882">Motorola</a></p>
-      </li>
-      <li>
-        <p><strong>Firmware Oficial</strong>
+        <h3><strong>Firmware Oficial</strong></h3>
+        <p>
           Usted va a requerir descargar firmware oficial correspondiente a su canal de software para su dispositivo,
           <strong>NUNCA DESCARGUE UN FIRMWARE DE OTRO CANAL.</strong> Para saber cuál es el firmware correspondiente a
           su dispositivo, tiene que fijarse en el canal al cual pertenece en la app de configuraciones, dentro del
           apartado "Acerca del teléfono" en "Canal de Software".
-          Link de descarga - <a href="https://mirrors.lolinet.com/firmware/moto/astro/official/">Mirrors Lolinet</a>
+        </p>
+        <p>
+          Link de descarga -
+          <a href="https://mirrors.lolinet.com/firmware/moto/astro/official/" class="link">Mirrors Lolinet</a>
         </p>
       </li>
+
       <li>
-        <p><strong>Windows Terminal (opcional)</strong>
+        <h3><strong>Windows Terminal (opcional)</strong></h3>
+        <p>
           Si usted tiene windows 8, 8.1 o 10, bájese de la tienda de Windows esta terminal, ya que va a obtener una
           función que va a necesitar en esta guía. Una vez obtenida la tienda, configure la misma para que el perfil
           predeterminado sea el símbolo del sistema (CMD).
-          Link de descarga - <a href="https://www.microsoft.com/store/productId/9N0DX20HK701">Microsoft Store</a></p>
+        </p>
+        <p>
+          Link de descarga -
+          <a href="https://www.microsoft.com/store/productId/9N0DX20HK701" class="link">Microsoft Store</a>
+        </p>
       </li>
+
       <li>
-        <p><strong>Depuración USB (opcional)</strong>
+        <h3><strong>Depuración USB (opcional)</strong></h3>
+        <p>
           En esta guía usaremos la depuración USB para acceder al modo bootloader, no es necesario si ya están en el
           modo bootloader o si van a acceder a este de otra forma (con una combinación de botones), pero recomiendo de
           la forma que se va a mostrar en esta guía.
+        </p>
+        <p>
           Para habilitar la depuración USB, usted tiene que ir a la app de configuraciones, en el apartado de "Acerca
           del teléfono" en "Número de compilación" y tocar 7 veces. Luego, tiene que acceder a las "Opciones para
-          desarrolladores" en la app de configuraciones en el apartado "Sistema" y activar la "Depuración USB".</p>
+          desarrolladores" en la app de configuraciones en el apartado "Sistema" y activar la "Depuración USB".
+        </p>
       </li>
+
     </ul>
-    <h2 class="atx" id="procedimiento-para-flashear-el-firmware-stock">Procedimiento para flashear el Firmware Stock
-    </h2>
-    <ol>
+
+    <h2><strong>Procedimiento para flashear el Firmware Stock</strong></h2>
+
+    <ol class="list">
+
       <li>
-        <p>Descomprima la carpeta platform-tools que obtuvo desde la página <strong>Android Developers</strong>, luego
+        <p>
+          Descomprima la carpeta platform-tools que obtuvo desde la página <strong>Android Developers</strong>, luego
           descomprima la carpeta del firmware oficial obtenido de <strong>Mirrors Lolinet</strong> y mueva todos los
-          archivos de esta carpeta a la carpeta platform-tools.</p>
+          archivos de esta carpeta a la carpeta platform-tools.
+          <picture class="article__multimedia">
+            <img src="/assets/img/flashofficialfirmware_image1.png" alt="flashofficialfirmware_image1">
+          </picture>
+        </p>
       </li>
+
       <li>
-        <p>Si usted tiene la <em>Windows Terminal</em> obtenida desde la <strong>Microsoft Store</strong>, simplemente
+        <p>
+          Si usted tiene la <em>Windows Terminal</em> obtenida desde la <strong>Microsoft Store</strong>, simplemente
           abra el CMD dentro de la carpeta haciendo clic secundario en una parte vacía de la carpeta y seleccionando
-          la
-          opción "Abrir en Terminal".
+          la opción "Abrir en Terminal".
+        </p>
+        <div class="article__multimedia">
+          <video src="/assets/video/tutorial1.mp4" controls autoplay loop></video>
+        </div>
+        <p>
           Si usted no tiene la Windows Terminal, dentro de la carpeta en un espacio vacío haga shift+clic secundario y
           seleccione la opción "Abrir la ventana de PowerShell aquí", escriba <code>cmd</code> dentro de la ventana y
-          presione enter.</p>
+          presione enter.
+        </p>
+        <div class="article__multimedia">
+          <video src="/assets/video/tutorial2.mp4" controls autoplay loop></video>
+        </div>
       </li>
+
       <li>
-        <p>Conecte el dispositivo a la PC, escriba en el CMD <code>adb devices</code> y presione enter.
-          Si la consola no le devuelve</p>
-        <pre><code class="fenced-code-block language-CMD">List of devices  attached
-ZE222BZWFF       device</code></pre>
-        <p>entonces asegúrese de que tenga conectado bien el dispositivo, o haya activado la depuración USB.</p>
+        <p>
+          Conecte el dispositivo a la PC, escriba en el CMD <code class="codetext">adb devices</code> y presione enter.
+          Si la consola no le devuelve
+        </p>
+        <div class="codetext codecontent">
+          <pre><code>List of devices   attached</code></pre>
+          <pre><code>ZE222BZWFF        device</code></pre>
+        </div>
+        <p>
+          entonces asegúrese de que tenga conectado bien el dispositivo, o haya activado la depuración USB.
+        </p>
       </li>
+
       <li>
-        <p>Ahora reinicie al bootloader con <code>adb reboot bootloader</code>, notará que se reinició en el
-          bootloader,
-          ya que este tiene una pantalla con texto y el robot de Android acostado con una tapa abierta.</p>
+        <p>
+          Ahora reinicie al bootloader con <code class="codetext">adb reboot bootloader</code>, notará que se reinició en el
+          bootloader, ya que este tiene una pantalla con texto y el robot de Android acostado con una tapa abierta.
+        </p>
       </li>
+
       <li>
-        <p>Ahora ejecute los siguientes comandos (puede copiarlos todos y pegarlos en el CMD).</p>
-        <pre><code class="fenced-code-block language-CMD">fastboot flash partition gpt.bin
-fastboot flash bootloader bootloader.img
-fastboot flash vbmeta_a vbmeta.img
-fastboot flash vbmeta_b vbmeta.img
-fastboot flash radio_a radio.img
-fastboot flash radio_b radio.img
-fastboot flash bluetooth_a BTFM.bin
-fastboot flash bluetooth_b BTFM.bin
-fastboot flash dsp_a dspso.bin
-fastboot flash dsp_b dspso.bin
-fastboot flash logo_a logo.bin
-fastboot flash logo_b logo.bin
-fastboot flash boot_a boot.img
-fastboot flash boot_b boot.img
-fastboot flash dtbo_a dtbo.img
-fastboot flash dtbo_b dtbo.img
-fastboot flash recovery_a recovery.img
-fastboot flash recovery_b recovery.img
-fastboot flash super super.img_sparsechunk.0
-fastboot flash super super.img_sparsechunk.1
-fastboot flash super super.img_sparsechunk.2
-fastboot flash super super.img_sparsechunk.3
-fastboot flash super super.img_sparsechunk.4
-fastboot flash super super.img_sparsechunk.5
-fastboot flash super super.img_sparsechunk.6
-fastboot flash super super.img_sparsechunk.7
-fastboot flash super super.img_sparsechunk.8
-fastboot flash super super.img_sparsechunk.9
-fastboot flash super super.img_sparsechunk.10
-fastboot flash super super.img_sparsechunk.11
-fastboot flash super super.img_sparsechunk.12
-fastboot flash super super.img_sparsechunk.13
-fastboot flash super super.img_sparsechunk.14
-fastboot flash super super.img_sparsechunk.15
-fastboot erase carrier
-fastboot erase userdata
-fastboot erase metadata
-fastboot erase ddr
-fastboot reboot</code></pre>
-        <p>Y con eso ya estaría flasheando el firmware oficial y se reiniciará automáticamente para su uso.</p>
+        <p>
+          Ahora ejecute los siguientes comandos (puede copiarlos todos y pegarlos en el CMD).
+        </p>
+        <div class="codetext codecontent">
+          <pre><code>fastboot flash partition gpt.bin</code></pre>
+          <pre><code>fastboot flash bootloader bootloader.img</code></pre>
+          <pre><code>fastboot flash vbmeta_a vbmeta.img</code></pre>
+          <pre><code>fastboot flash vbmeta_b vbmeta.img</code></pre>
+          <pre><code>fastboot flash radio_a radio.img</code></pre>
+          <pre><code>fastboot flash radio_b radio.img</code></pre>
+          <pre><code>fastboot flash bluetooth_a BTFM.bin</code></pre>
+          <pre><code>fastboot flash bluetooth_b BTFM.bin</code></pre>
+          <pre><code>fastboot flash dsp_a dspso.bin</code></pre>
+          <pre><code>fastboot flash dsp_b dspso.bin</code></pre>
+          <pre><code>fastboot flash logo_a logo.bin</code></pre>
+          <pre><code>fastboot flash logo_b logo.bin</code></pre>
+          <pre><code>fastboot flash boot_a boot.img</code></pre>
+          <pre><code>fastboot flash boot_b boot.img</code></pre>
+          <pre><code>fastboot flash dtbo_a dtbo.img</code></pre>
+          <pre><code>fastboot flash dtbo_b dtbo.img</code></pre>
+          <pre><code>fastboot flash recovery_a recovery.img</code></pre>
+          <pre><code>fastboot flash recovery_b recovery.img</code></pre>
+          <pre><code>fastboot flash super super.img_sparsechunk.0</code></pre>
+          <pre><code>fastboot flash super super.img_sparsechunk.1</code></pre>
+          <pre><code>fastboot flash super super.img_sparsechunk.2</code></pre>
+          <pre><code>fastboot flash super super.img_sparsechunk.3</code></pre>
+          <pre><code>fastboot flash super super.img_sparsechunk.4</code></pre>
+          <pre><code>fastboot flash super super.img_sparsechunk.5</code></pre>
+          <pre><code>fastboot flash super super.img_sparsechunk.6</code></pre>
+          <pre><code>fastboot flash super super.img_sparsechunk.7</code></pre>
+          <pre><code>fastboot flash super super.img_sparsechunk.8</code></pre>
+          <pre><code>fastboot flash super super.img_sparsechunk.9</code></pre>
+          <pre><code>fastboot flash super super.img_sparsechunk.10</code></pre>
+          <pre><code>fastboot flash super super.img_sparsechunk.11</code></pre>
+          <pre><code>fastboot flash super super.img_sparsechunk.12</code></pre>
+          <pre><code>fastboot flash super super.img_sparsechunk.13</code></pre>
+          <pre><code>fastboot flash super super.img_sparsechunk.14</code></pre>
+          <pre><code>fastboot flash super super.img_sparsechunk.15</code></pre>
+          <pre><code>fastboot erase carrier</code></pre>
+          <pre><code>fastboot erase userdata</code></pre>
+          <pre><code>fastboot erase metadata</code></pre>
+          <pre><code>fastboot erase ddr</code></pre>
+          <pre><code>fastboot reboot</code></pre>
+        </div>
+        <p>
+          Y con eso ya estaría flasheando el firmware oficial y se reiniciará automáticamente para su uso.
+        </p>
       </li>
+
     </ol>
-    <h2 class="atx" id="extra">Extra</h2>
-    <ul>
-      <li>Si usted tiene el bootloader desbloqueado, no hace falta que siga el anterior procedimiento y simplemente
-        puede ejecutar el siguiente <a
-          href="https://forum.xda-developers.com/t/guide-one-fusion-xt2073-fastboot-flashing.4205723/">bat</a> dentro
-        de
-        la carpeta platform-tools y este realizará todo por si solo.</li>
-    </ul>
-    <p>Si tienen alguna duda, pasen por el grupo de Telegram de nuestro dispositivo "<a
-        href="https://t.me/MotorolaOneFusionES">Motorola One Fusion | Español™</a>".</p>
-    <p><em>Saludos, atte. Syoker</em></p>
+
+    <h2><strong>Extra</strong></h2>
+
+    <div class="article__text">
+      <p>
+        Si usted tiene el bootloader desbloqueado, no hace falta que siga el anterior procedimiento y simplemente
+        puede ejecutar el siguiente <a href="/assets/files/Astro - Stock.bat" class="link">bat</a> dentro de la carpeta platform-tools y este realizará todo por si solo.
+      </p>
+    </div>
+
+    <div class="article__text">
+      <p>
+        Si tienen alguna duda, pasen por el grupo de Telegram de nuestro dispositivo 
+        <a href="https://t.me/MotorolaOneFusionES" class="link">Motorola One Fusion | Español™</a>.
+      </p>
+      <p class="article__end"><em>Saludos, atte. Syoker</em></p>
+    </div>
 
   </article>
 

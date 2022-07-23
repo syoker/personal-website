@@ -43,6 +43,19 @@
         color: #FFFFFF;
     }
 
+    .link {
+        color: #CEF8FF;
+    }
+    
+    .link:hover {
+        text-decoration-color: #CEF8FF;
+    }
+
+    .codetext {
+        background-color: rgba(255, 255, 255, 0.05);
+        color: #FFFFFF;
+    }
+
     .text {
         color: #FFFFFF
     }
@@ -53,10 +66,12 @@
 
     .adecoration:hover {
         color: #CEF8FF;
+        text-decoration-color: #CEF8FF;
     }
 
-    .ainpage {
+    .inpage {
         color: #CEF8FF;
+        text-decoration-color: #CEF8FF;
     }
 
     .avatar {

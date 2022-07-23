@@ -11,22 +11,21 @@
 }
 
 .adecoration {
-    text-decoration: none;
-
+    text-decoration: underline;
     margin-left: 0.5rem;
 
+    text-decoration-color: transparent;
     color: #000000;
+
+    transition: all .3s;
 }
 
 .adecoration:hover {
-    text-decoration: underline;
-
+    text-decoration-color: #00BCD3;
     color: #00BCD3;
 }
 
-.ainpage {
-    text-decoration: underline;
+.inpage {
+    text-decoration-color: #00BCD3;
     color: #00BCD3;
-
-    margin-left: 0.5rem;
 }
