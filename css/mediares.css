@@ -17,6 +17,10 @@
         max-width: 80%;
     }
 
+    .list {
+        padding-left: 2.5rem;
+    }
+
     .not {
         width: auto;
     }
