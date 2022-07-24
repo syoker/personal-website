@@ -76,6 +76,7 @@
 
 .link {
     text-decoration: underline;
+    overflow-wrap: normal;
 
     text-decoration-color: transparent;
     color: #00BCD3;

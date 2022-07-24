@@ -47,6 +47,12 @@ p {
     color: #000000;
 }
 
+pre {
+    font-family: Quicksand;
+    font-weight: 400;
+    color: #000000;
+}
+
 ul {
     font-family: Quicksand;
     font-weight: 400;
