@@ -1,12 +1,8 @@
-@media (min-width: 640px) {
-    .forcards {
+@media (min-width: 800px) {
+
+    .containercards__rowcolumn {
         flex-direction: row;
-
-        padding-top: 4rem;
-    }
-
-    .introduction {
-        width: 40%;
+        align-items: start;
     }
 
     .max {
@@ -30,9 +26,19 @@
 
 @media (min-width: 1300px)
 {
-    .containercards__rowcolumn {
+    .forcards {
         flex-direction: row;
+
+        padding-top: 4rem;
+    }
+
+    .introduction {
+        width: 40%;
+    }
+
+    .containercards {
         align-items: start;
     }
+
 }
 
