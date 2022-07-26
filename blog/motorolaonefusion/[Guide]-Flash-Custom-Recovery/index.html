@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>[Guide] Unlock Bootloader • Syoker</title>
+    <title>[Guide] Flash Custom Recovery • Syoker</title>
     <meta name="description"
-        content="Guía para desbloquear el Bootloader en el dispositivo Motorola One Fusion | Astro" />
+        content="Guía para flashear un Custom Recovery en el dispositivo Motorola One Fusion | Astro" />
     <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon" />
 
     <!-- Import components -->
@@ -38,13 +38,14 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@Syoker_" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://syoker.github.io/blog/motorolaonefusion/[Guide]-Unlock-Bootloader/" />
-    <meta property="og:title" content="[Guide] Unlock Bootloader • Syoker" />
+    <meta property="og:url" content="https://syoker.github.io/blog/motorolaonefusion/[Guide]-Flash-Custom-Recovery/" />
+    <meta property="og:title" content="[Guide] Flash Custom Recovery • Syoker" />
     <meta property="og:description"
-        content="Guía para desbloquear el Bootloader en el dispositivo Motorola One Fusion | Astro" />
+        content="Guía para flashear un Custom Recovery en el dispositivo Motorola One Fusion | Astro" />
     <meta property="og:image"
-        content="https://raw.githubusercontent.com/Syoker/syoker.github.io/main/assets/img/banner_unlockbootloader.png" />
+        content="https://raw.githubusercontent.com/Syoker/syoker.github.io/main/assets/img/banner_flashcustomrecovery.png" />
 </head>
+
 
 <body class="body">
     <header class="header">
@@ -68,8 +69,7 @@
         <div class="article__introduction">
 
             <p>
-                En esta guía, les mostraré cómo desbloquear el bootloader de nuestro dispositivo. Este proceso va a
-                formatear su dispositivo, por lo que recomiendo realizar una copia de seguridad antes.
+                En esta guía, les mostraré cómo flashear un Custom Recovery para nuestro dispositivo.
             </p>
             <p>
                 Todo esto es bajo su responsabilidad, no me hago responsable de ningún daño causado a su dispositivo.
@@ -80,7 +80,6 @@
         <h2><strong>¿Qué necesito?</strong></h2>
 
         <ul class="list">
-
 
             <li>
                 <h3><strong>SDK Platform Tools</strong></h3>
@@ -123,8 +122,8 @@
                 <h3><strong>Windows Terminal (opcional)</strong></h3>
                 <p>
                     Si usted tiene windows 8, 8.1 o 10, bájese de la tienda de Windows esta terminal, ya que va a
-                    obtener una función que va a necesitar en esta guía. Una vez obtenida la tienda, configure la
-                    misma para que el perfil predeterminado sea el símbolo del sistema (CMD).
+                    obtener una función que va a necesitar en esta guía. Una vez obtenida la tienda, configure la misma
+                    para que el perfil predeterminado sea el símbolo del sistema (CMD).
                 </p>
                 <p>
                     Link de descarga -
@@ -148,22 +147,52 @@
             </li>
 
             <li>
-                <h3><strong>Activar "Desbloqueo de OEM"</strong></h3>
+                <h3><strong>Bootloader desbloqueado</strong></h3>
                 <p>
-                    Entre en "Configuraciones/Sistema/Opciones Avanzadas/Desarrollador" y ahí, busque la opción
-                    "Desbloqueo de OEM" para activarla.
+                    Es necesario haber desbloqueado el bootloader para poder instalar un Custom Recovery
+                    en nuestro dispositivo. Si aún no lo han desbloqueado, les dejaré el link a la guía
+                    que hice explicando paso a paso lo que tienen que hacer.
+                </p>
+                <p>
+                    Link de la Guía -
+                    <a href="https://syoker.github.io/blog/motorolaonefusion/[Guide]-Unlock-Bootloader/"
+                        class="link">[Guía] Unlock bootloader</a>
+                </p>
+            </li>
+
+            <li>
+                <h3><strong>Custom Recovery</strong></h3>
+                <p>
+                    A continuación les dejaré los links de los custom recoverys disponibles en nuestro dispositivo. Una
+                    vez descargado, coloque la imagen en la misma carpeta donde se ubican los archivos del
+                    Platform-Tools.
+                </p>
+                <p>
+                    Link de TWRP -
+                    <a href="https://github.com/sdm710-motorola/android_device_motorola_astro_twrp/releases"
+                        class="link">GitHub</a>
+                    (créditos a <a href="https://github.com/uotlaf" class="link">Uotlaf</a>) - Funcional en Android 12
+                    con la última versión.
+                </p>
+                <p>
+                    Link de OrangeFox -
+                    <a href="https://github.com/sdm710-motorola/android_device_motorola_astro_ofrp/releases"
+                        class="link">GitHub</a>
+                    (créditos a <a href="https://github.com/uotlaf" class="link">Uotlaf</a>) - No funcional en Android
+                    12.
                 </p>
             </li>
 
         </ul>
 
-        <h2><strong>Procedimiento para desbloquear el bootloader</strong></h2>
+        <h2><strong>Procedimiento para flashear el custom recovery</strong></h2>
 
         <ol class="list">
 
             <li>
                 <p>
                     Descomprima la carpeta platform-tools que obtuvo desde la página <strong>Android Developers</strong>
+                    y pegue en la misma carpeta el archivo .img del custom recovery descargado previamente.
                 </p>
             </li>
 
@@ -179,10 +208,8 @@
                 </div>
                 <p>
                     Si usted no tiene la <strong>Windows Terminal</strong>, dentro de la carpeta en un espacio vacío
-                    haga shift+clic secundario y
-                    seleccione la opción "Abrir la ventana de PowerShell aquí", escriba <code
-                        class="codetext">cmd</code> dentro
-                    de la ventana y presione enter.
+                    haga shift+clic secundario y seleccione la opción "Abrir la ventana de PowerShell aquí", escriba
+                    <code class="codetext">cmd</code> dentro de la ventana y presione enter.
                 </p>
                 <div class="article__multimedia">
                     <video src="/assets/video/tutorial2.mp4" autoplay loop muted></video>
@@ -218,103 +245,33 @@
                 </p>
             </li>
 
-            <p>
-                Los siguientes pasos estarán en
-                <a href="https://motorola-global-portal.custhelp.com/app/standalone%2Fbootloader%2Funlock-your-device-b"
-                    class="link">esta</a> página de Motorola, pero yo lo explicare de todas formas ya que están
-                en inglés.
-            </p>
-
             <li>
                 <p>
-                    Dentro de la terminal previamente abierta, escriban
-                    <code class="codetext">fastboot oem get_unlock_data</code>. Este comando les soltará en la
-                    terminal el ID de su dispositivo, el cual necesitarán para obtener un código de desbloqueo.
-                </p>
-                <p>
-                    El ID se mostrará de la siguiente manera en Windows/Linux:
+                    Una vez dentro del bootloader, flashee el recovery en ambas particiones del dispositivo
+                    con:
                 </p>
                 <div class="codetext codecontent">
-                    <p><code>(bootloader) 0A40040192024205#4C4D3556313230</code></p>
-                    <p><code>(bootloader) 30373731363031303332323239#BD00</code></p>
-                    <p><code>(bootloader) 8A672BA4746C2CE02328A2AC0C39F95</code></p>
-                    <p><code>(bootloader) 1A3E5#1F53280002000000000000000</code></p>
-                    <p><code>(bootloader) 0000000</code></p>
+                    <p><code>fastboot flash recovery_a "customrecovery.img"</code></p>
+                    <p><code>fastboot flash recovery_b "customrecovery.img"</code></p>
                 </div>
                 <p>
-                    Y de la siguiente manera en MAC:
-                </p>
-                <div class="codetext codecontent">
-                    <p><code>INFO0A40040192024205#4C4D3556313230</code></p>
-                    <p><code>INFO30373731363031303332323239#BD00</code></p>
-                    <p><code>INFO8A672BA4746C2CE02328A2AC0C39F95</code></p>
-                    <p><code>INFO1A3E5#1F53280002000000000000000</code></p>
-                    <p><code>INFO0000000</code></p>
-                </div>
-            </li>
-
-            <li>
-                <p>
-                    Ahora deberá generar su código de desbloqueo a partir de lo que le devolvió el CMD, para hacerlo,
-                    tendrás que pegar las 5 líneas de salida en una cadena continua sin "bootloader o info" ni espacios
-                    en blanco. El código debería quedar de la siguiente manera:
-                </p>
-                <div class="codetext codecontent">
-                    <p>
-                        <code>
-                            0A40040192024205#4C4D355631323030373731363031303332323239#BD008A672BA4746C2CE02328A2AC0C39F951A3E5#1F532800020000000000000000000000
-                        </code>
-                    </p>
-                </div>
-            </li>
-
-            <li>
-                <p>
-                    Ahora, deberá pegar el código que hizo en el campo de texto de la
-                    <a href="https://motorola-global-portal.custhelp.com/app/standalone%2Fbootloader%2Funlock-your-device-b"
-                        class="link">página de Motorola</a> que dice "MAKE SURE YOUR DEVICE IS UNLOCKABLE".
-                </p>
-                <p>
-                    Luego, haga click en el botón que dice "Can my device be unlocked?".
-                </p>
-                <p>
-                    Ahora debería de llegarle en los próximos minutos un código por correo por parte de Motorola.
+                    Donde "customrecovery.img" es el nombre del archivo del recovery, va sin las comillas
+                    y con el ".img".
                 </p>
             </li>
 
             <li>
-                <p>
-                    Una vez que le llego el correo con el código, escriba en la terminal
-                    <code class="codetext">fastboot oem unlock "código"</code>, donde "código"
-                    es el código que le enviaron por correo, y va sin las comillas.
-                </p>
+                Ahora reinicie al recovery con <code class="codetext">fastboot reboot recovery</code> y
+                listo, ya estará en el recovery.
             </li>
 
-            <li>
-                <p>
-                    Ahora en el teléfono le saldrá una pantalla que le pedirá una confirmación de si realmente quiere
-                    desbloquear el bootloader, en esta pantalla se tendrá que navegar con las teclas de volumen y podrá
-                    confirmar con el botón de power. Confirme y espere unos 20 segundos aproximadamente hasta que la
-                    terminal muestre un <code class="codetext">OKAY</code>.
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    Ahora simplemente reinicie al sistema con <code class="codetext">fastboot reboot</code>
-                    y listo.
-                </p>
-                <p>
-                    Si por alguna razón usted quiere volver a bloquear el bootloader del dispositivo,
-                    simplemente escriba <code class="codetext">fastboot oem lock</code>. Le saldrá la misma
-                    pantalla de confirmación, le da a confirmar y espera a que la terminal muestre un
-                    <code class="codetext">OKAY</code>.
-                </p>
-                <p>
-                    Aclaro desde ya que el volver a bloquear el dispositivo tiene riesgo de brickear el celular,
-                    por lo que no lo recomiendo.
-                </p>
-            </li>
+            Aprovechando que ya tiene el recovery, haga copia de seguridad de las carpetas EFS, Modem y Persist y
+            guardela en una tarjeta micro SD o en la computadora, ya que le servirá si por algún motivo pierda el
+            IMEI.
+            <picture class="article__multimedia">
+                <img src="/blog/motorolaonefusion/[Guide]-Flash-Custom-Recovery/assets/img/backupofimei.png"
+                    alt="Backup of IMEI">
+            </picture>
 
         </ol>
 
