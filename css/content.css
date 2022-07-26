@@ -59,6 +59,15 @@
     padding: 1rem 0rem 1rem 1rem;
 }
 
+.list2 {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 0.2rem;
+
+    padding-right: 1rem;
+}
+
 .codetext {
     background-color: rgba(0, 0, 0, 0.05);
     border-radius: 0.2rem;
@@ -84,6 +93,11 @@
     transition: all .3s;
 }
 
+.epigraph {
+    font-size: x-small;
+    margin-bottom: 0.5rem;
+}
+
 .link:hover {
     text-decoration-color: #00BCD3;
 }
@@ -95,10 +109,14 @@
     gap: 0.2rem;
 }
 
+.gapplus {
+    gap: 0.5rem
+}
+
 .article__end {
     text-align: end;
 }
 
 .article__multimedia {
-    margin: 1rem 0rem 1rem 0rem;
+    margin-top: 1rem;
 }
