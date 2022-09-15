@@ -1,4 +1,2 @@
 # Syoker's webpage
-
-## Link
-- https://syoker.github.io
+This is my personal website where you will find my projects and guides.
