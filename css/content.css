@@ -3,9 +3,10 @@
     flex-direction: column;
 
     padding: 2rem 0rem 2rem 0rem;
-    
+
     gap: 1rem;
 }
+
 
 .introduction {
     display: flex;
@@ -37,12 +38,7 @@
     padding: 2rem 0rem 2rem 0rem;
 }
 
-.article__introduction {
-    display: flex;
-    flex-direction: column;
-
-    gap: 0.2rem;
-
+.__articlePadding {
     padding: 1rem 0rem 1rem 0rem;
 }
 

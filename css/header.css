@@ -10,7 +10,7 @@
     height: 3rem;
 }
 
-.adecoration {
+.tab {
     text-decoration: underline;
     margin-left: 0.5rem;
 
@@ -20,12 +20,12 @@
     transition: all .3s;
 }
 
-.adecoration:hover {
+.tab:hover {
     text-decoration-color: #00BCD3;
     color: #00BCD3;
 }
 
-.inpage {
+.__selected {
     text-decoration-color: #00BCD3;
     color: #00BCD3;
 }

@@ -14,16 +14,16 @@
         filter: invert();
     }
 
-    .adecoration {
+    .tab {
         color: #FFFFFF;
     }
 
-    .adecoration:hover {
+    .tab:hover {
         color: #CEF8FF;
         text-decoration-color: #CEF8FF;
     }
 
-    .inpage {
+    .__selected {
         color: #CEF8FF;
         text-decoration-color: #CEF8FF;
     }
@@ -45,15 +45,6 @@
     
     .link:hover {
         text-decoration-color: #CEF8FF;
-    }
-
-    /* for cards (component) */
-    .card {
-        border: 2px solid #4D4543;
-    }
-
-    .card:hover {
-        border: 2px solid #CDCCC5;
     }
 
     /* for footer */

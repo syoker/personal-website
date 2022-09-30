@@ -48,3 +48,13 @@
 
     margin: 0rem 1rem 0.5rem 0rem;
 }
+
+@media (prefers-color-scheme: dark) {
+    .card {
+        border: 2px solid #4D4543;
+    }
+
+    .card:hover {
+        border: 2px solid #CDCCC5;
+    }
+}
