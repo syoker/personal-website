@@ -1,67 +1,17 @@
 @media (prefers-color-scheme: dark) {
+    /* for text style default */
+    h1, h2, h3, h4, h5, h6, p, pre, ul, ol {
+        color: #FFFFFF;
+    }
+
+    /* for body */
     .body {
         background-color: #191919;
     }
 
-    .bodyhome {
-        background-color: #191919;
-    }
-
-    h1 {
-        color: #FFFFFF;
-    }
-
-    h2 {
-        color: #FFFFFF;
-    }
-
-    h3 {
-        color: #FFFFFF;
-    }
-
-    h4 {
-        color: #FFFFFF;
-    }
-
-    h5 {
-        color: #FFFFFF;
-    }
-
-    h6 {
-        color: #FFFFFF;
-    }
-
-    p {
-        color: #FFFFFF;
-    }
-
-    pre {
-        color: #FFFFFF;
-    }
-
-    ul {
-        color: #FFFFFF;
-    }
-
-    ol {
-        color: #FFFFFF;
-    }
-
-    .link {
-        color: #CEF8FF;
-    }
-    
-    .link:hover {
-        text-decoration-color: #CEF8FF;
-    }
-
-    .codetext {
-        background-color: rgba(255, 255, 255, 0.05);
-        color: #FFFFFF;
-    }
-
-    .text {
-        color: #FFFFFF
+    /* for header */
+    .avatar {
+        filter: invert();
     }
 
     .adecoration {
@@ -78,19 +28,36 @@
         text-decoration-color: #CEF8FF;
     }
 
-    .avatar {
-        filter: invert();
+    /* for home */
+    .content__hidelink {
+        color: #FFFFFF;
     }
 
-    .socialsvg {
-        filter: invert();
+    /* for article */
+    .codetext {
+        background-color: rgba(255, 255, 255, 0.05);
+        color: #FFFFFF;
     }
 
+    .link {
+        color: #CEF8FF;
+    }
+    
+    .link:hover {
+        text-decoration-color: #CEF8FF;
+    }
+
+    /* for cards (component) */
     .card {
         border: 2px solid #4D4543;
     }
 
     .card:hover {
         border: 2px solid #CDCCC5;
+    }
+
+    /* for footer */
+    .socialsvg {
+        filter: invert();
     }
 }
