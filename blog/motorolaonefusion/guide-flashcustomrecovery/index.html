@@ -2,291 +2,40 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>[Guide] Flash Custom Recovery • Syoker</title>
-    <meta name="description"
-        content="Guía para flashear un Custom Recovery en el dispositivo Motorola One Fusion | Astro" />
-    <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon" />
+  <title>Under maintenance</title>
+  <meta name="description" content="Under maintenance" />
+  <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon" />
 
-    <!-- Import components -->
-    <link rel="stylesheet" href="/css/components/card.css">
+  <!-- Import styles -->
+  <link rel="stylesheet" href="/css/text.css">
+  <link rel="stylesheet" href="/css/body.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/content.css">
+  <link rel="stylesheet" href="/css/footer.css">
 
-    <!-- Import styles -->
-    <link rel="stylesheet" href="/css/text.css">
-    <link rel="stylesheet" href="/css/body.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/content.css">
-    <link rel="stylesheet" href="/css/footer.css">
+  <!-- Import theme -->
+  <link rel="stylesheet" href="/css/theme.css">
 
-    <!-- Import theme -->
-    <link rel="stylesheet" href="/css/theme.css">
+  <!-- Import reset -->
+  <link rel="stylesheet" href="/css/reset.css">
 
-    <!-- Import reset -->
-    <link rel="stylesheet" href="/css/reset.css">
+  <!-- Import media responsive -->
+  <link rel="stylesheet" href="/css/mediares.css">
 
-    <!-- Import media responsive -->
-    <link rel="stylesheet" href="/css/mediares.css">
-
-    <!-- Import fonts -->
-    <link rel="stylesheet" href="/assets/fonts/quicksand.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com">
-
-    <!-- For social media -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Syoker_" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://syoker.github.io/blog/motorolaonefusion/[Guide]-Flash-Custom-Recovery/" />
-    <meta property="og:title" content="[Guide] Flash Custom Recovery • Syoker" />
-    <meta property="og:description"
-        content="Guía para flashear un Custom Recovery en el dispositivo Motorola One Fusion | Astro" />
-    <meta property="og:image"
-        content="https://raw.githubusercontent.com/Syoker/syoker.github.io/main/blog/motorolaonefusion/assets/img/banner_flashcustomrecovery.png" />
+  <!-- Import fonts -->
+  <link rel="stylesheet" href="/assets/fonts/quicksand.css">
 </head>
 
+<body class="body __404">
 
-<body class="body">
-    <header class="header">
-
-        <a href="/">
-            <img src="/assets/img/avatar.svg" alt="Avatar" class="avatar">
-        </a>
-
-        <div class="space"></div>
-        <nav class="header__links">
-            <a href="/blog/motorolaonefusion/" class="adecoration inpage">Blog</a>
-            <a href="/project/" class="adecoration">Proyectos</a>
-        </nav>
-
-    </header>
-
-    <article class="article">
-
-        <h1><strong>[Guía] Flash Custom Recovery</strong></h1>
-
-        <div class="article__introduction">
-
-            <p>
-                En esta guía, les mostraré cómo flashear un Custom Recovery para nuestro dispositivo.
-            </p>
-            <p>
-                Todo esto es bajo su responsabilidad, no me hago responsable de ningún daño causado a su dispositivo.
-            </p>
-
-        </div>
-
-        <h2><strong>¿Qué necesito?</strong></h2>
-
-        <ul class="list">
-
-            <li>
-                <h3><strong>SDK Platform Tools</strong></h3>
-                <p>
-                    Las <em>SDK Platform tools de Android</em>
-                    son un componente del SDK de Android. Incluyen herramientas que interactúan con la plataforma de
-                    Android, como
-                    <a href="https://developer.android.com/studio/command-line/adb"><code
-                            class="codetext">adb</code></a>,
-                    <a href="https://android.googlesource.com/platform/system/core/+/master/fastboot/#fastboot"><code
-                            class="codetext">fastboot</code></a>
-                    y
-                    <a href="https://developer.android.com/topic/performance/tracing/command-line"><code
-                            class="codetext">systrace</code></a>.
-                    Estas herramientas son necesarias para el desarrollo de apps para Android, o bien si quieres
-                    desbloquear el
-                    bootloader de tu dispositivo y actualizarlo con una nueva imagen del sistema.
-                </p>
-                <p>
-                    Link de descarga - <a class="link"
-                        href="https://developer.android.com/studio/releases/platform-tools">SDK
-                        Platform Tools</a>
-                </p>
-            </li>
-
-            <li>
-                <h3><strong>Motorola Drivers</strong></h3>
-                <p>
-                    Esto contiene los drivers USB para que la PC pueda reconocer su dispositivo y trabajar con él cuándo
-                    esté en Bootloader o en Fastbootd.
-                </p>
-                <p>
-                    Link de descarga -
-                    <a class="link"
-                        href="https://motorola-global-es-latam.custhelp.com/app/answers/detail/a_id/89882">Motorola</a>
-                </p>
-            </li>
-
-            <li>
-                <h3><strong>Windows Terminal (opcional)</strong></h3>
-                <p>
-                    Si usted tiene windows 8, 8.1 o 10, bájese de la tienda de Windows esta terminal, ya que va a
-                    obtener una función que va a necesitar en esta guía. Una vez obtenida la tienda, configure la misma
-                    para que el perfil predeterminado sea el símbolo del sistema (CMD).
-                </p>
-                <p>
-                    Link de descarga -
-                    <a href="https://www.microsoft.com/store/productId/9N0DX20HK701" class="link">Microsoft Store</a>
-                </p>
-            </li>
-
-            <li>
-                <h3><strong>Depuración USB (opcional)</strong></h3>
-                <p>
-                    En esta guía usaremos la depuración USB para acceder al modo bootloader, no es necesario si ya están
-                    en el modo bootloader o si van a acceder a este de otra forma (con una combinación de botones), pero
-                    recomiendo de la forma que se va a mostrar en esta guía.
-                </p>
-                <p>
-                    Para habilitar la depuración USB, usted tiene que ir a la app de configuraciones, en el apartado de
-                    "Acerca del teléfono" en "Número de compilación" y tocar 7 veces. Luego, tiene que acceder a las
-                    "Opciones para desarrolladores" en la app de configuraciones en el apartado "Sistema" y activar la
-                    "Depuración USB".
-                </p>
-            </li>
-
-            <li>
-                <h3><strong>Bootloader desbloqueado</strong></h3>
-                <p>
-                    Es necesario haber desbloqueado el bootloader para poder instalar un Custom Recovery
-                    en nuestro dispositivo. Si aún no lo han desbloqueado, les dejaré el link a la guía
-                    que hice explicando paso a paso lo que tienen que hacer.
-                </p>
-                <p>
-                    Link de la guía -
-                    <a href="/blog/motorolaonefusion/guide-unlockbootloader/" class="link">[Guía] Unlock bootloader</a>
-                </p>
-            </li>
-
-            <li>
-                <h3><strong>Custom Recovery</strong></h3>
-                <p>
-                    A continuación les dejaré los links de los custom recoverys disponibles en nuestro dispositivo. Una
-                    vez descargado, coloque la imagen en la misma carpeta donde se ubican los archivos del
-                    Platform-Tools.
-                </p>
-                <p>
-                    Link de TWRP -
-                    <a href="https://github.com/sdm710-motorola/android_device_motorola_astro_twrp/releases"
-                        class="link">GitHub</a>
-                    (créditos a <a href="https://github.com/uotlaf" class="link">Uotlaf</a>) - Funcional en Android 12
-                    con la última versión.
-                </p>
-                <p>
-                    Link de OrangeFox -
-                    <a href="https://github.com/sdm710-motorola/android_device_motorola_astro_ofrp/releases"
-                        class="link">GitHub</a>
-                    (créditos a <a href="https://github.com/uotlaf" class="link">Uotlaf</a>) - No funcional en Android
-                    12.
-                </p>
-            </li>
-
-        </ul>
-
-        <h2><strong>Procedimiento para flashear el Custom Recovery</strong></h2>
-
-        <ol class="list">
-
-            <li>
-                <p>
-                    Descomprima la carpeta platform-tools que obtuvo desde la página <strong>Android Developers</strong>
-                    y pegue en la misma carpeta el archivo .img del custom recovery descargado previamente.
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    Si usted tiene la <strong>Windows Terminal</strong> obtenida desde la
-                    <strong>Microsoft Store</strong>,
-                    simplemente abra el CMD dentro de la carpeta haciendo clic secundario en una parte vacía de la
-                    carpeta y seleccionando la opción "Abrir en Terminal".
-                </p>
-                <div class="article__multimedia">
-                    <video src="/blog/motorolaonefusion/guide-flashcustomrecovery/assets/video/tutorial1.mp4" autoplay
-                        loop muted></video>
-                    <p class="epigraph">Representación de los pasos mencionados anteriormente.</p>
-                </div>
-                <p>
-                    Si usted no tiene la <strong>Windows Terminal</strong>, dentro de la carpeta en un espacio vacío
-                    haga shift+clic secundario y seleccione la opción "Abrir la ventana de PowerShell aquí", escriba
-                    <code class="codetext">cmd</code> dentro de la ventana y presione enter.
-                </p>
-                <div class="article__multimedia">
-                    <video src="/blog/motorolaonefusion/guide-flashcustomrecovery/assets/video/tutorial2.mp4" autoplay
-                        loop muted></video>
-                    <p class="epigraph">Representación de los pasos mencionados anteriormente.</p>
-                </div>
-            </li>
-
-            <li>
-                <p>
-                    Conecte el dispositivo a la PC, escriba en el CMD <code class="codetext">adb devices</code> (el
-                    teléfono tiene que estar encendido para que este comando funcione, en el caso de que ya esté en
-                    bootloader, escriba <code class="codetext">fastboot devices</code>)
-                    y presione enter. Si la consola no le devuelve
-                </p>
-                <div class="codetext codecontent">
-                    <pre><code>List of devices   attached</code></pre>
-                    <pre><code>ZE222BZWFF        device</code></pre>
-                </div>
-                <p>
-                    entonces asegúrese de que tenga conectado bien el dispositivo, o haya activado la depuración USB.
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    Ahora reinicie al bootloader (si es que no está en él) con
-                    <code class="codetext">adb reboot bootloader</code> o con la combinación de
-                    teclas "volumen - y power" (tiene que mantener presionado estos botones
-                    hasta que aparezca la pantalla del bootloader).
-                </p>
-                <p>
-                    De cualquier forma, esto accederá al bootloader, el mismo tiene una pantalla con
-                    texto y el robot de Android acostado con una tapa abierta.
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    Una vez dentro del bootloader, flashee el recovery en ambas particiones del dispositivo
-                    con:
-                </p>
-                <div class="codetext codecontent">
-                    <p><code>fastboot flash recovery_a "customrecovery.img"</code></p>
-                    <p><code>fastboot flash recovery_b "customrecovery.img"</code></p>
-                </div>
-                <p>
-                    Donde "customrecovery.img" es el nombre del archivo del recovery, va sin las comillas
-                    y con el ".img".
-                </p>
-            </li>
-
-            <li>
-                Ahora reinicie al recovery con <code class="codetext">fastboot reboot recovery</code> y
-                listo, ya estará en el recovery.
-            </li>
-
-            Aprovechando que ya tiene el recovery, haga copia de seguridad de las carpetas EFS, Modem y Persist y
-            guardela en una tarjeta micro SD o en la computadora, ya que le servirá si por algún motivo pierda el
-            IMEI.
-            <picture class="article__multimedia">
-                <img src="/blog/motorolaonefusion/guide-flashcustomrecovery/assets/img/image1.png" alt="Backup of IMEI">
-                <p class="epigraph">Representación de los pasos mencionados anteriormente.</p>
-            </picture>
-
-        </ol>
-
-        <div class="article__text">
-            <p>
-                Si tienen alguna duda, pasen por el grupo de Telegram de nuestro dispositivo
-                <a href="https://t.me/MotorolaOneFusionES" class="link">Motorola One Fusion | Español™</a>.
-            </p>
-            <p class="article__end"><em>Saludos, atte. Syoker</em></p>
-        </div>
-
-    </article>
+  <main class="content __404">
+    <h1 class="title__maintenance"><strong>Under maintenance</strong></h1>
+    <h1 class="text__maintenance">Please, wait</h1>
+  </main>
 
 </body>
 
