@@ -1,5 +1,4 @@
 @media (min-width: 800px) {
-
     .containercards__rowcolumn {
         flex-direction: row;
         align-items: start;
@@ -24,8 +23,7 @@
     }
 }
 
-@media (min-width: 1300px)
-{
+@media (min-width: 1300px){
     .forcards {
         flex-direction: row;
 
