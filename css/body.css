@@ -13,3 +13,10 @@
 .home {
     justify-content: space-between;
 }
+
+/* for 404 not found */
+
+.__404 {
+    align-items: center;
+    justify-content: center;
+}
