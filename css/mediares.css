@@ -21,6 +21,10 @@
         flex-direction: column;
         align-items: center;
     }
+
+    .title__maintenance {
+        font-size: 4rem;
+    }
 }
 
 @media (min-width: 1300px){
