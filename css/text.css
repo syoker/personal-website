@@ -1,36 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400&display=swap');
 
-h1 {
-    font-family: Quicksand;
-    font-weight: 400;
-    color: #000000;
-}
 
-h2 {
-    font-family: Quicksand;
-    font-weight: 400;
-    color: #000000;
-}
-
-h3 {
-    font-family: Quicksand;
-    font-weight: 400;
-    color: #000000;
-}
-
-h4 {
-    font-family: Quicksand;
-    font-weight: 400;
-    color: #000000;
-}
-
-h5 {
-    font-family: Quicksand;
-    font-weight: 400;
-    color: #000000;
-}
-
-h6 {
+/* for text style default */
+h1, h2, h3, h4, h5, h6, p, pre, ul, ol {
     font-family: Quicksand;
     font-weight: 400;
     color: #000000;
@@ -41,43 +13,23 @@ a {
     font-weight: 500;
 }
 
-p {
-    font-family: Quicksand;
-    font-weight: 400;
-    color: #000000;
-}
-
-pre {
-    font-family: Quicksand;
-    font-weight: 400;
-    color: #000000;
-}
-
-ul {
-    font-family: Quicksand;
-    font-weight: 400;
-    color: #000000;
-}
-
-ol {
-    font-family: Quicksand;
-    font-weight: 400;
-    color: #000000;
-}
-
 code {
     font-family: 'Source Code Pro', monospace;
     font-size: 0.9rem;
 }
 
-.text {
+/* for home */
+.content__align {
+    text-align: center;
+}
+
+.content__hidelink {
     font-family: Quicksand;
     font-weight: 400;
     color: #000000;
 }
 
 /* for 404 not found */
-
 .title__404 {
     font-size: 10rem;
 }
