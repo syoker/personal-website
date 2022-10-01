@@ -22,6 +22,10 @@
         align-items: center;
     }
 
+    .__articlePadding {
+        width: 100%!important;
+    }
+
     .title__maintenance {
         font-size: 4rem;
     }
@@ -32,6 +36,10 @@
         flex-direction: row;
 
         padding-top: 4rem;
+    }
+
+    .__articlePadding {
+        width: 100%!important;
     }
 
     .introduction {
