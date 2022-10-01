@@ -1,0 +1,24 @@
+/* sourcecodepro-extralight */
+@font-face {
+	font-family: SourceCodePro;
+	font-style: normal;
+	font-weight: 200;
+	src: local("SourceCodePro ExtraLight"), local("SourceCodePro-ExtraLight"), url(sourcecodepro-extralight.woff2) format("woff2"), url(sourcecodepro-extralight.woff) format("woff");
+	font-display: swap;
+}
+/* sourcecodepro-light */
+@font-face {
+	font-family: SourceCodePro;
+	font-style: normal;
+	font-weight: 300;
+	src: local("SourceCodePro Light"), local("SourceCodePro-Light"), url(sourcecodepro-light.woff2) format("woff2"), url(sourcecodepro-light.woff) format("woff");
+	font-display: swap;
+}
+/* sourcecodepro-regular */
+@font-face {
+	font-family: SourceCodePro;
+	font-style: normal;
+	font-weight: 400;
+	src: local("SourceCodePro Regular"), local("SourceCodePro-Regular"), url(sourcecodepro-regular.woff2) format("woff2"), url(sourcecodepro-regular.woff) format("woff");
+	font-display: swap;
+}
