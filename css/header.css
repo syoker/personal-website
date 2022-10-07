@@ -6,6 +6,11 @@
     justify-content: space-between;
 }
 
+.header nav {
+    display: flex;
+    flex-direction: row;
+}
+
 .avatar {
     height: 3rem;
 }
