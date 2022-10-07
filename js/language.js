@@ -1,7 +1,11 @@
 var userLang = navigator.language || navigator.userLanguage;
 
-if (userLang = "es") {
-    location.href="./es/";
-} else {
-    location.href="./en/";
+alert (userLang);
+
+switch (userLang) {
+    case 'es':
+        location.href="./es/";
+        break;
+    default:
+        location.href="./en/";
 }
