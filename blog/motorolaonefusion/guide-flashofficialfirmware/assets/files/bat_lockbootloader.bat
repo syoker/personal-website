@@ -37,3 +37,4 @@ fastboot erase userdata
 fastboot erase metadata
 fastboot erase ddr
 fastboot reboot
+pause
