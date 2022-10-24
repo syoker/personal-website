@@ -13,6 +13,8 @@
 
 .avatar {
     height: 3rem;
+
+    transition: all .3s;
 }
 
 .tab {

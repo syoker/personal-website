@@ -3,6 +3,8 @@ h1, h2, h3, h4, h5, h6, p, pre, ul, ol {
     font-family: Quicksand;
     font-weight: 400;
     color: #000000;
+
+    transition: color .3s;
 }
 
 a {
@@ -24,6 +26,8 @@ code {
     font-family: Quicksand;
     font-weight: 400;
     color: #000000;
+
+    transition: color .3s;
 }
 
 /* for 404 not found */

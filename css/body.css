@@ -8,6 +8,8 @@
     max-width: 80rem;
 
     background-color: #FFFFFF;
+
+    transition: background-color .3s;
 }
 
 /* for home */
