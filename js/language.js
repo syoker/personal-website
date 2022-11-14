@@ -4,4 +4,4 @@ const matches = navigator.language.match(/^([a-z]{2})(?:-[a-zA-Z]{2})?(?:-[0-9]{
 const language = matches ? matches[1] : "en";
 
 if (currentLanguage != language)
-    location.href = acceptedLanguages.includes(language) ? `./${language}/` : `${currentPage}/`;
+    location.href = acceptedLanguages.includes(language) ? `/${language}${currentPage}/` : `${currentPage}/`;
