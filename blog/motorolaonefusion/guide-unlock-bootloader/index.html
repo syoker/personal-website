@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>[Guide] Unlock Bootloader • Syoker</title>
-    <meta name="description"
-        content="Guía para desbloquear el Bootloader en el dispositivo Motorola One Fusion | Astro" />
+    <meta name="description" content="Guide to Unlock Bootloader on Motorola One Fusion | Astro" />
     <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon" />
 
     <!-- Import components -->
@@ -49,8 +48,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://syoker.github.io/blog/motorolaonefusion/guide-unlock-bootloader/" />
     <meta property="og:title" content="[Guide] Unlock Bootloader • Syoker" />
-    <meta property="og:description"
-        content="Guía para desbloquear el Bootloader en el dispositivo Motorola One Fusion | Astro" />
+    <meta property="og:description" content="Guide to Unlock Bootloader on Motorola One Fusion | Astro" />
     <meta property="og:image"
         content="https://raw.githubusercontent.com/Syoker/syoker.github.io/main/assets/img/banner_unlockbootloader.png" />
 </head>
@@ -72,21 +70,21 @@
 
     <article class="article">
 
-        <h1><strong>[Guía] Unlock bootloader</strong></h1>
+        <h1><strong>[Guide] Unlock bootloader</strong></h1>
 
         <div class="introduction __articlePadding">
 
             <p>
-                En esta guía, les mostraré cómo desbloquear el bootloader de nuestro dispositivo. Este proceso va a
-                formatear su dispositivo, por lo que recomiendo realizar una copia de seguridad antes.
+                In this guide, I will show you how to unlock the bootloader of our device. This process will format your
+                device, so I recommend that you make a backup beforehand.
             </p>
             <p>
-                Todo esto es bajo su responsabilidad, no me hago responsable de ningún daño causado a su dispositivo.
+                All this is at your own risk, I am not responsible for any damage caused to your device.
             </p>
 
         </div>
 
-        <h2><strong>¿Qué necesito?</strong></h2>
+        <h2><strong>¿What I need?</strong></h2>
 
         <ul class="list">
 
@@ -94,22 +92,19 @@
             <li>
                 <h3><strong>SDK Platform Tools</strong></h3>
                 <p>
-                    Las <em>SDK Platform tools de Android</em>
-                    son un componente del SDK de Android. Incluyen herramientas que interactúan con la plataforma de
-                    Android, como
+                    The <em>Android SDK Platform tools</em> are a component of the Android SDK. They include tools that
+                    interact with the Android platform, such as
                     <a href="https://developer.android.com/studio/command-line/adb"><code
                             class="codetext">adb</code></a>,
                     <a href="https://android.googlesource.com/platform/system/core/+/master/fastboot/#fastboot"><code
-                            class="codetext">fastboot</code></a>
-                    y
+                            class="codetext">fastboot</code></a> and
                     <a href="https://developer.android.com/topic/performance/tracing/command-line"><code
                             class="codetext">systrace</code></a>.
-                    Estas herramientas son necesarias para el desarrollo de apps para Android, o bien si quieres
-                    desbloquear el
-                    bootloader de tu dispositivo y actualizarlo con una nueva imagen del sistema.
+                    These tools are required for Android app development, or if you want to unlock the bootloader of
+                    your device and update it with a new system image.
                 </p>
                 <p>
-                    Link de descarga - <a class="link"
+                    Download link - <a class="link"
                         href="https://developer.android.com/studio/releases/platform-tools">SDK
                         Platform Tools</a>
                 </p>
@@ -117,79 +112,75 @@
 
             <li>
                 <h3><strong>Motorola Drivers</strong></h3>
+                <p>This contains the USB drivers so that the PC can recognize your device and work with it when it is in
+                    Bootloader or Fastbootd.</p>
                 <p>
-                    Esto contiene los drivers USB para que la PC pueda reconocer su dispositivo y trabajar con él cuándo
-                    esté en Bootloader o en Fastbootd.
-                </p>
-                <p>
-                    Link de descarga -
+                    Download link -
                     <a class="link"
                         href="https://motorola-global-es-latam.custhelp.com/app/answers/detail/a_id/89882">Motorola</a>
                 </p>
             </li>
 
             <li>
-                <h3><strong>Windows Terminal (opcional)</strong></h3>
+                <h3><strong>Windows Terminal (optional)</strong></h3>
                 <p>
-                    Si usted tiene windows 8, 8.1 o 10, bájese de la tienda de Windows esta terminal, ya que va a
-                    obtener una función que va a necesitar en esta guía. Una vez obtenida la tienda, configure la
-                    misma para que el perfil predeterminado sea el símbolo del sistema (CMD).
+                    If you have windows 8, 8.1 or 10, download this terminal from the Windows Store, as you will get a
+                    feature that you will need in this guide. Once you have obtained the terminal, configure it so that
+                    the default profile is the command prompt (CMD).
                 </p>
                 <p>
-                    Link de descarga -
+                    Download link -
                     <a href="https://www.microsoft.com/store/productId/9N0DX20HK701" class="link">Microsoft Store</a>
                 </p>
             </li>
 
             <li>
-                <h3><strong>Depuración USB (opcional)</strong></h3>
+                <h3><strong>USB debugging (optional)</strong></h3>
                 <p>
-                    En esta guía usaremos la depuración USB para acceder al modo bootloader, no es necesario si ya están
-                    en el modo bootloader o si van a acceder a este de otra forma (con una combinación de botones), pero
-                    recomiendo de la forma que se va a mostrar en esta guía.
+                    In this guide we will use USB debugging to access the bootloader mode, it is not necessary if you
+                    are already in bootloader mode or if you are going to access it in another way (with a buttons
+                    combination), but I recommend the way it is going to be shown in this guide.
                 </p>
                 <p>
-                    Para habilitar la depuración USB, usted tiene que ir a la app de configuraciones, en el apartado de
-                    "Acerca del teléfono" en "Número de compilación" y tocar 7 veces. Luego, tiene que acceder a las
-                    "Opciones para desarrolladores" en la app de configuraciones en el apartado "Sistema" y activar la
-                    "Depuración USB".
+                    To enable USB debugging, you have to go to the settings app, in the "About phone" section under
+                    "Build number" and tap 7 times. Then, you have to access the "Developer options" in the settings app
+                    under "System" and enable "USB debugging".
                 </p>
             </li>
 
             <li>
-                <h3><strong>Activar "Desbloqueo de OEM"</strong></h3>
+                <h3><strong>Activate "OEM Unlock"</strong></h3>
                 <p>
-                    Entre en "Configuraciones/Sistema/Opciones Avanzadas/Desarrollador" y ahí, busque la opción
-                    "Desbloqueo de OEM" para activarla.
+                    Go to "Settings/System/Advanced Settings/Developer" and there, look for the "OEM Unlock" option to
+                    activate it.
                 </p>
             </li>
 
         </ul>
 
-        <h2><strong>Procedimiento para desbloquear el bootloader</strong></h2>
+        <h2><strong>Procedure for unlocking the bootloader</strong></h2>
 
         <ol class="list">
 
             <li>
                 <p>
-                    Descomprima la carpeta platform-tools que obtuvo desde la página <strong>Android Developers</strong>
+                    Unzip the platform-tools folder you got from the page <strong>Android Developers</strong>.
                 </p>
             </li>
 
             <li>
                 <p>
-                    Si usted tiene la <strong>Windows Terminal</strong> obtenida desde la
-                    <strong>Microsoft Store</strong>,
-                    simplemente abra el CMD dentro de la carpeta haciendo clic secundario en una parte vacía de la
-                    carpeta y seleccionando la opción "Abrir en Terminal".
+                    If you have the <strong>Windows Terminal</strong> obtained from the <strong>Microsoft
+                        Store</strong>, simply open the CMD inside the folder by right-clicking on an empty part of the
+                    folder and selecting the "Open in Terminal" option.
                 </p>
                 <div class="article__multimedia">
                     <video src="/assets/video/opencommandprompt.mp4" autoplay loop muted></video>
                 </div>
                 <p>
-                    Si usted no tiene la <strong>Windows Terminal</strong>, dentro de la carpeta en un espacio vacío
-                    haga shift+clic secundario y seleccione la opción "Abrir la ventana de PowerShell aquí", escriba
-                    <code class="codetext">cmd</code> dentro de la ventana y presione enter.
+                    If you don't have the <strong>Windows Terminal</strong>, inside the folder in an empty space,
+                    shift+right-click and select the option "Open PowerShell window here", type <code
+                        class="codetext">cmd</code> inside the window and press enter.
                 </p>
                 <div class="article__multimedia">
                     <video src="/assets/video/openwindowspowershell.mp4" autoplay loop muted></video>
@@ -198,48 +189,45 @@
 
             <li>
                 <p>
-                    Conecte el dispositivo a la PC, escriba en el CMD <code class="codetext">adb devices</code> (el
-                    teléfono tiene que estar encendido para que este comando funcione, en el caso de que ya esté en
-                    bootloader, escriba <code class="codetext">fastboot devices</code>)
-                    y presione enter. Si la consola no le devuelve
+                    Connect the device to the PC, type in the CMD <code class="codetext">adb devices</code> (the phone
+                    has to be on for this command to work, in case it is already in bootloader, type <code
+                        class="codetext">fastboot devices</code>) and press enter. If the console doesn't return
                 </p>
                 <div class="codetext codecontent">
                     <pre><code>List of devices   attached</code></pre>
                     <pre><code>ZE222BZWFF        device</code></pre>
                 </div>
                 <p>
-                    entonces asegúrese de que tenga conectado bien el dispositivo, o haya activado la depuración USB.
+                    then make sure you have your device properly connected, or have enabled USB debugging.
                 </p>
             </li>
 
             <li>
                 <p>
-                    Ahora reinicie al bootloader (si es que no está en él) con
-                    <code class="codetext">adb reboot bootloader</code> o con la combinación de
-                    teclas "volumen - y power" (tiene que mantener presionado estos botones
-                    hasta que aparezca la pantalla del bootloader).
+                    Now reboot to the bootloader (if you aren't in it) with <code
+                        class="codetext">adb reboot bootloader</code> or with the key combination "volume - and power"
+                    (you have to hold down these buttons until the bootloader screen appears).
                 </p>
                 <p>
-                    De cualquier forma, esto accederá al bootloader, el mismo tiene una pantalla con
-                    texto y el robot de Android acostado con una tapa abierta.
+                    Either way, this will access the bootloader, which has a screen with text and the Android robot
+                    lying down with an open lid.
                 </p>
             </li>
 
             <p>
-                Los siguientes pasos estarán en
+                The next steps will be on
                 <a href="https://motorola-global-portal.custhelp.com/app/standalone%2Fbootloader%2Funlock-your-device-b"
-                    class="link">esta</a> página de Motorola, pero yo lo explicaré de todas formas porque están
-                en inglés.
+                    class="link">this</a> Motorola page, but I'll explain it anyway.
             </p>
 
             <li>
                 <p>
-                    Dentro de la terminal previamente abierta, escriban
-                    <code class="codetext">fastboot oem get_unlock_data</code>. Este comando les soltará en la
-                    terminal el ID de su dispositivo, el cual necesitarán para obtener un código de desbloqueo.
+                    Inside the previously opened terminal, type
+                    <code class="codetext">fastboot oem get_unlock_data</code>. This command will drop your device ID
+                    into the terminal, which you will need to obtain an unlock code.
                 </p>
                 <p>
-                    El ID se mostrará de la siguiente manera en Windows/Linux:
+                    The ID will be displayed as follows on Windows/Linux:
                 </p>
                 <div class="codetext codecontent">
                     <p><code>(bootloader) 0A40040192024205#4C4D3556313230</code></p>
@@ -249,7 +237,7 @@
                     <p><code>(bootloader) 0000000</code></p>
                 </div>
                 <p>
-                    Y de la siguiente manera en MAC:
+                    And as follows in MAC:
                 </p>
                 <div class="codetext codecontent">
                     <p><code>INFO0A40040192024205#4C4D3556313230</code></p>
@@ -262,9 +250,9 @@
 
             <li>
                 <p>
-                    Deberá generar su código de desbloqueo a partir de lo que le devolvió el CMD, para hacerlo,
-                    tendrá que pegar las 5 líneas de salida en una cadena continua sin "bootloader o info" ni espacios
-                    en blanco. El código debería quedar de la siguiente manera:
+                    You will need to generate your unlock code from what the CMD displays, to do this, you will need to
+                    paste the 5 lines of output in a continuous string without "bootloader or info" and without blanks.
+                    The code should look like this:
                 </p>
                 <div class="codetext codecontent">
                     <p>
@@ -277,49 +265,48 @@
 
             <li>
                 <p>
-                    Pegue el código que hizo en el campo de texto de la
+                    Paste the code you made into the text field on the
                     <a href="https://motorola-global-portal.custhelp.com/app/standalone%2Fbootloader%2Funlock-your-device-b"
-                        class="link">página de Motorola</a> que dice "MAKE SURE YOUR DEVICE IS UNLOCKABLE".
+                        class="link">Motorola page</a> that says "MAKE SURE YOUR DEVICE IS UNLOCKABLE".
                 </p>
                 <p>
-                    Luego, haga click en el botón que dice "Can my device be unlocked?".
+                    Then, click on the button that says "Can my device be unlocked?.
                 </p>
                 <p>
-                    Le llegará un código por correo por parte de Motorola en los próximos minutos.
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    Una vez que le llego el correo con el código, escriba en la terminal
-                    <code class="codetext">fastboot oem unlock "código"</code>, donde "código"
-                    es el código que le enviaron por correo, y va sin las comillas.
+                    You will receive a code by mail from Motorola in the next few minutes.
                 </p>
             </li>
 
             <li>
                 <p>
-                    Ahora en el teléfono le saldrá una pantalla que le pedirá una confirmación de si realmente quiere
-                    desbloquear el bootloader, en esta pantalla se tendrá que navegar con las teclas de volumen y podrá
-                    confirmar con el botón de power. Confirme y espere unos 20 segundos aproximadamente hasta que la
-                    consola muestre un <code class="codetext">OKAY</code>.
+                    Once you receive the email with the code, type in the console <code
+                        class="codetext">fastboot oem unlock "code"</code>, where "code" is the code that was sent to
+                    you by email, without the quotes.
                 </p>
             </li>
 
             <li>
                 <p>
-                    Ahora simplemente reinicie al sistema con <code class="codetext">fastboot reboot</code>
-                    y listo.
+                    Now on the phone you will get a screen that will ask you to confirm if you really want to unlock the
+                    bootloader, on this screen you will have to navigate with the volume keys and you can confirm with
+                    the power button. Confirm and wait about 20 seconds until the console displays <code
+                        class="codetext">OKAY</code>.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    ANow simply reboot the system with <code class="codetext">fastboot reboot</code>
+                    and you are done.
                 </p>
                 <p>
-                    Si por alguna razón usted quiere volver a bloquear el bootloader del dispositivo,
-                    simplemente escriba <code class="codetext">fastboot oem lock</code>. Le saldrá la misma
-                    pantalla de confirmación, le da a confirmar y espera a que la consola muestre un
-                    <code class="codetext">OKAY</code>.
+                    If for some reason you want to relock the bootloader of the device, simply type <code
+                        class="codetext">fastboot oem lock</code>. You will get the same confirmation screen, hit
+                    confirm and wait for the console to show an <code class="codetext">OKAY</code>.
                 </p>
                 <p>
-                    Aclaro desde ya que el volver a bloquear el dispositivo tiene riesgo de brickear el celular,
-                    por lo que no lo recomiendo.
+                    I should point out that relocking the device has a risk of bricking the phone, so I don't recommend
+                    it.
                 </p>
             </li>
 
@@ -327,11 +314,13 @@
 
         <div class="article__text">
             <p>
-                Si tienen alguna duda, pasen por el grupo de Telegram de nuestro dispositivo
-                <a href="https://t.me/MotorolaOneFusionES" class="link">Motorola One Fusion | Español™</a>.
+              If you have any questions, please visit the Telegram group in Spanish (currently doesn't exist in English) of
+              our device <a href="https://t.me/MotorolaOneFusionES" class="link">Motorola One Fusion | Español™</a> (If you
+              find any translation errors, let me know via this group or by md on <a href="https://t.me/Syoker"
+                class="link">telegram</a>).
             </p>
-            <p class="article__end"><em>Saludos, atte. Syoker</em></p>
-        </div>
+            <p class="article__end"><em>Regards, Yours sincerely Syoker</em></p>
+          </div>
 
     </article>
 
