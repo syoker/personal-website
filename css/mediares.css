@@ -1,4 +1,15 @@
 @media (min-width: 800px) {
+
+    /*For new article*/
+
+    .preparation ul {
+        padding-left: 2.5rem;
+    }
+
+    .steps ol {
+        padding-left: 4.5rem;
+    }
+
     .containercards__rowcolumn {
         flex-direction: row;
         align-items: start;
@@ -49,6 +60,4 @@
     .containercards {
         align-items: start;
     }
-
 }
-

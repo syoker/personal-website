@@ -29,6 +29,91 @@
     gap: 1rem;
 }
 
+/* For new article */
+
+.newArticle {
+    display: flex;
+    flex-direction: column;
+
+    padding: 2rem 0rem;
+}
+
+.beginning {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0rem 2rem;
+}
+
+.beginning h1 {
+    font-size: 1.5rem;
+}
+
+.beginning div {
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem 0rem;
+    gap: .4rem;
+}
+
+.preparation {
+    padding: 0rem 2rem;
+}
+
+.preparation ul {
+    display: flex;
+    flex-direction: column;
+
+    list-style: inherit;
+
+    padding: 1rem 0rem 1rem 1rem;
+    gap: 0.5rem;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+}
+
+.steps h2 {
+    padding-inline: 2rem;
+}
+
+.steps ol {
+    display: flex;
+    flex-direction: column;
+
+    padding-inline: 3rem 2rem;
+
+    gap: 0.5rem;
+}
+
+.steps img {
+    padding: 0rem;
+}
+
+.steps video {
+    padding: 0rem;
+}
+
+.steps__div {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0.5rem 0rem;
+
+    gap: 0.5rem;
+}
+
+.end {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0.5rem 2rem 0rem 2rem;
+    gap: 0.5rem;
+}
+
 /* For article */
 
 .article {
@@ -85,11 +170,6 @@
     color: #00BCD3;
 
     transition: all .3s;
-}
-
-.epigraph {
-    font-size: x-small;
-    margin-bottom: 0.5rem;
 }
 
 .link:hover {
