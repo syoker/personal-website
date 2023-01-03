@@ -54,7 +54,7 @@
 </head>
 
 <body class="body" style="padding: 0rem;">
-    
+
     <header class="header" style="padding: 2rem 2rem 0rem 2rem;">
 
         <a href="/">
@@ -77,7 +77,8 @@
             <div>
 
                 <p>
-                    In this guide, I will show you how to unlock the bootloader of our device. This process will format your device, so I recommend you to make a backup before.
+                    In this guide, I will show you how to unlock the bootloader of our device. This process will format
+                    your device, so I recommend you to make a backup before.
                 </p>
                 <p>
                     All this is at your own risk, I'm not responsible for any damage caused to your device.
@@ -115,8 +116,10 @@
 
                 <li>
                     <h3><strong>Motorola Drivers</strong></h3>
-                    <p>This contains the USB drivers so that the PC can recognize your device and work with it when it
-                        is in Bootloader or Fastbootd.</p>
+                    <p>
+                        This contains the USB drivers so that the PC can recognize your device and work with it when it
+                        is in Bootloader or Fastbootd.
+                    </p>
                     <p>
                         Download link - <a class="link"
                             href="https://motorola-global-es-latam.custhelp.com/app/answers/detail/a_id/89882">Motorola</a>
@@ -135,7 +138,7 @@
                             class="link">Microsoft Store</a>
                     </p>
                 </li>
-                
+
                 <li>
                     <h3><strong>USB debugging (optional)</strong></h3>
                     <p>
@@ -153,8 +156,8 @@
                 <li>
                     <h3><strong>Activate "OEM Unlock"</strong></h3>
                     <p>
-                        Go to "Settings/System/Advanced Settings/Developer" and there, look for the "OEM Unlock" option to
-                        activate it.
+                        Go to "Settings/System/Advanced Settings/Developer" and there, look for the "OEM Unlock" option
+                        to activate it.
                     </p>
                 </li>
 
@@ -206,8 +209,8 @@
 
                 <li value="3">
                     <p>
-                        Connect the device to the PC, type in the CMD <code class="codetext">adb devices</code> (the phone
-                        has to be on for this command to work, in case it is already in bootloader, type <code
+                        Connect the device to the PC, type in the CMD <code class="codetext">adb devices</code> (the
+                        phone has to be on for this command to work, in case it is already in bootloader, type <code
                             class="codetext">fastboot devices</code>) and press enter. If the console doesn't return
                     </p>
                     <div class="codetext codecontent">
@@ -222,25 +225,25 @@
                 <li>
                     <p>
                         Now reboot to the bootloader (if you aren't in it) with <code
-                            class="codetext">adb reboot bootloader</code> or with the key combination "volume - and power"
-                        (you have to hold down these buttons until the bootloader screen appears).
+                            class="codetext">adb reboot bootloader</code> or with the key combination "volume - and
+                        power" (you have to hold down these buttons until the bootloader screen appears).
                     </p>
                     <p>
                         Either way, this will access the bootloader, which has a screen with text and the Android robot
                         lying down with an open lid.
                     </p>
                 </li>
-    
+
                 <p>
-                    The next steps will be on
-                    <a href="https://motorola-global-portal.custhelp.com/app/standalone%2Fbootloader%2Funlock-your-device-b"
+                    The next steps will be on <a
+                        href="https://motorola-global-portal.custhelp.com/app/standalone%2Fbootloader%2Funlock-your-device-b"
                         class="link">this</a> Motorola page, but I'll explain it anyway.
                 </p>
-    
+
                 <li>
                     <p>
-                        Inside the previously opened terminal, type
-                        <code class="codetext">fastboot oem get_unlock_data</code>. This command will drop your device ID
+                        Inside the previously opened terminal, type <code
+                            class="codetext">fastboot oem get_unlock_data</code>. This command will drop your device ID
                         into the terminal, which you will need to obtain an unlock code.
                     </p>
                     <p>
@@ -264,12 +267,12 @@
                         <p><code>INFO0000000</code></p>
                     </div>
                 </li>
-    
+
                 <li>
                     <p>
-                        You will need to generate your unlock code from what the CMD displays, to do this, you will need to
-                        paste the 5 lines of output in a continuous string without "bootloader or info" and without blanks.
-                        The code should look like this:
+                        You will need to generate your unlock code from what the CMD displays, to do this, you will need
+                        to paste the 5 lines of output in a continuous string without "bootloader or info" and without
+                        blanks. The code should look like this:
                     </p>
                     <div class="codetext codecontent">
                         <p>
@@ -279,11 +282,11 @@
                         </p>
                     </div>
                 </li>
-    
+
                 <li>
                     <p>
-                        Paste the code you made into the text field on the
-                        <a href="https://motorola-global-portal.custhelp.com/app/standalone%2Fbootloader%2Funlock-your-device-b"
+                        Paste the code you made into the text field on the <a
+                            href="https://motorola-global-portal.custhelp.com/app/standalone%2Fbootloader%2Funlock-your-device-b"
                             class="link">Motorola page</a> that says "MAKE SURE YOUR DEVICE IS UNLOCKABLE".
                     </p>
                     <p>
@@ -293,28 +296,28 @@
                         You will receive a code by mail from Motorola in the next few minutes.
                     </p>
                 </li>
-    
+
                 <li>
                     <p>
                         Once you receive the email with the code, type in the console <code
-                            class="codetext">fastboot oem unlock "code"</code>, where "code" is the code that was sent to
-                        you by email, without the quotes.
+                            class="codetext">fastboot oem unlock "code"</code>, where "code" is the code that was sent
+                        to you by email, without the quotes.
                     </p>
                 </li>
-    
+
                 <li>
                     <p>
-                        Now on the phone you will get a screen that will ask you to confirm if you really want to unlock the
-                        bootloader, on this screen you will have to navigate with the volume keys and you can confirm with
-                        the power button. Confirm and wait about 20 seconds until the console displays <code
-                            class="codetext">OKAY</code>.
+                        Now on the phone you will get a screen that will ask you to confirm if you really want to unlock
+                        the bootloader, on this screen you will have to navigate with the volume keys and you can
+                        confirm with the power button. Confirm and wait about 20 seconds until the console displays
+                        <code class="codetext">OKAY</code>.
                     </p>
                 </li>
-    
+
                 <li>
                     <p>
-                        Now simply reboot the system with <code class="codetext">fastboot reboot</code>
-                        and you are done.
+                        Now simply reboot the system with <code class="codetext">fastboot reboot</code> and you are
+                        done.
                     </p>
                     <p>
                         If for some reason you want to relock the bootloader of the device, simply type <code
@@ -322,8 +325,8 @@
                         confirm and wait for the console to show an <code class="codetext">OKAY</code>.
                     </p>
                     <p>
-                        I should point out that relocking the device has a risk of bricking the phone, so I don't recommend
-                        it.
+                        I should point out that relocking the device has a risk of bricking the phone, so I don't
+                        recommend it.
                     </p>
                 </li>
 

@@ -114,8 +114,10 @@
 
                 <li>
                     <h3><strong>Motorola Drivers</strong></h3>
-                    <p>This contains the USB drivers so that the PC can recognize your device and work with it when it
-                        is in Bootloader or Fastbootd.</p>
+                    <p>
+                        This contains the USB drivers so that the PC can recognize your device and work with it when it
+                        is in Bootloader or Fastbootd.
+                    </p>
                     <p>
                         Download link - <a class="link"
                             href="https://motorola-global-es-latam.custhelp.com/app/answers/detail/a_id/89882">Motorola</a>
@@ -154,14 +156,12 @@
                     <h3><strong>Bootloader unlocked</strong></h3>
                     <p>
                         You need to have unlocked the bootloader to be able to install a Custom Recovery on your device.
-                        If
-                        you haven't unlocked it yet, I'll leave you the link to the guide I made explaining step by step
-                        what you have to do.
+                        If you haven't unlocked it yet, I'll leave you the link to the guide I made explaining step by
+                        step what you have to do.
                     </p>
                     <p>
-                        Link of the guide -
-                        <a href="/blog/motorolaonefusion/guide-unlock-bootloader/" class="link">[Guide] Unlock
-                            bootloader</a>
+                        Link of the guide - <a href="/blog/motorolaonefusion/guide-unlock-bootloader/"
+                            class="link">[Guide] Unlock bootloader</a>
                     </p>
                 </li>
 
@@ -174,18 +174,14 @@
                     <p>
                         Link of TWRP -
                         <a href="https://github.com/sdm710-motorola/android_device_motorola_astro_twrp/releases"
-                            class="link">GitHub</a>
-                        (credits to <a href="https://github.com/uotlaf" class="link">Uotlaf</a>) - Functional on Android
-                        12
-                        with the latest version.
+                            class="link">GitHub</a> (credits to <a href="https://github.com/uotlaf"
+                            class="link">Uotlaf</a>) - Functional on Android 12 with the latest version.
                     </p>
                     <p>
                         Link of OrangeFox -
                         <a href="https://github.com/sdm710-motorola/android_device_motorola_astro_ofrp/releases"
-                            class="link">GitHub</a>
-                        (credits to <a href="https://github.com/uotlaf" class="link">Uotlaf</a>) - Not functional on
-                        Android
-                        12.
+                            class="link">GitHub</a> (credits to <a href="https://github.com/uotlaf"
+                            class="link">Uotlaf</a>) - Not functional on Android 12.
                     </p>
                 </li>
 
@@ -203,8 +199,7 @@
                     <li>
                         <p>
                             Unzip the platform-tools folder you got from the <strong>Android Developers</strong> page
-                            and paste
-                            the .img file of the previously downloaded custom recovery into the same folder.
+                            and paste the .img file of the previously downloaded custom recovery into the same folder.
                         </p>
                     </li>
                 </ol>
@@ -240,8 +235,7 @@
                 <li value="3">
                     <p>
                         Connect the device to the PC, type in the CMD <code class="codetext">adb devices</code> (the
-                        phone
-                        has to be on for this command to work, in case it is already in bootloader, type <code
+                        phone has to be on for this command to work, in case it is already in bootloader, type <code
                             class="codetext">fastboot devices</code>) and press enter. If the console doesn't return
                     </p>
                     <div class="codetext codecontent">
@@ -257,8 +251,7 @@
                     <p>
                         Now reboot to the bootloader (if you aren't in it) with <code
                             class="codetext">adb reboot bootloader</code> or with the key combination "volume - and
-                        power"
-                        (you have to hold down these buttons until the bootloader screen appears).
+                        power" (you have to hold down these buttons until the bootloader screen appears).
                     </p>
                     <p>
                         Either way, this will access the bootloader, which has a screen with text and the Android robot
@@ -286,8 +279,7 @@
 
                 <p>
                     Now, make a backup of the EFS, Modem and Persist folders and save it on a micro SD card or on the
-                    computer,
-                    as it will be useful if for some reason you lose the IMEI.
+                    computer, as it will be useful if for some reason you lose the IMEI.
                 </p>
 
             </ol>
