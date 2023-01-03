@@ -19,28 +19,6 @@
         align-items: start;
     }
 
-    .max {
-        width: 100%;
-    }
-
-    .article__multimedia {
-        max-width: 80%;
-    }
-
-    .list {
-        padding-left: 2.5rem;
-    }
-
-    .center {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .__articlePadding {
-        width: 100%!important;
-    }
-
     .title__maintenance {
         font-size: 4rem;
     }
@@ -51,10 +29,6 @@
         flex-direction: row;
 
         padding-top: 4rem;
-    }
-
-    .__articlePadding {
-        width: 100%!important;
     }
 
     .introduction {
