@@ -188,6 +188,8 @@
     cursor: pointer;
 
     transition: all 0.3s;
+
+    -webkit-tap-highlight-color: transparent;
 }
 
 @media (prefers-color-scheme: dark) {

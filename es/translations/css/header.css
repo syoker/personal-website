@@ -26,6 +26,8 @@
     z-index: 1;
 
     cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
 }
 
 .hamburgerButton {
