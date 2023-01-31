@@ -2,26 +2,27 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>SyokerTranslations</title>
     <meta name="description" content="" />
     <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon" />
 
     <!-- Import styles -->
-    <link rel="stylesheet" href="./css/body.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/newsSection.css">
-    <link rel="stylesheet" href="https://kit.fontawesome.com/20d241b379.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/body.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/newsSection.css" />
+    <link rel="stylesheet" href="./css/lastUpdatesSection.css" />
+    <link rel="stylesheet" href="https://kit.fontawesome.com/20d241b379.css" crossorigin="anonymous" />
 
     <!-- Import reset -->
-    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/reset.css" />
 
     <!-- Import fonts -->
-    <link rel="stylesheet" href="./assets/fonts/slimfit.css">
-    <link rel="stylesheet" href="./assets/fonts/colaterasoft.css">
+    <link rel="stylesheet" href="./assets/fonts/slimfit.css" />
+    <link rel="stylesheet" href="./assets/fonts/colaterasoft.css" />
 
     <!-- Import scripts -->
     <script defer src="./js/carousel.js"></script>
@@ -40,9 +41,7 @@
 </head>
 
 <body class="body" id="body">
-
     <header class="header">
-
         <button id="btn_menu"></button>
         <div class="hamburgerButton" id="hamburgerButton"></div>
         <h1 class="logo" id="logo">SYOKERSUBS</h1>
@@ -66,19 +65,16 @@
                 </ul>
             </div>
         </nav>
-
     </header>
 
     <main class="content">
-
         <section class="newsSection">
-
             <h2 class="titleSection">Nuevos animes y mangas</h2>
 
             <div class="carousel">
                 <div class="containerCards">
                     <div>
-                        <a href="#" style="-webkit-tap-highlight-color: transparent;">
+                        <a href="#" style="-webkit-tap-highlight-color: transparent">
                             <article class="card" id="card-1">
                                 <div class="cardBackgroundCoverBlack"></div>
                                 <div class="cardBackgroundCover"
@@ -87,10 +83,10 @@
                                 <div class="cardContent">
                                     <picture>
                                         <img src="./assets/img/kubo-san-wa-mob-wo-yurusanai-volume-1.jpg"
-                                            alt="Kubo-san wa Mob wo Yurusanai - Volume 1" class="cardCover">
+                                            alt="Kubo-san wa Mob wo Yurusanai - Volume 1" class="cardCover" />
                                     </picture>
                                     <div class="cardInformation">
-                                        <h3 class="cardTitle">Kubo-san wa Mob wo Yurusanai 1</h3>
+                                        <h3 class="cardTitle">Kubo-san wa Mob wo Yurusanai</h3>
                                         <div class="separation">
                                             <h4 class="cardText">Formato: Manga</h4>
                                             <div class="genres">
@@ -108,12 +104,11 @@
                             <article class="card" id="card-2">
                                 <div class="cardBackgroundCoverBlack"></div>
                                 <div class="cardBackgroundCover"
-                                    style="background-image: url(./assets/img/initial-d.jpg);">
-                                </div>
+                                    style="background-image: url(./assets/img/initial-d.jpg)"></div>
                                 <div class="cardContent">
                                     <picture>
-                                        <img src="./assets/img/initial-d.jpg"
-                                            alt="Initial D - Poster" class="cardCover">
+                                        <img src="./assets/img/initial-d.jpg" alt="Initial D - Poster"
+                                            class="cardCover" />
                                     </picture>
                                     <div class="cardInformation">
                                         <h3 class="cardTitle">Initial D</h3>
@@ -133,7 +128,7 @@
                 </div>
             </div>
 
-            <div style="position: relative;">
+            <div style="position: relative">
                 <ul class="pointers">
                     <li class="pointer active"></li>
                     <li class="pointer"></li>
@@ -144,11 +139,34 @@
                     <button class="fa-solid fa-chevron-right row"></button>
                 </div>
             </div>
-
         </section>
 
-    </main>    
+        <section class="lastUpdates">
+            <h2 class="titleSection">Últimas actualizaciones</h2>
 
+            <div class="updates">
+                <div>
+                    <a href="#">
+                        <article class="entry">
+                            <img src="./assets/img/kubo-san-wa-mob-wo-yurusanai-volume-1.jpg"
+                                alt="Kubo-san wa Mob wo Yurusanai - Volume 1" class="entryCover" />
+                            <div class="entryInformation">
+                                <div class="entryBackgroundCoverBlack"></div>
+                                <div class="entryBackgroundCover"
+                                    style="background-image: url(./assets/img/kubo-san-wa-mob-wo-yurusanai-volume-1.jpg);">
+                                </div>
+                                <h4 class="entryTitle">Kubo-san wa Mob wo Yurusanai</h4>
+                                <h5 class="entryText">
+                                    Vol. 1 Cap. 001 - La chica heroína y el chico del fondo
+                                </h5>
+                                <h6 class="entryDate">Hace 5s</h6>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>

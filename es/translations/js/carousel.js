@@ -15,11 +15,5 @@ row.forEach(( perRow , i )=> {
             pointer[i].classList.remove('active')
         })
         pointer[i].classList.add('active')
-
-        row[i].style.filter = 'brightness(50%)'
-
-        setInterval(function(){
-            row[i].style.filter = 'brightness(100%)'
-        }, 200)
     })
 })
