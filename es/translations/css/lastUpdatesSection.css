@@ -16,6 +16,10 @@
     flex-direction: column;
     gap: 0.5rem;
 
+    max-height: 56.5rem;
+
+    overflow: hidden;
+
     border-radius: 8px;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
 
@@ -29,6 +33,12 @@
     gap: 0.5rem;
 
     height: 5rem;
+
+    transition: all 0.3s;
+}
+
+.entry:hover {
+    transform: scale(1.015);
 }
 
 .entryCover {
@@ -60,7 +70,9 @@
     top: 0;
     left: 0;
 
-    background-color: #191919;
+    background-color: #8F8F8F;
+
+    transition: all 0.3s;
 }
 
 .entryBackgroundCover {
@@ -102,5 +114,9 @@
 @media (prefers-color-scheme: dark) {
     .updates {
         background: #262626;
+    }
+
+    .entryBackgroundCoverBlack {
+        background-color: #191919;
     }
 }
