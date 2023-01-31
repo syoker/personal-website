@@ -20,6 +20,6 @@ row.forEach(( perRow , i )=> {
 
         setInterval(function(){
             row[i].style.filter = 'brightness(100%)'
-        }, 150)
+        }, 200)
     })
 })
