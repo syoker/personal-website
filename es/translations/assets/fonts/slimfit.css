@@ -1,0 +1,7 @@
+@font-face {
+	font-family: SlimFit;
+	font-style: normal;
+	font-weight: 400;
+	src: local("SlimFit College"), local("SlimFit-College"), url(slimfit-college.woff2) format("woff2");
+	font-display: swap;
+}

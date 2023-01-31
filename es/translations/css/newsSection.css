@@ -1,0 +1,211 @@
+.newsSection {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    position: relative;
+
+    padding: 1rem 1.5rem 1rem 1.5rem;
+
+    gap: 0.5rem;
+}
+
+.titleSection {
+    font-family: ColateraSoft;
+    font-weight: 400;
+
+    color: #000000;
+
+    transition: color 0.3s;
+}
+
+.cardTitle, .cardText {
+    font-family: ColateraSoft;
+    font-weight: 400;
+
+    color: #FFFFFF;
+
+    transition: color 0.3s;
+}
+
+.carousel {
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+    gap: 2rem;
+
+    overflow: hidden;
+
+    transition: all 1s;
+}
+
+.containerCards {
+    width: 200%;
+
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    
+    transition: all 0.3s;
+    transform: translateX(0%);
+}
+
+.card {
+    display: flex;
+
+    padding-inline: 1rem;
+    border-radius: 8px;
+    gap: 1rem;
+
+    position: relative;
+
+    height: 12rem;
+
+    align-items: center;
+
+    transition: all 0.3s;
+
+    overflow: hidden;
+}
+
+.cardBackgroundCoverBlack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+
+    background-color: #191919;
+}
+
+.cardBackgroundCover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+    
+    background-position: top;
+    background-size: cover;
+
+    filter: brightness(0.5) blur(3rem);
+
+    z-index: 1;
+}
+
+.cardContent {
+    display: flex;
+    gap: 1rem;
+
+    position: relative;
+    z-index: 2;
+}
+
+.cardCover {
+    height: 10rem;
+    min-width: 7rem;
+    border-radius: 8px;
+}
+
+.cardInformation {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    
+    gap: 0.5rem;
+}
+
+.separation {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.genres {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.genres h5 {
+    background-color: #C42A00;
+    color: #FFFFFF;
+    border-radius: 0.4rem;
+    padding: 0.1rem 0.3rem;
+
+    transition: all 0.3s;
+}
+
+.pointers {
+    width: 100%;
+    padding: 0rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.pointer {
+    width: 0.5rem;
+    height: 0.5rem;
+    margin: 0.75rem 0.25rem;
+
+    border-radius: 10rem;
+    background-color: #C42A00;
+
+    filter: brightness(50%);
+
+    list-style: none;
+
+    transition: all 0.3s;
+}
+
+.active {
+    filter: brightness(100%);
+}
+
+.rows {
+    display: flex;
+
+    gap: 0.5rem;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.row {
+    background-color: #C42A00;
+    padding: 0.5rem 0.6rem;
+    border-radius: 5rem;
+    color: #FFFFFF;
+
+    cursor: pointer;
+
+    transition: all 0.3s;
+}
+
+@media (prefers-color-scheme: dark) {
+    .titleSection {
+        color: #FFFFFF;
+    }
+
+    .genres h5 {
+        background-color: #FF9148;
+        color: #2C2C2C;
+    }
+
+    .pointer {
+        background-color: #FF9148;
+    }
+
+    .row {
+        background-color: #FF9148;
+        color: #2C2C2C;
+    }
+}

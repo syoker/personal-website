@@ -1,0 +1,7 @@
+@font-face {
+	font-family: ColateraSoft;
+	font-style: normal;
+	font-weight: 400;
+	src: local("ColateraSoft"), local("ColateraSoft"), url(colaterasoft.woff2) format("woff2");
+	font-display: swap;
+}
