@@ -189,7 +189,9 @@
 
     transition: all 0.3s;
 
-    -webkit-tap-highlight-color: transparent;
+    border: 0px;
+
+    -webkit-tap-highlight-color: #C42A00;
 }
 
 @media (prefers-color-scheme: dark) {
