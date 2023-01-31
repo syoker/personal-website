@@ -191,6 +191,8 @@
 
     border: 0px;
 
+    overflow: hidden;
+
     -webkit-tap-highlight-color: #C42A00;
 }
 
