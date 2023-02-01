@@ -62,7 +62,7 @@
     width: 100%;
 }
 
-.entryBackgroundCoverBlack {
+.entryBackgroundCoverTapestry {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -116,7 +116,7 @@
         background: #262626;
     }
 
-    .entryBackgroundCoverBlack {
+    .entryBackgroundCoverTapestry {
         background-color: #191919;
     }
 }

@@ -1,4 +1,4 @@
-.newsSection {
+.lastEntrys {
     display: flex;
     flex-direction: column;
 
@@ -9,15 +9,6 @@
     padding: 1rem 1.5rem 0.5rem 1.5rem;
 
     gap: 0.5rem;
-}
-
-.titleSection {
-    font-family: ColateraSoft;
-    font-weight: 400;
-
-    color: #000000;
-
-    transition: color 0.3s;
 }
 
 .cardTitle, .cardText {
@@ -51,7 +42,6 @@
     justify-content: flex-start;
     
     transition: all 0.3s;
-    transform: translateX(0%);
 }
 
 .card {
@@ -72,7 +62,7 @@
     overflow: hidden;
 }
 
-.cardBackgroundCoverBlack {
+.cardBackgroundCoverTapestry {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -212,4 +202,12 @@
         background-color: #FF9148;
         color: #2C2C2C;
     }
+}
+
+@media (min-width: 80rem) {
+
+    .containerCards {
+        gap: 1rem;
+    }
+
 }
