@@ -28,6 +28,12 @@
     transition: all 0.3s;
 }
 
+.containerEntrys {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .entry {
     display: flex;
     gap: 0.5rem;
@@ -118,5 +124,19 @@
 
     .entryBackgroundCoverTapestry {
         background-color: #191919;
+    }
+}
+
+@media (min-width: 80rem) {
+    .updates {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+
+        max-height: 29rem;
+    }
+
+    .containerEntrys {
+        width: 100%;
     }
 }
