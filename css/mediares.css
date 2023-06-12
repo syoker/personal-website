@@ -14,11 +14,6 @@
         padding-left: 4.5rem;
     }
 
-    .containercards__rowcolumn {
-        flex-direction: row;
-        align-items: start;
-    }
-
     .title__maintenance {
         font-size: 4rem;
     }
@@ -37,5 +32,6 @@
 
     .containercards {
         align-items: start;
+        width: 60%;
     }
 }
