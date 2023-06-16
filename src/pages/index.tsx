@@ -1,5 +1,5 @@
 import { LuGithub, LuMail, LuTwitter, LuYoutube } from 'react-icons/lu';
-// import { TbBrandTelegram } from 'react-icons/Tb';
+import { TbBrandTelegram } from 'react-icons/Tb';
 
 import Link from 'next/link';
 import useTranslation from 'next-translate/useTranslation';
@@ -32,9 +32,9 @@ export default function Home() {
 					<Link href="mailto:lautarogomezcastro@outlook.com.ar" target="_blank">
 						<LuMail className={styles.icon} />
 					</Link>
-					{/* <Link href="https://t.me/Syoker" target="_blank">
+					<Link href="https://t.me/Syoker" target="_blank">
 						<TbBrandTelegram className={styles.icon} />
-					</Link> */}
+					</Link>
 					<Link href="https://twitter.com/Syoker_" target="_blank">
 						<LuTwitter className={styles.icon} />
 					</Link>
