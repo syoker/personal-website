@@ -13,10 +13,10 @@ export default function MotorolaOneFusion() {
 			<Head
 				title="Motorola One Fusion"
 				description="In this section you will find all my guides for this phone, for example, how to reinstall the software of this device."
-				ogUrl="https://syoker.github.io/blog/motorolaonefusion"
+				ogUrl="https://syoker.vercel.app/blog/motorolaonefusion"
 				ogTitle="Motorola One Fusion"
 				ogDescription="In this section you will find all my guides for this phone, for example, how to reinstall the software of this device."
-				ogImage="https://raw.githubusercontent.com/Syoker/syoker.github.io/main/public/img/banner-motorolaonefusion.png"
+				ogImage="https://raw.githubusercontent.com/Syoker/personal-website/main/public/img/banner-motorolaonefusion.png"
 			/>
 
 			<section className={styles.topic}>

@@ -14,12 +14,12 @@ export default function Home() {
 	return (
 		<>
 			<Head
-				title="Syoker"
+				title="Lautaro"
 				description="An electronics technician who enjoys programming, watching anime and reading manga."
-				ogUrl="https://syoker.github.io/"
-				ogTitle="Syoker"
+				ogUrl="https://syoker.vercel.app/"
+				ogTitle="Lautaro"
 				ogDescription="An electronics technician who enjoys programming, watching anime and reading manga."
-				ogImage="https://raw.githubusercontent.com/Syoker/syoker.github.io/main/public/img/banner-socialshare.png"
+				ogImage="https://raw.githubusercontent.com/Syoker/personal-website/main/public/img/banner-socialshare.png"
 			/>
 
 			<section className={styles.presentation}>

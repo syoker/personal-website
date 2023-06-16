@@ -15,10 +15,10 @@ export default function Projects() {
 			<Head
 				title="Projects"
 				description="In this section I will add all the projects I will be working on."
-				ogUrl="https://syoker.github.io/project"
+				ogUrl="https://syoker.vercel.app/project"
 				ogTitle="Projects"
 				ogDescription="In this section I will add all the projects I will be working on."
-				ogImage="https://raw.githubusercontent.com/Syoker/syoker.github.io/main/public/img/banner-socialshare.png"
+				ogImage="https://raw.githubusercontent.com/Syoker/personal-website/main/public/img/banner-socialshare.png"
 			/>
 
 			<section className={styles.projects}>

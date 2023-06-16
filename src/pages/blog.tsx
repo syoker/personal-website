@@ -13,7 +13,7 @@ export default function Blog() {
 			<Head
 				title="Blog"
 				description="In this section I will be adding all the topics of the guides I make."
-				ogUrl="https://syoker.github.io/blog"
+				ogUrl="https://syoker.vercel.app/blog"
 				ogTitle="Blog"
 				ogDescription="In this section I will be adding all the topics of the guides I make."
 				ogImage="https://raw.githubusercontent.com/Syoker/syoker.github.io/main/public/img/banner-socialshare.png"
