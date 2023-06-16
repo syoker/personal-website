@@ -40,11 +40,11 @@ export default function Projects() {
 					<h3>{t('title-websites-section')}</h3>
 					<article className={styles.cards}>
 						<ProjectCard
-							banner="https://opengraph.githubassets.com/8a5f4bbbbcd18dd8c3e895aa6c2331b3b1f46dc12a25fd8b9c392e9f4e8feb0c/Syoker/syoker.github.io"
-							title="syoker.github.io"
+							banner="https://opengraph.githubassets.com/22e98067b867381178b93c444ed6cc814384c87a1f6ac940c86e20383a0c7520/Syoker/personal-website"
+							title="Personal Website"
 							page="GitHub"
-							description="This is my personal website where you will find my projects and guides."
-							link="https://github.com/Syoker/syoker.github.io"
+							description="This is my personal page made in React with NextJS and TypeScript, using MDX for the articles, and Next-Translate to support English and Spanish."
+							link="https://github.com/Syoker/personal-website"
 						/>
 						<ProjectCard
 							banner="https://opengraph.githubassets.com/d109c32cf1438e624a9848b36bed7cb1e0ee6761c7e4f634822c002bdd4183b1/rickruad/proyecto-de-residencias"
