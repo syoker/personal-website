@@ -1,4 +1,4 @@
-import { GuideCard } from 'src/components/Topic';
+import { CustomCard } from 'src/components/shared';
 import useTranslation from 'next-translate/useTranslation';
 
 import { Head } from 'src/components/shared';
@@ -25,33 +25,33 @@ export default function MotorolaOneFusion() {
 					<p>{t('additional-information')}</p>
 				</article>
 				<article className={styles.guides}>
-					<GuideCard
+					<CustomCard
 						banner="/img/banner-flashofficialfirmware.png"
 						title={t('guide-flash-official-firmware-title')}
 						description={t('guide-flash-official-firmware-description')}
 						link="/blog/motorolaonefusion/guide-flash-official-firmware"
-						index={`${t('guide')} 1`}
+						titleSide={`${t('guide')} 1`}
 					/>
-					<GuideCard
+					<CustomCard
 						banner="/img/banner-unlockbootloader.png"
 						title={t('guide-unlock-bootloader-title')}
 						description={t('guide-unlock-bootloader-description')}
 						link="/blog/motorolaonefusion/guide-unlock-bootloader"
-						index={`${t('guide')} 2`}
+						titleSide={`${t('guide')} 2`}
 					/>
-					<GuideCard
+					<CustomCard
 						banner="/img/banner-flashcustomrecovery.png"
 						title={t('guide-flash-custom-recovery-title')}
 						description={t('guide-flash-custom-recovery-description')}
 						link="/blog/motorolaonefusion/guide-flash-custom-recovery"
-						index={`${t('guide')} 3`}
+						titleSide={`${t('guide')} 3`}
 					/>
-					<GuideCard
+					<CustomCard
 						banner="/img/banner-flashromgsi.png"
 						title={t('guide-flash-rom-gsi-title')}
 						description={t('guide-flash-rom-gsi-description')}
 						link="/blog/motorolaonefusion/guide-flash-rom-gsi"
-						index={`${t('guide')} 4`}
+						titleSide={`${t('guide')} 4`}
 					/>
 				</article>
 			</section>

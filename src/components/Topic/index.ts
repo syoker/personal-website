@@ -1,1 +1,1 @@
-export { default as GuideCard } from './GuideCard/GuideCard';
+export { default as MotorolaOneFusion } from './MotorolaOneFusion/MotorolaOneFusion';

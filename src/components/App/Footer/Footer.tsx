@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
 import { useWindowDimensions } from 'src/hooks';
 import { MdArticle, MdAccountCircle, MdSpaceDashboard } from 'react-icons/md';
 
@@ -10,17 +9,12 @@ import useTranslation from 'next-translate/useTranslation';
 import styles from './styles/Footer.module.css';
 
 export default function Footer() {
-	const [windowWidth, setWindowWidth] = useState<number>(0);
 	const { t } = useTranslation('footer');
 	const { width } = useWindowDimensions();
 
 	const router = useRouter();
 
-	useEffect(() => {
-		setWindowWidth(width);
-	}, [width]);
-
-	if (windowWidth >= 1280) {
+	if (width >= 1280) {
 		return null;
 	}
 
