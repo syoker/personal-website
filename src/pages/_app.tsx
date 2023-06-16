@@ -5,6 +5,7 @@ import 'public/fonts/source-code-pro.css';
 
 import { useEffect } from 'react';
 import { Header, Footer } from 'src/components/App';
+import { Analytics } from '@vercel/analytics/react';
 import { StyledEngineProvider } from '@mui/material';
 
 import setLanguage from 'next-translate/setLanguage';
@@ -27,6 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
 			<Header />
 			<Component {...pageProps} />
 			<Footer />
+			<Analytics />
 		</StyledEngineProvider>
 	);
 }
