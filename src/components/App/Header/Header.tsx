@@ -26,7 +26,15 @@ export default function Header() {
 
 	const home = () => router.push('../../../');
 
-	const back = () => router.back();
+	const back = () => {
+		if (pathname === '/blog/motorolaonefusion') {
+			router.push('/blog');
+		}
+
+		if (pathname.includes('/blog/motorolaonefusion/guide')) {
+			router.push('/blog/motorolaonefusion');
+		}
+	};
 
 	if (windowWidth < 1280 && (pathname === '/' || pathname === '/blog' || pathname === '/projects')) {
 		return <></>;
