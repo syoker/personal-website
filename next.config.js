@@ -11,7 +11,6 @@ const nextTranslate = require('next-translate-plugin');
 
 const nextConfig = nextTranslate({
 	reactStrictMode: true,
-	output: 'export',
 	pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
 	images: {
 		remotePatterns: [
