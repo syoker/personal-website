@@ -12,7 +12,5 @@ export default function Topic() {
 		'/blog/motorolaonefusion': <MotorolaOneFusion />,
 	};
 
-	const error = <Error404 />;
-
-	return <>{validPages[pathname] || error}</>;
+	return <>{validPages[pathname] || <Error404 />}</>;
 }
