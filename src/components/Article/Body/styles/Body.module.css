@@ -85,12 +85,12 @@
 	.body h3,
 	.body h4,
 	.body h5,
-	.body h6,
-	.body li {
+	.body h6 {
 		color: #f5f5f5;
 	}
 
-	.body p {
+	.body p,
+	.body li {
 		color: #e4e5f3;
 	}
 
