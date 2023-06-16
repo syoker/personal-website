@@ -1,0 +1,100 @@
+import { Head } from 'src/components/shared';
+import { Video } from 'src/components/Article';
+
+<Head
+	title="[Guide] Flash Custom Recovery"
+	description="Guide to flash a Custom Recovery on Motorola One Fusion | Astro"
+	ogUrl="https://syoker.github.io/blog/motorolaonefusion/guide-flash-custom-recovery"
+	ogTitle="[Guide] Flash Custom Recovery"
+	ogDescription="Guide to flash a Custom Recovery on Motorola One Fusion | Astro"
+	ogImage="https://raw.githubusercontent.com/Syoker/syoker.github.io/main/public/img/banner-flashcustomrecovery.png"
+/>
+
+In this guide, I will show you how to flash a Custom Recovery for your device.
+
+All this is at your own risk, I'm not responsible for any damage caused to your device.
+
+## **¿What I need?**
+
+- ### **SDK Platform Tools**
+    
+  	The _Android SDK Platform tools_ are a component of the Android SDK. They include tools that interact with the Android platform, such as <code><a href="https://developer.android.com/studio/command-line/adb">adb</a></code>, <code><a href="https://android.googlesource.com/platform/system/core/+/master/fastboot/#fastboot">fastboot</a></code> y <code><a href="https://developer.android.com/topic/performance/tracing/command-line">systrace</a></code>. These tools are required for Android app development, or if you want to unlock the bootloader of your device and update it with a new system image.
+
+  	Download link - [SDK Platform Tools](https://developer.android.com/studio/releases/platform-tools)
+    
+- ### **Motorola Drivers**
+    
+    This contains the USB drivers so that the PC can recognize your device and work with it when it is in Bootloader or Fastbootd.
+    
+    Download link - [Motorola](https://motorola-global-es-latam.custhelp.com/app/answers/detail/a_id/89882)
+    
+- ### **Windows Terminal (optional)**
+    
+    If you have windows 8, 8.1 or 10, download this terminal from the Windows Store, as you will get a feature that you will need in this guide. Once you have obtained the terminal, configure it so that the default profile is the command prompt (CMD).
+    
+    Download link - [Microsoft Store](https://www.microsoft.com/store/productId/9N0DX20HK701)
+    
+- ### **USB debugging (optional)**
+    
+    In this guide we will use USB debugging to access the bootloader mode, it is not necessary if you are already in bootloader mode or if you are going to access it in another way (with a buttons combination), but I recommend the way it is going to be shown in this guide.
+    
+    To enable USB debugging, you have to go to the settings app, in the "About phone" section under "Build number" and tap 7 times. Then, you have to access the "Developer options" in the settings app under "System" and enable "USB debugging".
+    
+- ### **Bootloader unlocked**
+    
+    You need to have unlocked the bootloader to be able to install a Custom Recovery on your device. If you haven't unlocked it yet, I'll leave you the link to the guide I made explaining step by step what you have to do.
+    
+    Link of the guide - [[Guide] Unlock bootloader](https://syoker.github.io/blog/motorolaonefusion/guide-unlock-bootloader/)
+    
+- ### **Custom Recovery**
+    
+    Here are the links to the custom recoveries available on our device. Once downloaded, place the image in the same folder where the platform-Tools files are located.
+    
+    Link of TWRP - [GitHub](https://github.com/sdm710-motorola/android_device_motorola_astro_twrp/releases) (credits to [Uotlaf](https://github.com/uotlaf)) - Functional on Android 12 with the latest version.
+    
+    Link of OrangeFox - [GitHub](https://github.com/sdm710-motorola/android_device_motorola_astro_ofrp/releases) (credits to [Uotlaf](https://github.com/uotlaf)) - Not functional on Android 12.
+    
+
+## **Procedure for flashing the Custom Recovery**
+
+1. Unzip the platform-tools folder you got from the **Android Developers** page and paste the .img file of the previously downloaded custom recovery into the same folder.
+    
+![Folder example](/img/guide-examplefolder.png)
+
+2. If you have the **Windows Terminal** obtained from the **Microsoft Store**, simply open the CMD inside the folder by right-clicking on an empty part of the folder and selecting the "Open in Terminal" option.
+    
+<Video src="/video/opencommandprompt.mp4" />
+
+	If you don't have the **Windows Terminal**, inside the folder in an empty space, shift+right-click and select the option "Open PowerShell window here", type `cmd` inside the window and press enter.
+
+<Video src="/video/openwindowspowershell.mp4" />
+
+3. Connect the device to the PC, type in the CMD `adb devices` (the phone has to be on for this command to work, in case it is already in bootloader, type `fastboot devices`) and press enter. If the console doesn't return
+    
+    ```bash
+    List of devices   attached
+    ZE222BZWFF        device
+    ```
+    
+    then make sure you have your device properly connected, or have enabled USB debugging.
+    
+4. Now reboot to the bootloader (if you aren't in it) with `adb reboot bootloader` or with the key combination "volume - and power" (you have to hold down these buttons until the bootloader screen appears).
+    
+    Either way, this will access the bootloader, which has a screen with text and the Android robot lying down with an open lid.
+    
+5. Once inside the bootloader, flash the recovery on both partitions of the device with:
+    
+	```bash
+	fastboot flash recovery_a "customrecovery.img"
+	fastboot flash recovery_b "customrecovery.img"
+	```
+    
+  Where "customrecovery.img" is the name of the recovery file, without quotes and with the ".img".
+    
+6. Now reboot to recovery with `fastboot reboot recovery` and you are in recovery.
+
+Now, make a backup of the EFS, Modem and Persist folders and save it on a micro SD card or on the computer, as it will be useful if for some reason you lose the IMEI.
+
+![IMEI Backup](/img/guide-imeibackup.png)
+
+If you have any questions, please visit the Telegram group in Spanish (currently doesn't exist in English) of our device [Motorola One Fusion | Español™](https://t.me/MotorolaOneFusionES) (If you find any translation errors, let me know via this group or by md on [telegram](https://t.me/Syoker)).

@@ -1,0 +1,12 @@
+{
+	"guide": "Guide",
+	"additional-information": "In this section you will find all my guides for this phone, for example, how to reinstall the software of this device.",
+	"guide-flash-official-firmware-title": "[Guide] Flash Official Firmware",
+	"guide-flash-official-firmware-description": "Guide to flash the official firmware on Motorola One Fusion | Astro",
+	"guide-unlock-bootloader-title": "[Guide] Unlock Bootloader",
+	"guide-unlock-bootloader-description": "Guide to Unlock Bootloader on Motorola One Fusion | Astro",
+	"guide-flash-custom-recovery-title": "[Guide] Flash Custom Recovery",
+	"guide-flash-custom-recovery-description": "Guide to flash a Custom Recovery on Motorola One Fusion | Astro",
+	"guide-flash-rom-gsi-title": "[Guide] Flash ROM GSI",
+	"guide-flash-rom-gsi-description": "Guide to flash a GSI ROM on the Motorola One Fusion | Astro"
+}

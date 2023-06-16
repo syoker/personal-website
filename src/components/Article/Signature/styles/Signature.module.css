@@ -1,0 +1,12 @@
+.signature {
+	font-family: Inter;
+	color: #1b1c20;
+	width: 100%;
+	text-align: end;
+}
+
+@media (prefers-color-scheme: dark) {
+	.signature {
+		color: #c4c5d0;
+	}
+}

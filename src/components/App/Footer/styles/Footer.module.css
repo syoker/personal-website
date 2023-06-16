@@ -1,0 +1,129 @@
+@keyframes activeIconLight {
+	0% {
+		color: #45474f;
+		width: 2.5rem;
+	}
+	100% {
+		color: #1b1c20;
+		width: 4rem;
+	}
+}
+
+@keyframes activeTextLight {
+	0% {
+		font-weight: 400;
+		color: #45474f;
+	}
+	100% {
+		font-weight: 700;
+		color: #1b1c20;
+	}
+}
+
+@keyframes activeIconDark {
+	0% {
+		color: #c4c8d0;
+		width: 2.5rem;
+	}
+	100% {
+		color: #e0e2e9;
+		width: 4rem;
+	}
+}
+
+@keyframes activeTextDark {
+	0% {
+		font-weight: 400;
+		color: #c4c8d0;
+	}
+	100% {
+		font-weight: 700;
+		color: #e0e2e9;
+	}
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	z-index: 99;
+	background-color: #f1f5fd;
+}
+
+.footer > .button {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 0.7rem;
+	gap: 0.3rem;
+}
+
+.footer > .button > .icon {
+	width: 4rem;
+	height: 2rem;
+	padding: 0.2rem;
+	color: #45474f;
+}
+
+.footer > .button > label {
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 0.8rem;
+	color: #45474f;
+}
+
+.footer > .activeButton > .icon {
+	background-color: #d8e1f7;
+	color: #1b1c20;
+	width: 4rem;
+	height: 2rem;
+	padding: 0.2rem;
+	border-radius: 10rem;
+	animation: activeIconLight 0.2s;
+}
+
+.footer > .activeButton > label {
+	font-weight: 700;
+	color: #1b1c20;
+	animation: activeTextLight 0.2s;
+}
+
+@media (prefers-color-scheme: dark) {
+	.footer {
+		background-color: #242424;
+	}
+	
+	.footer > .button > .icon {
+		width: 4rem;
+		height: 2rem;
+		padding: 0.2rem;
+		color: #c4c8d0;
+	}
+	
+	.footer > .button > label {
+		font-family: Inter;
+		font-weight: 400;
+		font-size: 0.8rem;
+		color: #c4c8d0;
+	}
+
+	.footer > .activeButton > .icon {
+		background-color: #444858;
+		color: #e0e2e9;
+		width: 4rem;
+		height: 2rem;
+		padding: 0.2rem;
+		border-radius: 10rem;
+		animation: activeIconDark 0.2s;
+	}
+	
+	.footer > .activeButton > label {
+		font-weight: 700;
+		color: #e0e2e9;
+		animation: activeTextDark 0.2s;
+	}
+}

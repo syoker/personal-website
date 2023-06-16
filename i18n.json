@@ -1,0 +1,14 @@
+{
+	"locales": ["en", "es"],
+	"defaultLocale": "en",
+	"pages": {
+		"/": ["header", "home", "footer"],
+		"/blog": ["header", "blog", "footer"],
+		"/projects": ["header", "projects", "footer"],
+		"/blog/motorolaonefusion": ["header", "topic-motorola-one-fusion"],
+		"/blog/motorolaonefusion/guide-flash-official-firmware": ["header", "article"],
+		"/blog/motorolaonefusion/guide-unlock-bootloader": ["header", "article"],
+		"/blog/motorolaonefusion/guide-flash-custom-recovery": ["header", "article"],
+		"/blog/motorolaonefusion/guide-flash-rom-gsi": ["header", "article"]
+	}
+}

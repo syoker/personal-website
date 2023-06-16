@@ -1,0 +1,81 @@
+.presentation {
+	position: fixed;
+	width: 100%;
+	height: calc(100% - 9rem);
+	top: 4rem;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+}
+
+.presentation > h1 {
+	font-family: Inter;
+	font-weight: 700;
+	color: #1b1c20;
+	text-align: center;
+}
+
+.presentation > p {
+	font-family: Inter;
+	font-weight: 500;
+	hyphens: none;
+	color: #1b1c20;
+	text-align: center;
+	margin-bottom: 0.5rem;
+}
+
+.presentation > .social {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.presentation > .social .icon {
+	width: 1.6rem;
+	height: 1.6rem;
+	color: #333333;
+	transition: color 0.3s;
+}
+
+.presentation > .social .icon:hover {
+	color: #2b50aa;
+}
+
+@media (min-width: 1280px) {
+	.presentation {
+		top: 0;
+		height: 100%;
+	}
+
+	.presentation > .social {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		margin-bottom: 2rem;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		gap: 0.5rem;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.presentation > h1 {
+		color: #f5f5f5;
+	}
+	
+	.presentation > p {
+		color: #c4c5d0;
+	}
+
+	.presentation > .social .icon {
+		color: #e6e6e6;
+	}
+
+	.presentation > .social .icon:hover {
+		color: #5a7dd4;
+	}
+}
