@@ -1,4 +1,4 @@
-## Syoker Webpage
+## Personal Website
 This is my personal page made in React with NextJS and TypeScript, using MDX for the articles, and Next-Translate to support English and Spanish.
 
 ### Requirements to build the project
