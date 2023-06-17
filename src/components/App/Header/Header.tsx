@@ -11,7 +11,7 @@ import useTranslation from 'next-translate/useTranslation';
 
 import styles from './styles/Header.module.css';
 
-export default function Header() {
+export default function Header({ pathname }: { pathname: string }) {
 	const { t } = useTranslation('header');
 	const { width } = useWindowDimensions();
 
@@ -26,7 +26,6 @@ export default function Header() {
 	const errorPage = <h2>{'Error 404'}</h2>;
 
 	const router = useRouter();
-	const pathname = router.asPath;
 
 	const home = () => router.push('../../../');
 
@@ -45,7 +44,7 @@ export default function Header() {
 	};
 
 	if (width < 1280 && (pathname === '/' || pathname === '/blog' || pathname === '/projects')) {
-		return <></>;
+		return null;
 	}
 
 	return (

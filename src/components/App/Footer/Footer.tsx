@@ -13,12 +13,9 @@ export default function Footer() {
 	const { width } = useWindowDimensions();
 
 	const router = useRouter();
+	const pathname = router.pathname;
 
-	if (width >= 1280) {
-		return null;
-	}
-
-	if (router.pathname === '/' || router.pathname === '/blog' || router.pathname === '/projects') {
+	if (width < 1280 && (pathname === '/' || pathname === '/blog' || pathname === '/projects')) {
 		return (
 			<footer className={styles.footer}>
 				<Link href="../" className={classNames(styles.button, router.pathname === '/' && styles.activeButton)}>

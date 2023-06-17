@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router';
+import { GetServerSideProps } from 'next';
 
 import { ValidPages } from 'src/types';
 import {
@@ -17,11 +17,18 @@ import useTranslation from 'next-translate/useTranslation';
 
 import styles from 'src/styles/Article.module.css';
 
-export default function Article() {
-	const { t, lang } = useTranslation('article');
+export const getServerSideProps: GetServerSideProps = async (context) => {
+	const pathname = context.resolvedUrl;
 
-	const router = useRouter();
-	const pathname = router.asPath;
+	return {
+		props: {
+			pathname,
+		},
+	};
+};
+
+export default function Article({ pathname }: { pathname: string }) {
+	const { t, lang } = useTranslation('article');
 
 	const validPages: ValidPages = {
 		'/blog/motorolaonefusion/guide-flash-official-firmware': (
