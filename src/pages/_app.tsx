@@ -8,10 +8,22 @@ import { useRouter } from 'next/router';
 import { Header, Footer } from 'src/components/App';
 import { Analytics } from '@vercel/analytics/react';
 import { StyledEngineProvider } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import setLanguage from 'next-translate/setLanguage';
 
 import type { AppProps } from 'next/app';
+
+const theme = createTheme({
+	palette: {
+		mode:
+			typeof window !== 'undefined'
+				? window.matchMedia('(prefers-color-scheme: dark)').matches
+					? 'dark'
+					: 'light'
+				: 'light',
+	},
+});
 
 export default function App({ Component, pageProps }: AppProps) {
 	useEffect(() => {
@@ -27,11 +39,13 @@ export default function App({ Component, pageProps }: AppProps) {
 	const router = useRouter();
 
 	return (
-		<StyledEngineProvider injectFirst>
-			<Header pathname={router.asPath} />
-			<Component {...pageProps} />
-			<Footer />
-			<Analytics />
-		</StyledEngineProvider>
+		<ThemeProvider theme={theme}>
+			<StyledEngineProvider injectFirst>
+				<Header pathname={router.asPath} />
+				<Component {...pageProps} />
+				<Footer />
+				<Analytics />
+			</StyledEngineProvider>
+		</ThemeProvider>
 	);
 }

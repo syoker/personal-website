@@ -1,0 +1,11 @@
+.icon {
+	filter: invert(12%) sepia(10%) saturate(9%) hue-rotate(342deg) brightness(101%) contrast(79%);
+	width: 1.6rem;
+	height: 1.6rem;
+}
+
+@media (prefers-color-scheme: dark) {
+	.icon {
+		filter: invert(99%) sepia(6%) saturate(91%) hue-rotate(261deg) brightness(111%) contrast(80%);
+	}
+}

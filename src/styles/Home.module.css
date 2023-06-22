@@ -30,18 +30,6 @@
 
 .presentation > .social {
 	display: flex;
-	gap: 0.5rem;
-}
-
-.presentation > .social .icon {
-	width: 1.6rem;
-	height: 1.6rem;
-	color: #333333;
-	transition: color 0.3s;
-}
-
-.presentation > .social .icon:hover {
-	color: #2b50aa;
 }
 
 @media (min-width: 1280px) {
@@ -58,7 +46,6 @@
 		width: 100%;
 		display: flex;
 		justify-content: center;
-		gap: 0.5rem;
 	}
 }
 
@@ -69,13 +56,5 @@
 	
 	.presentation > p {
 		color: #c4c5d0;
-	}
-
-	.presentation > .social .icon {
-		color: #e6e6e6;
-	}
-
-	.presentation > .social .icon:hover {
-		color: #5a7dd4;
 	}
 }
