@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 import { MdKeyboardArrowLeft } from 'react-icons/md';
 
 import { ValidPages } from 'src/types';
@@ -14,6 +15,12 @@ import styles from './styles/Header.module.css';
 export default function Header({ pathname }: { pathname: string }) {
 	const { t } = useTranslation('header');
 	const { width } = useWindowDimensions();
+
+	const [windowWidth, setWindowWidth] = useState<number>(0);
+
+	useEffect(() => {
+		setWindowWidth(width);
+	}, [width]);
 
 	const validPages: ValidPages = {
 		'/blog/motorolaonefusion': <h2>{'Motorola One Fusion'}</h2>,
@@ -43,7 +50,7 @@ export default function Header({ pathname }: { pathname: string }) {
 		home();
 	};
 
-	if (width < 1280 && (pathname === '/' || pathname === '/blog' || pathname === '/projects')) {
+	if (windowWidth < 1280 && (pathname === '/' || pathname === '/blog' || pathname === '/projects')) {
 		return null;
 	}
 

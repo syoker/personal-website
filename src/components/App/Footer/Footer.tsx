@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
 import { useWindowDimensions } from 'src/hooks';
 import { MdArticle, MdAccountCircle, MdSpaceDashboard } from 'react-icons/md';
 
@@ -12,10 +13,16 @@ export default function Footer() {
 	const { t } = useTranslation('footer');
 	const { width } = useWindowDimensions();
 
+	const [windowWidth, setWindowWidth] = useState<number>(0);
+
+	useEffect(() => {
+		setWindowWidth(width);
+	}, [width]);
+
 	const router = useRouter();
 	const pathname = router.pathname;
 
-	if (width < 1280 && (pathname === '/' || pathname === '/blog' || pathname === '/projects')) {
+	if (windowWidth < 1280 && (pathname === '/' || pathname === '/blog' || pathname === '/projects')) {
 		return (
 			<footer className={styles.footer}>
 				<Link href="../" className={classNames(styles.button, router.pathname === '/' && styles.activeButton)}>
