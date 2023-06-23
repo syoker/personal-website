@@ -33,7 +33,7 @@ export default function HeaderMobile({ pathname }: HeaderMobileProps) {
 	return (
 		<header className={styles.header}>
 			<MdKeyboardArrowLeft onClick={back} className={styles.icon} />
-			{validPages[pathname] || <h2>{'Error 404'}</h2>}
+			{validPages[pathname]}
 		</header>
 	);
 }
