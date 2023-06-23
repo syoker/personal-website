@@ -83,3 +83,9 @@
 		background-color: #363636;
 	}
 }
+
+@media (max-width: 1279px) {
+	.card {
+		width: 100%;
+	}
+}

@@ -1,0 +1,42 @@
+.header {
+	display: flex;
+	padding: 1rem;
+	gap: 1rem;
+	align-items: center;
+	position: relative;
+	z-index: 2;
+}
+
+.header > .icon {
+	max-width: 30px;
+	min-width: 30px;
+	height: 30px;
+	color: #1b1c20;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.header > h2 {
+	font-family: Inter;
+	font-weight: 700;
+	color: #1b1c20;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+@media (prefers-color-scheme: dark) {
+	.header > h2 {
+		color: #f5f5f5;
+	}
+
+	.header > .icon {
+		color: #e6e6e6;
+	}
+}
+
+@media (min-width: 1280px) {
+	.header {
+		display: none;
+	}
+}
