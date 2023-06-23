@@ -20,6 +20,7 @@
 		cursor: pointer;
 		transition: all 0.3s;
 		filter: invert(8%) sepia(5%) saturate(1661%) hue-rotate(191deg) brightness(95%) contrast(91%);
+		user-select: none;
 	}
 	
 	.header > .navigation {
