@@ -52,13 +52,13 @@ export default function Projects() {
 							description="Este es un proyecto realizado en React con NextJS y TypeScript."
 							link="https://github.com/rickruad/proyecto-de-residencias"
 						/>
-						<CustomCard
+						{/* <CustomCard
 							banner="https://opengraph.githubassets.com/31e94331a8ce52193ff25ae9b16250716b2d4ea149a84af0b8f0464557f24662/Syoker/vash"
 							title="VASH"
 							titleSide="GitHub"
 							description="This is a self-hosted image and video viewer project focused on artists from various websites, such as Patreon, Fanbox, etc."
 							link="https://github.com/Syoker/vash"
-						/>
+						/> */}
 					</article>
 					<h3>{t('title-magisk-modules-section')}</h3>
 					<article className={classNames(styles.cards, styles.bottom)}>
