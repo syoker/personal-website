@@ -52,13 +52,24 @@ export default function Projects() {
 							description="Este es un proyecto realizado en React con NextJS y TypeScript."
 							link="https://github.com/rickruad/proyecto-de-residencias"
 						/>
-						{/* <CustomCard
-							banner="https://opengraph.githubassets.com/31e94331a8ce52193ff25ae9b16250716b2d4ea149a84af0b8f0464557f24662/Syoker/vash"
-							title="VASH"
+						<CustomCard
+							banner="https://opengraph.githubassets.com/a1453ac1295c82090ad9685e9ed1099b384654dc80a3f1bccd6c21f4061a6c3e/Syoker/vash-web-client"
+							title="VASH Web Client"
 							titleSide="GitHub"
-							description="This is a self-hosted image and video viewer project focused on artists from various websites, such as Patreon, Fanbox, etc."
-							link="https://github.com/Syoker/vash"
-						/> */}
+							description="This is a project written in React with NextJS and TypeScript, using next-translate for internationalization."
+							link="https://github.com/Syoker/vash-web-client"
+						/>
+					</article>
+					<h3>{t('title-servers-section')}</h3>
+					<article className={styles.cards}>
+					<CustomCard
+							banner="https://opengraph.githubassets.com/aa9a116dfd53df375a470fcdd80bc0f2cb704d51937d4cb303a39845ec9bdaf0/Syoker/vash-server"
+							title="VASH Server"
+							titleSide="GitHub"
+							description="This is the local server where any VASH client will connect. It is written in TypeScript with the NodeJS framework."
+							link="https://github.com/Syoker/vash-server"
+							sx={{ width: 'calc(50% - 0.5rem)' }}
+						/>
 					</article>
 					<h3>{t('title-magisk-modules-section')}</h3>
 					<article className={classNames(styles.cards, styles.bottom)}>
