@@ -3,7 +3,7 @@ This is my personal page made in React with NextJS and TypeScript, using MDX for
 
 ### Requirements to build the project
 - [Git](https://git-scm.com/downloads)
-- [NodeJS 18.16 LTS](https://nodejs.org/en)
+- [NodeJS 18.16.1 LTS](https://nodejs.org/en)
 
 ### How to build this project
 1. First, clone the repository with `git clone https://github.com/Syoker/personal-website`.
