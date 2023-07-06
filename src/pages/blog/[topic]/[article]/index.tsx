@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next';
+import { useRouter } from 'next/router';
 
 import { ValidPages } from 'src/types';
 import {
@@ -17,18 +17,11 @@ import useTranslation from 'next-translate/useTranslation';
 
 import styles from 'src/styles/Article.module.css';
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-	const pathname = context.resolvedUrl;
-
-	return {
-		props: {
-			pathname,
-		},
-	};
-};
-
-export default function Article({ pathname }: { pathname: string }) {
+export default function Article() {
+	const router = useRouter();
 	const { t, lang } = useTranslation('article');
+
+	const path = router.asPath;
 
 	const validPages: ValidPages = {
 		'/blog/motorolaonefusion/guide-flash-official-firmware': (
@@ -57,16 +50,16 @@ export default function Article({ pathname }: { pathname: string }) {
 		),
 	};
 
-	if (validPages[pathname]) {
-		return (
-			<section className={styles.body}>
-				{validPages[pathname]}
-				<div className={styles.signature}>
-					<em>{t('signature')}</em>
-				</div>
-			</section>
-		);
+	if (!validPages[path]) {
+		return <Error404 />;
 	}
 
-	return <Error404 />;
+	return (
+		<section className={styles.body}>
+			{validPages[path]}
+			<div className={styles.signature}>
+				<em>{t('signature')}</em>
+			</div>
+		</section>
+	);
 }
