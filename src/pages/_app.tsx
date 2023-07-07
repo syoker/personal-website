@@ -4,8 +4,6 @@ import 'public/fonts/inter.css';
 import 'public/fonts/source-code-pro.css';
 
 import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { Header, Footer } from 'src/components/App';
 import { Analytics } from '@vercel/analytics/react';
 import { StyledEngineProvider } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -36,14 +34,10 @@ export default function App({ Component, pageProps }: AppProps) {
 		setLanguage(language ?? 'en');
 	}, []);
 
-	const router = useRouter();
-
 	return (
 		<ThemeProvider theme={theme}>
 			<StyledEngineProvider injectFirst>
-				<Header pathname={router.asPath} />
 				<Component {...pageProps} />
-				<Footer />
 				<Analytics />
 			</StyledEngineProvider>
 		</ThemeProvider>

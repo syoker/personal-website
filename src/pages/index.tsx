@@ -1,14 +1,17 @@
 import useTranslation from 'next-translate/useTranslation';
+import type { GetServerSidePropsContext, GetServerSideProps } from 'next';
 
-import { Head, CustomIconButton } from 'src/components/shared';
+import { Head, Header, Footer, CustomIconButton } from 'src/components/shared';
 
 import styles from 'src/styles/Home.module.css';
 
-export default function Home() {
+export default function Home({ path }: { path: string }) {
 	const { t } = useTranslation('home');
 
 	return (
 		<>
+			<Header pathname={path} />
+
 			<Head
 				title="Lautaro"
 				description="An electronics technician who enjoys programming, watching anime and reading manga."
@@ -29,6 +32,16 @@ export default function Home() {
 					<CustomIconButton icon="/icon/youtube.svg" link="https://www.youtube.com/channel/UChPFf_wds74OSNKWuZCa-zA" />
 				</nav>
 			</section>
+
+			<Footer path={path} />
 		</>
 	);
 }
+
+export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
+	return {
+		props: {
+			path: context.resolvedUrl,
+		},
+	};
+};

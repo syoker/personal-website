@@ -20,6 +20,9 @@ const nextConfig = nextTranslate({
 			},
 		],
 	},
+	compiler: {
+		emotion: true,
+	},
 });
 
 module.exports = withMDX(nextConfig);

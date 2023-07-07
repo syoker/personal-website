@@ -1,14 +1,17 @@
 import useTranslation from 'next-translate/useTranslation';
+import type { GetServerSidePropsContext, GetServerSideProps } from 'next';
 
-import { CustomCard, Head } from 'src/components/shared';
+import { CustomCard, Head, Header, Footer } from 'src/components/shared';
 
 import styles from 'src/styles/Blog.module.css';
 
-export default function Blog() {
+export default function Blog({ path }: { path: string }) {
 	const { t } = useTranslation('blog');
 
 	return (
 		<>
+			<Header pathname={path} />
+
 			<Head
 				title="Blog"
 				description="In this section I will be adding all the topics of the guides I make."
@@ -33,6 +36,16 @@ export default function Blog() {
 					/>
 				</article>
 			</section>
+
+			<Footer path={path} />
 		</>
 	);
 }
+
+export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
+	return {
+		props: {
+			path: context.resolvedUrl,
+		},
+	};
+};

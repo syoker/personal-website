@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router';
+import type { GetServerSidePropsContext, GetServerSideProps } from 'next';
 
 import { ValidPages } from 'src/types';
 import {
@@ -11,55 +11,70 @@ import {
 	GuideFlashROMGSIEN,
 	GuideFlashROMGSIES,
 } from 'src/components/Article';
-import { Error404 } from 'src/components/shared';
+import { Header } from 'src/components/shared';
 
 import useTranslation from 'next-translate/useTranslation';
 
 import styles from 'src/styles/Article.module.css';
 
-export default function Article() {
-	const router = useRouter();
-	const { t, lang } = useTranslation('article');
+type ValidPagesServer = {
+	[key: string]: string;
+};
 
-	const path = router.asPath;
+export default function Article({ page, path }: { page: string; path: string }) {
+	const { t } = useTranslation('article');
 
 	const validPages: ValidPages = {
-		'/blog/motorolaonefusion/guide-flash-official-firmware': (
-			<>
-				<h1 className={styles.title}>{t('title-flash-official-firmware')}</h1>
-				{lang === 'es' ? <GuideFlashOfficialFirmwareES /> : <GuideFlashOfficialFirmwareEN />}
-			</>
-		),
-		'/blog/motorolaonefusion/guide-unlock-bootloader': (
-			<>
-				<h1 className={styles.title}>{t('title-unlock-bootloader')}</h1>
-				{lang === 'es' ? <GuideUnlockBootloaderES /> : <GuideUnlockBootloaderEN />}
-			</>
-		),
-		'/blog/motorolaonefusion/guide-flash-custom-recovery': (
-			<>
-				<h1 className={styles.title}>{t('title-flash-custom-recovery')}</h1>
-				{lang === 'es' ? <GuideFlashCustomRecoveryES /> : <GuideFlashCustomRecoveryEN />}
-			</>
-		),
-		'/blog/motorolaonefusion/guide-flash-rom-gsi': (
-			<>
-				<h1 className={styles.title}>{t('title-flash-rom-gsi')}</h1>
-				{lang === 'es' ? <GuideFlashROMGSIES /> : <GuideFlashROMGSIEN />}
-			</>
-		),
+		'[Guide] Flash ROM GSI': <GuideFlashROMGSIEN />,
+		'[Guía] Flashear ROM GSI': <GuideFlashROMGSIES />,
+		'[Guide] Unlock Bootloader': <GuideUnlockBootloaderEN />,
+		'[Guía] Desbloquear Bootloader': <GuideUnlockBootloaderES />,
+		'[Guide] Flash Custom Recovery': <GuideFlashCustomRecoveryEN />,
+		'[Guía] Flashear Recovery Personalizado': <GuideFlashCustomRecoveryES />,
+		'[Guide] Flash Official Firmware': <GuideFlashOfficialFirmwareEN />,
+		'[Guía] Flashear Firmware Oficial': <GuideFlashOfficialFirmwareES />,
+	};
+
+	return (
+		<>
+			<Header pathname={path} />
+			<section className={styles.body}>
+				<h1 className={styles.title}>{page}</h1>
+				{validPages[page]}
+				<div className={styles.signature}>
+					<em>{t('signature')}</em>
+				</div>
+			</section>
+		</>
+	);
+}
+
+export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
+	const lang = context.locale;
+	const path = context.resolvedUrl;
+
+	const guide1 = lang === 'es' ? '[Guía] Flashear ROM GSI' : '[Guide] Flash ROM GSI';
+	const guide2 = lang === 'es' ? '[Guía] Desbloquear Bootloader' : '[Guide] Unlock Bootloader';
+	const guide3 = lang === 'es' ? '[Guía] Flashear Recovery Personalizado' : '[Guide] Flash Custom Recovery';
+	const guide4 = lang === 'es' ? '[Guía] Flashear Firmware Oficial' : '[Guide] Flash Official Firmware';
+
+	const validPages: ValidPagesServer = {
+		'/blog/motorolaonefusion/guide-flash-rom-gsi': guide1,
+		'/blog/motorolaonefusion/guide-unlock-bootloader': guide2,
+		'/blog/motorolaonefusion/guide-flash-custom-recovery': guide3,
+		'/blog/motorolaonefusion/guide-flash-official-firmware': guide4,
 	};
 
 	if (!validPages[path]) {
-		return <Error404 />;
+		return {
+			notFound: true,
+		};
 	}
 
-	return (
-		<section className={styles.body}>
-			{validPages[path]}
-			<div className={styles.signature}>
-				<em>{t('signature')}</em>
-			</div>
-		</section>
-	);
-}
+	return {
+		props: {
+			path: path,
+			page: validPages[path],
+		},
+	};
+};

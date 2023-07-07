@@ -2,10 +2,10 @@
 	"locales": ["en", "es"],
 	"defaultLocale": "en",
 	"pages": {
-		"/": ["header", "home", "footer", "error"],
-		"/blog": ["header", "blog", "footer", "error"],
-		"/projects": ["header", "projects", "footer", "error"],
-		"/blog/[topic]": ["header", "topic-motorola-one-fusion", "error"],
-		"/blog/[topic]/[article]": ["header", "article", "error"]
+		"/": ["header", "home", "footer"],
+		"/blog": ["header", "blog", "footer"],
+		"/projects": ["header", "projects", "footer"],
+		"/blog/[topic]": ["header", "topic-motorola-one-fusion"],
+		"/blog/[topic]/[article]": ["header", "article"]
 	}
 }

@@ -1,15 +1,18 @@
 import classNames from 'classnames';
 import useTranslation from 'next-translate/useTranslation';
+import type { GetServerSidePropsContext, GetServerSideProps } from 'next';
 
-import { CustomCard, Head } from 'src/components/shared';
+import { CustomCard, Head, Header, Footer } from 'src/components/shared';
 
 import styles from 'src/styles/Projects.module.css';
 
-export default function Projects() {
+export default function Projects({ path }: { path: string }) {
 	const { t } = useTranslation('projects');
 
 	return (
 		<>
+			<Header pathname={path} />
+
 			<Head
 				title="Projects"
 				description="In this section I will add all the projects I will be working on."
@@ -62,7 +65,7 @@ export default function Projects() {
 					</article>
 					<h3>{t('title-servers-section')}</h3>
 					<article className={styles.cards}>
-					<CustomCard
+						<CustomCard
 							banner="https://opengraph.githubassets.com/aa9a116dfd53df375a470fcdd80bc0f2cb704d51937d4cb303a39845ec9bdaf0/Syoker/vash-server"
 							title="VASH Server"
 							titleSide="GitHub"
@@ -111,6 +114,16 @@ export default function Projects() {
 					</article>
 				</div>
 			</section>
+
+			<Footer path={path} />
 		</>
 	);
 }
+
+export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
+	return {
+		props: {
+			path: context.resolvedUrl,
+		},
+	};
+};
