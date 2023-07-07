@@ -1,5 +1,6 @@
 import type { GetServerSidePropsContext, GetServerSideProps } from 'next';
 
+import { useRouter } from 'next/router';
 import { ValidPages } from 'src/types';
 import {
 	GuideFlashOfficialFirmwareEN,
@@ -22,9 +23,24 @@ type ValidPagesServer = {
 };
 
 export default function Article({ page, path }: { page: string; path: string }) {
-	const { t } = useTranslation('article');
+	const { t, lang } = useTranslation('article');
+	const router = useRouter();
 
-	const validPages: ValidPages = {
+	const guide1 = lang === 'es' ? '[Guía] Flashear ROM GSI' : '[Guide] Flash ROM GSI';
+	const guide2 = lang === 'es' ? '[Guía] Desbloquear Bootloader' : '[Guide] Unlock Bootloader';
+	const guide3 = lang === 'es' ? '[Guía] Flashear Recovery Personalizado' : '[Guide] Flash Custom Recovery';
+	const guide4 = lang === 'es' ? '[Guía] Flashear Firmware Oficial' : '[Guide] Flash Official Firmware';
+
+	const validPages: ValidPagesServer = {
+		'/blog/motorolaonefusion/guide-flash-rom-gsi': guide1,
+		'/blog/motorolaonefusion/guide-unlock-bootloader': guide2,
+		'/blog/motorolaonefusion/guide-flash-custom-recovery': guide3,
+		'/blog/motorolaonefusion/guide-flash-official-firmware': guide4,
+	};
+
+	const pageTemp = validPages[router.asPath];
+
+	const validPagesRender: ValidPages = {
 		'[Guide] Flash ROM GSI': <GuideFlashROMGSIEN />,
 		'[Guía] Flashear ROM GSI': <GuideFlashROMGSIES />,
 		'[Guide] Unlock Bootloader': <GuideUnlockBootloaderEN />,
@@ -37,10 +53,10 @@ export default function Article({ page, path }: { page: string; path: string }) 
 
 	return (
 		<>
-			<Header pathname={path} />
+			<Header pathname={router.asPath} />
 			<section className={styles.body}>
-				<h1 className={styles.title}>{page}</h1>
-				{validPages[page]}
+				<h1 className={styles.title}>{pageTemp}</h1>
+				{validPagesRender[pageTemp]}
 				<div className={styles.signature}>
 					<em>{t('signature')}</em>
 				</div>
