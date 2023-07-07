@@ -1,6 +1,5 @@
-import type { GetServerSidePropsContext, GetServerSideProps } from 'next';
-
 import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import { ValidPages } from 'src/types';
 import {
 	GuideFlashOfficialFirmwareEN,
@@ -22,9 +21,27 @@ type ValidPagesServer = {
 	[key: string]: string;
 };
 
-export default function Article({ page, path }: { page: string; path: string }) {
+export default function Article() {
 	const { t, lang } = useTranslation('article');
 	const router = useRouter();
+
+	useEffect(() => {
+		const guide1 = lang === 'es' ? '[Guía] Flashear ROM GSI' : '[Guide] Flash ROM GSI';
+		const guide2 = lang === 'es' ? '[Guía] Desbloquear Bootloader' : '[Guide] Unlock Bootloader';
+		const guide3 = lang === 'es' ? '[Guía] Flashear Recovery Personalizado' : '[Guide] Flash Custom Recovery';
+		const guide4 = lang === 'es' ? '[Guía] Flashear Firmware Oficial' : '[Guide] Flash Official Firmware';
+
+		const validPages: ValidPagesServer = {
+			'/blog/motorolaonefusion/guide-flash-rom-gsi': guide1,
+			'/blog/motorolaonefusion/guide-unlock-bootloader': guide2,
+			'/blog/motorolaonefusion/guide-flash-custom-recovery': guide3,
+			'/blog/motorolaonefusion/guide-flash-official-firmware': guide4,
+		};
+
+		if (!validPages[router.asPath]) {
+			router.push('/404');
+		}
+	}, [lang, router]);
 
 	const guide1 = lang === 'es' ? '[Guía] Flashear ROM GSI' : '[Guide] Flash ROM GSI';
 	const guide2 = lang === 'es' ? '[Guía] Desbloquear Bootloader' : '[Guide] Unlock Bootloader';
@@ -64,33 +81,3 @@ export default function Article({ page, path }: { page: string; path: string }) 
 		</>
 	);
 }
-
-export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
-	const lang = context.locale;
-	const path = context.resolvedUrl;
-
-	const guide1 = lang === 'es' ? '[Guía] Flashear ROM GSI' : '[Guide] Flash ROM GSI';
-	const guide2 = lang === 'es' ? '[Guía] Desbloquear Bootloader' : '[Guide] Unlock Bootloader';
-	const guide3 = lang === 'es' ? '[Guía] Flashear Recovery Personalizado' : '[Guide] Flash Custom Recovery';
-	const guide4 = lang === 'es' ? '[Guía] Flashear Firmware Oficial' : '[Guide] Flash Official Firmware';
-
-	const validPages: ValidPagesServer = {
-		'/blog/motorolaonefusion/guide-flash-rom-gsi': guide1,
-		'/blog/motorolaonefusion/guide-unlock-bootloader': guide2,
-		'/blog/motorolaonefusion/guide-flash-custom-recovery': guide3,
-		'/blog/motorolaonefusion/guide-flash-official-firmware': guide4,
-	};
-
-	if (!validPages[path]) {
-		return {
-			notFound: true,
-		};
-	}
-
-	return {
-		props: {
-			path: path,
-			page: validPages[path],
-		},
-	};
-};

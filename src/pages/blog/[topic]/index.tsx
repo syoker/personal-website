@@ -1,13 +1,22 @@
-import type { GetServerSidePropsContext, GetServerSideProps } from 'next';
-
 import { useRouter } from 'next/router';
 
 import { ValidPages } from 'src/types';
 import { Header } from 'src/components/shared';
 import { MotorolaOneFusion } from 'src/components/Topic';
+import { useEffect } from 'react';
 
-export default function Topic({ path }: { path: string }) {
+export default function Topic() {
 	const router = useRouter();
+
+	useEffect(() => {
+		const validPages: ValidPages = {
+			'/blog/motorolaonefusion': <MotorolaOneFusion />,
+		};
+
+		if (!validPages[router.asPath]) {
+			router.push('/404');
+		}
+	}, [router]);
 
 	const validPages: ValidPages = {
 		'/blog/motorolaonefusion': <MotorolaOneFusion />,
@@ -20,19 +29,3 @@ export default function Topic({ path }: { path: string }) {
 		</>
 	);
 }
-
-export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
-	const validPages = ['/blog/motorolaonefusion'];
-
-	if (!validPages.includes(context.resolvedUrl)) {
-		return {
-			notFound: true,
-		};
-	}
-
-	return {
-		props: {
-			path: context.resolvedUrl,
-		},
-	};
-};
