@@ -66,7 +66,26 @@ const Wrapper = styled('section')`
 		}
 	}
 
-	@media (min-width: 25rem) {
+	@media (min-width: 23.438rem) {
+		.article {
+			.greeting {
+				font-size: 5rem;
+			}
+
+			.presentation {
+				font-size: 2.2rem;
+				line-height: 1em;
+			}
+
+			.details {
+				padding: 1rem;
+				font-size: 0.95rem;
+				margin-top: 0.5rem;
+			}
+		}
+	}
+
+	@media (min-width: 24.375rem) {
 		.article {
 			.greeting {
 				font-size: 5rem;

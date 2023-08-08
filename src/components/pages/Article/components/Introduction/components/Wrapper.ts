@@ -118,7 +118,7 @@ const Wrapper = styled('div')`
 		}
 	}
 
-	@media (min-width: 25rem) {
+	@media (min-width: 23.438rem) {
 		.container {
 			flex-direction: row;
 
