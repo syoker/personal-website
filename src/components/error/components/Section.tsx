@@ -14,7 +14,7 @@ const Wrapper = styled('section')`
 
 	gap: 1rem;
 	width: 100%;
-	height: 100vh;
+	height: 100dvh;
 
 	display: flex;
 	flex-direction: column;
