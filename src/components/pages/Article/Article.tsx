@@ -22,7 +22,7 @@ const Article = () => {
 	return (
 		<>
 			<NameHead>{post.title}</NameHead>
-			<RouteHead>{`https://test-azure-theta-50.vercel.app${lang === 'es' ? '/es' : ''}/${category}/${tag}`}</RouteHead>
+			<RouteHead>{`https://syoker.vercel.app${lang === 'es' ? '/es' : ''}/${category}/${tag}`}</RouteHead>
 			<DescriptionHead>{post.description}</DescriptionHead>
 
 			<Introduction post={post} />
