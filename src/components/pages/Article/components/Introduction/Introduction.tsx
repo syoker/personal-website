@@ -27,7 +27,7 @@ const Introduction = ({ post }: { post: Post }) => {
 	));
 
 	const renderIconLink = post.category === 'projects' && (
-		<IconLink href={post.url} target="_blank">
+		<IconLink href={post.url} rel="noreferrer noopener" target="_blank">
 			<PiGithubLogoBold />
 		</IconLink>
 	);

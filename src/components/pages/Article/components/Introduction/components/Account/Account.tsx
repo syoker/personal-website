@@ -5,7 +5,7 @@ import validUsers from './utils/validUsers';
 const Account = ({ username }: { username: string }) => {
 	if (validUsers[username]) {
 		return (
-			<Wrapper href={validUsers[username].url}>
+			<Wrapper href={validUsers[username].url} rel="noreferrer noopener" target="_blank">
 				<Image
 					className="avatar"
 					src={validUsers[username].avatar}

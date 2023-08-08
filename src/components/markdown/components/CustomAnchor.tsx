@@ -5,7 +5,7 @@ import type { ReactAnchor } from 'src/types/shared';
 
 const CustomAnchor = ({ children, href }: ReactAnchor) => {
 	return (
-		<StyledAnchor href={{ pathname: href }} target="_blank">
+		<StyledAnchor href={{ pathname: href }} rel="noreferrer noopener" target="_blank">
 			{children}
 		</StyledAnchor>
 	);
