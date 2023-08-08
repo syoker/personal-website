@@ -66,6 +66,25 @@ const Wrapper = styled('section')`
 		}
 	}
 
+	@media (min-width: 22.5rem) {
+		.article {
+			.greeting {
+				font-size: 4.8rem;
+			}
+
+			.presentation {
+				font-size: 2.1rem;
+				line-height: 1.3em;
+			}
+
+			.details {
+				padding: 0.9rem;
+				font-size: 0.9rem;
+				margin-top: 0.3rem;
+			}
+		}
+	}
+
 	@media (min-width: 23.438rem) {
 		.article {
 			.greeting {
@@ -87,19 +106,8 @@ const Wrapper = styled('section')`
 
 	@media (min-width: 24.375rem) {
 		.article {
-			.greeting {
-				font-size: 5rem;
-			}
-
-			.presentation {
-				font-size: 2.2rem;
-				line-height: 1em;
-			}
-
 			.details {
-				padding: 1rem;
 				font-size: 1rem;
-				margin-top: 0.5rem;
 			}
 		}
 	}
