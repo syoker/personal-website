@@ -22,7 +22,6 @@ const Wrapper = styled('section')`
 	align-items: center;
 	justify-content: center;
 
-	animation: fade-in var(--transition);
 	background-color: var(--md-color-background);
 	transition: background-color var(--transition);
 
@@ -34,6 +33,7 @@ const Wrapper = styled('section')`
 		letter-spacing: -0.01563rem;
 
 		transition: color var(--transition);
+		animation: fade-in var(--transition);
 
 		color: var(--md-color-on-background);
 	}
@@ -47,6 +47,7 @@ const Wrapper = styled('section')`
 		margin-bottom: 0.8rem;
 
 		transition: color var(--transition);
+		animation: fade-in var(--transition);
 
 		color: var(--md-color-on-background);
 	}
@@ -60,14 +61,14 @@ const Wrapper = styled('section')`
 
 		margin-inline: 1rem;
 
-		transition: color var(--transition), background-color var(--transition);
-
 		padding: 1rem;
 		border-radius: 0.5rem;
-		box-shadow: var(--elevation-level-1);
 
+		animation: fade-in var(--transition);
+		box-shadow: var(--elevation-level-1);
 		color: var(--md-color-on-surface-variant);
 		background-color: var(--md-color-surface-variant);
+		transition: color var(--transition), background-color var(--transition);
 
 		a {
 			text-decoration: underline;
