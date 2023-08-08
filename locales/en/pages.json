@@ -1,0 +1,22 @@
+{
+	"title-head-blog": "Blog",
+	"route-head-blog": "https://test-azure-theta-50.vercel.app/blog",
+	"description-head-blog": "All my posts, this includes guides and others.",
+
+	"title-head-projects": "Projects",
+	"route-head-projects": "https://test-azure-theta-50.vercel.app/projects",
+	"description-head-projects": "All my projects, from when I started programming to now",
+
+	"all": "All",
+	"astro": "Motorola One Fusion",
+	"guide": "Guides",
+	"magisk-module": "Magisk Modules",
+	"web-app": "Web Applications",
+	"application": "Applications",
+	"server": "Servers",
+
+	"blog": "Blog",
+	"author": "Author",
+	"projects": "Projects",
+	"contributors": "Contributors"
+}

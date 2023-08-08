@@ -1,0 +1,19 @@
+import type { ReactNode } from 'react';
+
+const useCode = (code: ReactNode) => {
+	const resolvedCode: string = Array.isArray(code) ? code[0] : code || '';
+
+	if (typeof resolvedCode === 'string') {
+		const resolvedLines = resolvedCode.split('\n') || [''];
+		const resolvedTitle = resolvedLines[0].startsWith('// ') ? resolvedLines[0].slice(3) : undefined;
+
+		return { lines: resolvedLines.slice(1), resolvedTitle };
+	}
+
+	const resolvedLines = [''];
+	const resolvedTitle = undefined;
+
+	return { lines: resolvedLines, resolvedTitle };
+};
+
+export default useCode;

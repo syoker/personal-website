@@ -1,0 +1,16 @@
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background-color: var(--md-color-on-surface-disabled);
+}
+
+::selection {
+	color: var(--md-color-on-primary);
+	background-color: var(--md-color-primary);
+}
