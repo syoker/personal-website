@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
 
 const Wrapper = styled('article')`
-	display: grid;
-	animation: fade-in var(--transition);
-	grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+	display: flex;
+	flex-direction: column;
 
 	padding-bottom: 1rem;
+	animation: fade-in var(--transition);
 
 	.line {
 		width: calc(100% - 2rem);
@@ -18,7 +18,9 @@ const Wrapper = styled('article')`
 	}
 
 	@media (min-width: 42.375rem) {
+		display: grid;
 		grid-template-columns: var(--grid-template-columns-1);
+		grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
 
 		.line {
 			display: none;

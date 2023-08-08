@@ -25,6 +25,7 @@ const Content = styled('div')`
 		.content {
 			gap: 0.5rem;
 			display: flex;
+			flex-wrap: wrap;
 			align-items: center;
 
 			.tag {
