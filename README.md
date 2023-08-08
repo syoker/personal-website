@@ -22,7 +22,7 @@ This is my personal page made in React with NextJS and TypeScript, using MDX for
    npm run build
    ```
 4. And finally, mount the page on a port with
-   ```
+   ```bash
    npm start
    ```
    > NOTE: By default, Next will mount the page on port 3000, you can change the port by doing `npm start -- --port 3001` being 3001 the port where you want to start the project.
