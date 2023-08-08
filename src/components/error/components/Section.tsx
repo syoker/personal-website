@@ -53,6 +53,8 @@ const Wrapper = styled('section')`
 	}
 
 	.redirect {
+		hyphens: none;
+
 		font-size: 1rem;
 		font-style: normal;
 		font-weight: 500;
@@ -79,6 +81,17 @@ const Wrapper = styled('section')`
 
 			&:hover {
 				text-decoration-color: var(--md-color-primary);
+			}
+		}
+	}
+
+	@media (max-width: 20.625rem) {
+		.redirect {
+			display: flex;
+			flex-direction: column;
+
+			a {
+				word-break: break-word;
 			}
 		}
 	}
