@@ -16,13 +16,11 @@ export default function Home() {
 			</ThumbnailHead>
 
 			<Wrapper>
-				<span />
 				<article className="article">
 					<h1 className="greeting">{t('greeting')}</h1>
 					<h2 className="presentation">{t('presentation')}</h2>
 					<code className="details">{`<code>${t('details')}</code>`}</code>
 				</article>
-				<span />
 			</Wrapper>
 		</>
 	);

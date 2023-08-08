@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 const Wrapper = styled('section')`
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
 
 	width: 100%;
 	height: calc(100dvh - 8rem);
