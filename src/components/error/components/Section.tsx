@@ -12,9 +12,9 @@ const Wrapper = styled('section')`
 	z-index: 200;
 	position: fixed;
 
-	gap: 1rem;
+	gap: 0rem;
 	width: 100%;
-	height: 100dvh;
+	height: 100%;
 
 	display: flex;
 	flex-direction: column;
@@ -43,6 +43,8 @@ const Wrapper = styled('section')`
 		font-style: normal;
 		font-weight: 500;
 		line-height: 1.75rem;
+
+		margin-bottom: 0.8rem;
 
 		transition: color var(--transition);
 

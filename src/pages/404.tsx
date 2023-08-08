@@ -26,7 +26,7 @@ export default function Error404() {
 	};
 
 	return (
-		<Section>
+		<Section style={{ gap: `${asPath.includes('/blog/motorolaonefusion') ? '0rem' : '1rem'}` }}>
 			<NameHead>{translations[lang].nameHead}</NameHead>
 			<h1>{translations[lang].title}</h1>
 			<p>{translations[lang].description}</p>
