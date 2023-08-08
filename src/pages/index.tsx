@@ -12,7 +12,7 @@ export default function Home() {
 			<RouteHead>{t('route-head')}</RouteHead>
 			<DescriptionHead>{t('description-head')}</DescriptionHead>
 			<ThumbnailHead>
-				https://raw.githubusercontent.com/Syoker/personal-website/main/public/img/banner-socialshare.png
+				https://raw.githubusercontent.com/Syoker/personal-website/main/public/img/social-share.png
 			</ThumbnailHead>
 
 			<Wrapper>

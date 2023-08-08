@@ -1,10 +1,10 @@
 {
 	"title-head-blog": "Blog",
-	"route-head-blog": "https://test-azure-theta-50.vercel.app/blog",
+	"route-head-blog": "https://syoker.vercel.app/blog",
 	"description-head-blog": "All my posts, this includes guides and others.",
 
 	"title-head-projects": "Projects",
-	"route-head-projects": "https://test-azure-theta-50.vercel.app/projects",
+	"route-head-projects": "https://syoker.vercel.app/projects",
 	"description-head-projects": "All my projects, from when I started programming to now",
 
 	"all": "All",

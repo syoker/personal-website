@@ -18,25 +18,28 @@ export default function Pages({ posts }: { posts: Post[] }) {
 	const validPages = getValidPages(posts);
 	const resolvedPosts = posts.filter((post) => post.language === lang);
 
+	const tag = query['pages']?.[1] || '';
+	const category = query['pages']?.[0] || '';
+
 	return (
-		<PagesProvider tag={query['pages']?.[1]} posts={resolvedPosts} category={query['pages']?.[0]}>
-			<ThumbnailHead>{headPage[query['pages']?.[0] || ''].thumbnail}</ThumbnailHead>
-			<DescriptionHead>{t(headPage[query['pages']?.[0] || ''].description)}</DescriptionHead>
+		<PagesProvider tag={tag} posts={resolvedPosts} category={category}>
+			<ThumbnailHead>{headPage[category].thumbnail}</ThumbnailHead>
+			<DescriptionHead>{t(headPage[category].description)}</DescriptionHead>
 
 			{query['pages']?.[1] ? (
 				<>
-					<NameHead>{t(query['pages']?.[1])}</NameHead>
-					<RouteHead>{`${t(headPage[query['pages']?.[0] || ''].route)}/${query['pages']?.[1]}`}</RouteHead>
+					<NameHead>{t(tag)}</NameHead>
+					<RouteHead>{`${t(headPage[category].route)}/${tag}`}</RouteHead>
 				</>
 			) : (
 				<>
-					<NameHead>{t(headPage[query['pages']?.[0] || ''].title)}</NameHead>
-					<RouteHead>{t(headPage[query['pages']?.[0] || ''].route)}</RouteHead>
+					<NameHead>{t(headPage[category].title)}</NameHead>
+					<RouteHead>{t(headPage[category].route)}</RouteHead>
 				</>
 			)}
 
 			<Wrapper>
-				{validPages.includes(asPath) && <Categories key={query['pages']?.[0]} />}
+				{validPages.includes(asPath) && <Categories key={category} />}
 				{validPages.includes(asPath) && <Posts key={asPath} />}
 				{!validPages.includes(asPath) && <Article />}
 			</Wrapper>
