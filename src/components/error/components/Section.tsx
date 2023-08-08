@@ -54,6 +54,9 @@ const Wrapper = styled('section')`
 		font-style: normal;
 		font-weight: 500;
 		line-height: 1.5rem;
+		text-align: center;
+
+		margin-inline: 1rem;
 
 		transition: color var(--transition), background-color var(--transition);
 
