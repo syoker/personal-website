@@ -18,7 +18,7 @@ const Wrapper = styled('div')`
 		align-items: center;
 		justify-content: space-between;
 
-		margin: 1rem 0rem 0rem 0rem;
+		margin: 0.2rem 0rem 0.6rem 0rem;
 
 		h1 {
 			hyphens: none;
