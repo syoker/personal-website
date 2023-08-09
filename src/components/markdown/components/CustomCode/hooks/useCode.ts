@@ -5,7 +5,11 @@ const useCode = (code: ReactNode) => {
 
 	if (typeof resolvedCode === 'string') {
 		const resolvedLines = resolvedCode.split('\n') || [''];
-		const resolvedTitle = resolvedLines[0].startsWith('// ') ? resolvedLines[0].slice(3) : undefined;
+		let resolvedTitle = resolvedLines[0].startsWith('// ') ? resolvedLines[0].slice(3) : undefined;
+
+		if (!resolvedTitle) {
+			resolvedTitle = resolvedLines[0].startsWith('# ') ? resolvedLines[0].slice(2) : undefined;
+		}
 
 		return { lines: resolvedLines.slice(1), resolvedTitle };
 	}

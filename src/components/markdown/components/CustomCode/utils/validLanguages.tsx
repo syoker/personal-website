@@ -1,5 +1,5 @@
 import { VscJson } from 'react-icons/vsc';
-import { SiJavascript } from 'react-icons/si';
+import { SiJavascript, SiDotenv } from 'react-icons/si';
 import { RiTerminalLine } from 'react-icons/ri';
 
 import type { ValidLanguages } from '../types/ValidLanguages';
@@ -28,6 +28,10 @@ const validLanguages: ValidLanguages = {
 	'language-1c': {
 		language: 'jsonc',
 		icon: <VscJson />,
+	},
+	'language-dosini': {
+		language: 'dotenv',
+		icon: <SiDotenv />,
 	},
 };
 

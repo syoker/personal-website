@@ -47,6 +47,18 @@ const StyledEditor = styled('div')`
 			background: transparent;
 		}
 
+		.dotenv {
+			color: #f92672;
+
+			transition: color var(--transition);
+
+			.hljs-attr {
+				color: var(--md-color-on-background);
+
+				transition: color var(--transition);
+			}
+		}
+
 		.hljs-comment {
 			color: #9f9f8f;
 
@@ -91,6 +103,10 @@ const StyledEditor = styled('div')`
 		}
 
 		@media (prefers-color-scheme: dark) {
+			.dotenv {
+				color: #ff3f4f;
+			}
+
 			.hljs-comment {
 				color: #ababab;
 			}
