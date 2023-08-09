@@ -2,6 +2,8 @@
 
 This is my personal page made in React with NextJS and TypeScript, using MDX for the articles, and Next-Translate to support English and Spanish.
 
+![project image](https://raw.githubusercontent.com/Syoker/personal-website/main/.github/img/image.png)
+
 ## Requirements to build the project
 
 - [Git](https://git-scm.com/downloads)
