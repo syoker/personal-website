@@ -5,4 +5,3 @@ export { default as DescriptionHead } from './DescriptionHead/DescriptionHead';
 
 export { default as IconLink } from './IconLink/IconLink';
 export { default as IconButton } from './IconButton/IconButton';
-export { default as MarkdownHighlight } from './MarkdownHighlight/MarkdownHighlight';
