@@ -9,6 +9,9 @@ body {
 
 	font-family: Inter;
 
+	overflow-y: scroll;
+	scrollbar-gutter: stable both-edges;
+
 	transition: background-color var(--transition);
 	background-color: var(--md-color-background);
 }

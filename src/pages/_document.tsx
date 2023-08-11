@@ -12,9 +12,6 @@ export default function Document() {
 				<link rel="icon" media="(prefers-color-scheme: dark)" href="/icon/favicon-white.ico" />
 				<link rel="icon" media="(prefers-color-scheme: light)" href="/icon/favicon-black.ico" />
 
-				<meta name="twitter:creator" content="@Syoker_" />
-				<meta name="twitter:card" content="summary_large_image" />
-
 				<meta property="og:type" content="website" />
 			</Head>
 			<body>

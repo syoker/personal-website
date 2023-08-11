@@ -1,15 +1,15 @@
-import CustomParagraph from './components/CustomParagraph';
-import CustomH1 from './components/CustomH1';
-import CustomH2 from './components/CustomH2';
-import CustomLi from './components/CustomLi';
-import CustomImage from './components/CustomImage';
-import CustomAnchor from './components/CustomAnchor';
-import CustomCode from './components/CustomCode/CustomCode';
-import CustomBlockquote from './components/CustomBlockquote';
-import CustomOList from './components/CustomOList';
-import CustomPre from './components/CustomPre';
-import CustomVideo from './components/CustomVideo';
-import CustomUList from './components/CustomUList';
+import CustomParagraph from './CustomParagraph/CustomParagraph';
+import CustomH1 from './CustomH1/CustomH1';
+import CustomH2 from './CustomH2/CustomH2';
+import CustomLi from './CustomLi/CustomLi';
+import CustomImage from './CustomImage/CustomImage';
+import CustomAnchor from './CustomAnchor/CustomAnchor';
+import CustomCode from './CustomCode/CustomCode';
+import CustomBlockquote from './CustomBlockquote/CustomBlockquote';
+import CustomOList from './CustomOList/CustomOList';
+import CustomPre from './CustomPre/CustomPre';
+import CustomVideo from './CustomVideo/CustomVideo';
+import CustomUList from './CustomUList/CustomUList';
 
 const components = {
 	p: CustomParagraph,
