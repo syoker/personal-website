@@ -18,5 +18,7 @@
 	"blog": "Blog",
 	"author": "Autor",
 	"projects": "Proyectos",
-	"contributors": "Colaboradores"
+	"contributors": "Colaboradores",
+
+	"toaster": "Se ha copiado el código"
 }

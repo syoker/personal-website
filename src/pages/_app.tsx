@@ -10,7 +10,7 @@ import 'src/styles/app/elevations.css';
 
 import type { AppProps } from 'next/app';
 import { Analytics } from '@vercel/analytics/react';
-import { Languages, Header } from 'src/components/app';
+import { Languages, Header, Toaster } from 'src/components/app';
 
 import dayjs from 'dayjs';
 import localizedFormat from 'dayjs/plugin/localizedFormat';
@@ -19,11 +19,11 @@ export default function App({ Component, pageProps }: AppProps) {
 	dayjs.extend(localizedFormat);
 
 	return (
-		<>
-			<Languages validLanguages={['en', 'es']} />
+		<Languages validLanguages={['en', 'es']}>
+			<Toaster />
 			<Header />
 			<Component {...pageProps} />
 			<Analytics />
-		</>
+		</Languages>
 	);
 }

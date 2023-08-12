@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { compareArrays } from 'src/utils/shared';
+import type { ReactNode } from '@mdx-js/react/lib';
 
 import setLanguage from 'next-translate/setLanguage';
 
-const Languages = ({ validLanguages }: { validLanguages: string[] }) => {
+const Languages = ({ validLanguages, children }: { validLanguages: string[]; children: ReactNode }) => {
 	const [languages, setLanguages] = useState(validLanguages);
 
 	if (!compareArrays(validLanguages, languages)) {
@@ -20,7 +21,7 @@ const Languages = ({ validLanguages }: { validLanguages: string[] }) => {
 		setLanguage(language ?? 'en');
 	}, [languages]);
 
-	return <></>;
+	return <>{children}</>;
 };
 
 export default Languages;

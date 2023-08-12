@@ -3,9 +3,12 @@ import { useCopyToClipboard } from 'usehooks-ts';
 
 import type { ReactNode } from 'react';
 
+import { toast } from 'sonner';
+
 import StyledHeader from './StyledHeader';
 import StyledIconButton from './StyledIconButton';
 import validLanguages from '../utils/validLanguages';
+import useTranslation from 'next-translate/useTranslation';
 
 interface HeaderProps {
 	title: string | undefined;
@@ -14,6 +17,7 @@ interface HeaderProps {
 }
 
 const Header = ({ language, title, children }: HeaderProps) => {
+	const { t } = useTranslation('pages');
 	const [, copy] = useCopyToClipboard();
 
 	if (!title || !validLanguages[language]) {
@@ -22,6 +26,13 @@ const Header = ({ language, title, children }: HeaderProps) => {
 
 	const copyValue = typeof children === 'string' ? children.replace(/\n[^\n]*$/, '') : '';
 
+	const handleCopy = () => {
+		copy(copyValue);
+		toast.message(t('toaster'), {
+			description: `${copyValue}`,
+		});
+	};
+
 	return (
 		<StyledHeader>
 			<div className="container">
@@ -29,7 +40,7 @@ const Header = ({ language, title, children }: HeaderProps) => {
 				<h3>{title}</h3>
 			</div>
 			<StyledIconButton>
-				<MdCopyAll onClick={() => copy(copyValue)} />
+				<MdCopyAll onClick={handleCopy} />
 			</StyledIconButton>
 		</StyledHeader>
 	);
