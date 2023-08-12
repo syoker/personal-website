@@ -1,7 +1,7 @@
 import StyledToaster from './components/StyledToaster';
 
 const Toaster = () => {
-	return <StyledToaster />;
+	return <StyledToaster duration={50000000} />;
 };
 
 export default Toaster;

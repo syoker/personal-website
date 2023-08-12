@@ -7,6 +7,9 @@ const StyledToaster = styled(Toaster)`
 		color: var(--md-color-on-surface-variant) !important;
 		background: var(--md-color-surface-variant) !important;
 		border: 1px solid var(--md-color-outline-variant) !important;
+
+		hyphens: auto;
+		word-break: break-all;
 	}
 `;
 
