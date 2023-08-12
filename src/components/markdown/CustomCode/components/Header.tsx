@@ -39,7 +39,7 @@ const Header = ({ language, title, children }: HeaderProps) => {
 				{validLanguages[language].icon}
 				<h3>{title}</h3>
 			</div>
-			<StyledIconButton>
+			<StyledIconButton aria-label="Copy code button">
 				<MdCopyAll onClick={handleCopy} />
 			</StyledIconButton>
 		</StyledHeader>

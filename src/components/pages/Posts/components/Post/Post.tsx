@@ -22,9 +22,9 @@ const Post = ({ post, category, tag }: PostInterface) => {
 	};
 
 	const renderTags = post.tags.map((tag, index) => (
-		<li className="tag" key={index}>
+		<span aria-label={`${tag} tag`} className="tag" key={index}>
 			{t(tag)}
-		</li>
+		</span>
 	));
 
 	return (

@@ -55,7 +55,7 @@ const Introduction = ({ post }: { post: Post }) => {
 
 			<div className="container">
 				<div className="users">
-					<h4 className="title-container">{t('author')}</h4>
+					<h2 className="title-container">{t('author')}</h2>
 					<Account username={post.author} />
 					{renderContributors}
 				</div>

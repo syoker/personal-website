@@ -130,6 +130,11 @@ const StyledImageContainer = styled('div')`
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+
+	img {
+		width: auto;
+		height: auto;
+	}
 `;
 
 export default CustomParagraph;

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 const StyledImage = styled('img')`
-	width: auto;
+	width: 100%;
 	height: auto;
 
 	user-select: none;
