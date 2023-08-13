@@ -28,9 +28,7 @@ const Header = ({ language, title, children }: HeaderProps) => {
 
 	const handleCopy = () => {
 		copy(copyValue);
-		toast.message(t('toaster'), {
-			description: `${copyValue}`,
-		});
+		toast(t('toaster'));
 	};
 
 	return (
