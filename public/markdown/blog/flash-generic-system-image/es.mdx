@@ -1,7 +1,7 @@
 !--
 author: Syoker
 title: Cómo flashear una Imagen Genérica de un Sistema (GSI)
-banner: /img/posts/flash-generic-system-image.png
+banner: /img/posts/flash-generic-system-image.webp
 description: Guía para flashear una Imagen Genérica de un Sistema (GSI) en el Motorola One Fusion | Astro
 tags: astro, guide
 created: November 30, 2021
@@ -98,7 +98,7 @@ Todo esto es bajo su responsabilidad, no me hago responsable de ningún daño ca
 
 1.  Descomprima la carpeta platform-tools que obtuvo desde la página de **Android Developers**, luego descomprima el archivo del firmware oficial obtenido de **Mirrors Lolinet** y también descomprima el archivo de la GSI. Ahora mueva todos los archivos de esta carpeta a la carpeta platform-tools.
 
-    ![Ejemplo de carpeta](/img/guides/guide-examplefolder.png)
+    ![Ejemplo de carpeta](/img/guides/guide-examplefolder.webp)
 
     > Ejemplo de carpeta
 
@@ -212,7 +212,7 @@ Todo esto es bajo su responsabilidad, no me hago responsable de ningún daño ca
 - ### **Copia de seguridad del IMEI**
 
   Siempre hagan una copia de seguridad de su IMEI por las dudas de un posible caso de perdida de IMEI. Lo único qu tiene que hacer es, desde OrangeFox o TWRP entrar al apartado de copia de seguridad, seleccionar un almacenamiento externo (tarjeta SD) y añadir una nueva copia de seguridad, seleccionando las carpetas EFS, Modem y Persist.
-  ![guide_imei-backup](/img/guides/guide-imeibackup.png)
+  ![guide_imei-backup](/img/guides/guide-imeibackup.webp)
 
   > Representación visual del tip
 
@@ -225,21 +225,21 @@ Todo esto es bajo su responsabilidad, no me hago responsable de ningún daño ca
   ```
 
   Su eMMC está en peligro si la respuesta a este comando es 0x08 0x03 o más, mientras más cercano sea su número al anterior mencionado, más desgastado estará su eMMC. El número de un eMMC nuevo es 0x01 0x01.
-  ![guide_emmc-life](/img/guides/guide-emmclife.png)
+  ![guide_emmc-life](/img/guides/guide-emmclife.webp)
 
   > Representación visual del tip
 
 - ### **Solución al problema de los SMS**
 
   Para solucionar el problema de que los SMS no llegan, simplemente tiene que ir a "Configuraciones/Phh Treble Settings/IMS features" y seleccionar la opción "Install IMS APK for Qualcomm vendor", después esperar a que se instale el apk (saldrá un cartel avisando) y reiniciar el dispositivo.
-  ![guide_solution-to-sms-problem](/img/guides/guide-solutionsmsproblem.png)
+  ![guide_solution-to-sms-problem](/img/guides/guide-solutionsmsproblem.webp)
 
   > Representación visual del tip
 
 - ### **Certificación de dispositivo**
 
   Si tienen el problema de la certificación de la Play Store (se darán cuenta cuando les salte una notificación diciendo "Este dispositivo no está certificado") lo que tienen que hacer es instalar la app [Device ID](https://play.google.com/store/apps/details?id=com.evozi.deviceid), dentro de la app copiar el GSF ID (Google Service Framework ID), con ese ID, registrarlo en Google [acá](https://www.google.com/android/uncertified) (pegue su ID en el único lugar de entrada de texto que hay en la página y toque el botón "Registrarse"), luego reinicia el teléfono y limpia los datos de la Google Play Store en "Información de la app/Almacenamiento y caché/Liberar espacio de almacenamiento" y listo (tarda un poco en aplicarse).
-  ![guide_device-certification](/img/guides/guide-devicecertification.png)
+  ![guide_device-certification](/img/guides/guide-devicecertification.webp)
 
   > Representación visual del tip
 
