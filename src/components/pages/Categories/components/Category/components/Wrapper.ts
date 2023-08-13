@@ -12,6 +12,8 @@ const Wrapper = styled(Link)`
 	text-align: center;
 	white-space: nowrap;
 
+	outline: none;
+
 	border-radius: 0.5rem;
 	padding: 0.375rem 0.75rem;
 
