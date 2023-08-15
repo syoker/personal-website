@@ -9,10 +9,10 @@ type ValidUsers = {
 
 const validUsers: ValidUsers = {
 	Syoker: {
-		url: 'https://twitter.com/Syoker_',
+		url: 'https://github.com/syoker',
 		name: 'Syoker',
-		alias: '@Syoker_',
-		avatar: 'https://pbs.twimg.com/profile_images/1628276605939220481/Rk3Nfn2x_400x400.jpg',
+		alias: '@syoker',
+		avatar: 'https://avatars.githubusercontent.com/u/61765318?v=4',
 	},
 	nahuelwexd: {
 		url: 'https://github.com/nahuelwexd',
