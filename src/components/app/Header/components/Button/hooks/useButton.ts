@@ -3,7 +3,7 @@ import { useWindowSize } from 'usehooks-ts';
 import { useEffect, useState, useRef } from 'react';
 
 const useButton = (basePath: string) => {
-	const { asPath } = useRouter();
+	const { asPath, query } = useRouter();
 	const { width } = useWindowSize();
 	const buttonRef = useRef<HTMLAnchorElement | null>(null);
 
@@ -21,7 +21,7 @@ const useButton = (basePath: string) => {
 			setButtonWidth(0);
 			setButtonPosition(0);
 		}
-	}, [asPath, basePath, width]);
+	}, [asPath, basePath, width, query]);
 
 	return { buttonRef, buttonWidth, buttonPosition };
 };
