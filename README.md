@@ -2,7 +2,7 @@
 
 This is my personal website written in React with NextJS and TypeScript, using MDX for the articles, and next-translate to support English and Spanish.
 
-![project image](https://raw.githubusercontent.com/Syoker/personal-website/main/.github/images/image.png)
+![project image](https://raw.githubusercontent.com/syoker/personal-website/main/.github/image/image.png)
 
 ## Requirements to build the project
 
