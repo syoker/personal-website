@@ -131,7 +131,6 @@
 	border-radius: 0.5rem;
 
 	outline: none;
-	white-space: nowrap;
 
 	color: var(--color-on-primary);
 	background-color: var(--color-primary);
