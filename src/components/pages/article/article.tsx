@@ -23,6 +23,7 @@ const Article = () => {
 		title: post.title,
 		description: post.description,
 		url: `https://syoker.vercel.app${lang === 'es' ? '/es' : ''}/blog/${tag}`,
+		thumbnail: post.banner,
 	};
 
 	return (
