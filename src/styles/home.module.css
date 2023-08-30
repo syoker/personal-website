@@ -59,6 +59,25 @@
 	transition: color var(--transition-default);
 }
 
+.home > .pointers {
+	gap: 1rem;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	width: 100%;
+}
+
+.home > .pointers > span {
+	width: 0.5rem;
+	height: 0.5rem;
+
+	border-radius: 100%;
+
+	background-color: rgba(var(--color-on-surface-variant-rgb), 0.3);
+	transition: background-color var(--transition-default);
+}
+
 .home > .projects {
 	margin-top: 4rem;
 	margin-bottom: 2rem;

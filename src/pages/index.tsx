@@ -23,6 +23,14 @@ export default function Home() {
 					<h2 className={styles['full-stack']}>Front End</h2>
 					<code className={styles['developer']}>Developer</code>
 				</section>
+				<section className={styles['pointers']}>
+					<span />
+					<span />
+					<span />
+					<span />
+					<span />
+					<span />
+				</section>
 				<section className={styles['projects']}>
 					<article className={styles['title-section']}>
 						<span className={styles['line']} />
