@@ -1,5 +1,3 @@
-export { default as Wrapper } from './Wrapper';
-export { default as Posts } from './Posts/Posts';
-export { default as Article } from './Article/Article';
-export { default as Categories } from './Categories/Categories';
-export { default as PagesProvider } from './PagesProvider/PagesProvider';
+export { default as Tags } from './tags/tags';
+export { default as Posts } from './posts/posts';
+export { default as Article } from './article/article';

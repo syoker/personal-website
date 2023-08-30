@@ -3,7 +3,6 @@
 	"route-head": "https://syoker.vercel.app",
 	"description-head": "A web developer who likes watching anime and reading manga.",
 
-	"greeting": "Hi",
-	"presentation": "I'm Lautaro",
-	"details": "web developer"
+	"project": "Projects",
+	"github-button": "Check all my projects on GitHub"
 }

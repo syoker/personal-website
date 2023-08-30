@@ -1,0 +1,85 @@
+.account {
+	gap: 0.5rem;
+	display: flex;
+	align-items: center;
+
+	user-select: none;
+
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+
+	outline: none;
+
+	background-color: transparent;
+	transition: background-color var(--transition-default);
+}
+
+.account:active {
+	background-color: rgba(var(--color-object-hover-rgb), 0.12);
+}
+
+.account > .avatar {
+	width: 3rem;
+	height: 3rem;
+
+	border-radius: 6.25rem;
+}
+
+.account > .information {
+	gap: 0rem;
+	display: flex;
+	flex-direction: column;
+
+	width: calc(100% - 3.5rem);
+
+	align-items: flex-start;
+	justify-content: space-between;
+
+	border: none;
+}
+
+.account > .information > .name {
+	hyphens: none;
+
+	font-size: 0.9rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.5rem;
+	letter-spacing: 0.01563rem;
+
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+
+	color: var(--color-on-background);
+	transition: color var(--transition-default);
+}
+
+.account > .information > .alias {
+	hyphens: none;
+
+	font-size: 0.9rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.5rem;
+	letter-spacing: 0.01563rem;
+
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+
+	color: var(--color-on-surface-variant);
+	transition: color var(--transition-default);
+}
+
+@media (min-width: 80rem) {
+	.account:hover {
+		background-color: rgba(var(--color-object-hover-rgb), 0.08);
+	}
+
+	.account:focus-visible {
+		background-color: rgba(var(--color-object-hover-rgb), 0.12);
+	}
+}

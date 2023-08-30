@@ -10,13 +10,4 @@ export type Post = {
 	language: string;
 	description: string;
 	contributors: string[] | null;
-} & (
-	| {
-			url: string;
-			readme: string;
-			category: 'projects';
-	  }
-	| {
-			category: 'blog';
-	  }
-);
+};

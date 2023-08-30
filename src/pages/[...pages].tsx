@@ -1,58 +1,44 @@
 import { compile } from '@mdx-js/mdx';
+import { METADATA } from '~/constants/shared';
 import { useRouter } from 'next/router';
-import { getPosts, getPaths } from 'src/utils/serverSide';
-import { headPage, getValidPages } from 'src/utils/pages';
-import { Categories, Posts, Article, Wrapper, PagesProvider } from 'src/components/pages';
-import { NameHead, DescriptionHead, RouteHead, ThumbnailHead } from 'src/components/shared';
+import { CustomHead } from '~/components/shared';
+import { isPostOpen } from '~/functions/pages-client-side';
+import { PageDataProvider } from '~/providers';
+import { getPosts, getPaths } from '~/functions/pages-server-side';
+import { Article, Tags, Posts } from '~/components/pages';
 
-import type { Post } from 'src/types/pages';
+import type { Post } from '~/types/pages';
 import type { GetStaticPaths, GetStaticPathsContext, GetStaticProps } from 'next';
 
 import path from 'path';
 import useTranslation from 'next-translate/useTranslation';
 
+import styles from '~/styles/pages.module.css';
+
 export default function Pages({ posts }: { posts: Post[] }) {
-	const { query, asPath } = useRouter();
-	const { lang, t } = useTranslation('pages');
-
-	const validPages = getValidPages(posts);
-	const resolvedPosts = posts.filter((post) => post.language === lang);
-
-	const tag = query['pages']?.[1] || '';
-	const category = query['pages']?.[0] || '';
+	const { asPath } = useRouter();
+	const { lang } = useTranslation('pages');
 
 	return (
-		<PagesProvider tag={tag} posts={resolvedPosts} category={category}>
-			<ThumbnailHead>{headPage[category].thumbnail}</ThumbnailHead>
-			<DescriptionHead>{t(headPage[category].description)}</DescriptionHead>
-
-			{query['pages']?.[1] ? (
-				<>
-					<NameHead>{t(tag)}</NameHead>
-					<RouteHead>{`${t(headPage[category].route)}/${tag}`}</RouteHead>
-				</>
+		<PageDataProvider posts={posts}>
+			{isPostOpen(posts, asPath) ? (
+				<main className={styles['pages']}>
+					<Article />
+				</main>
 			) : (
-				<>
-					<NameHead>{t(headPage[category].title)}</NameHead>
-					<RouteHead>{t(headPage[category].route)}</RouteHead>
-				</>
+				<CustomHead properties={METADATA[asPath][lang]}>
+					<main className={styles['pages']}>
+						<Tags />
+						<Posts key={asPath} />
+					</main>
+				</CustomHead>
 			)}
-
-			<Wrapper>
-				{validPages.includes(asPath) && <Categories key={category} />}
-				{validPages.includes(asPath) && <Posts key={asPath} />}
-				{!validPages.includes(asPath) && <Article />}
-			</Wrapper>
-		</PagesProvider>
+		</PageDataProvider>
 	);
 }
 
 export const getStaticPaths: GetStaticPaths = async (context: GetStaticPathsContext) => {
-	const { locales } = context;
-
-	const directory = path.join(process.cwd(), 'public', 'markdown');
-
-	const paths = [await getPaths('blog', locales, directory), await getPaths('projects', locales, directory)].flat();
+	const paths = await getPaths(context.locales, path.join(process.cwd(), 'src', 'posts'));
 
 	return {
 		paths: paths,
@@ -61,9 +47,7 @@ export const getStaticPaths: GetStaticPaths = async (context: GetStaticPathsCont
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-	const directory = path.join(process.cwd(), 'public', 'markdown');
-
-	const posts = [await getPosts('blog', directory), await getPosts('projects', directory)].flat();
+	const posts = await getPosts(path.join(process.cwd(), 'src', 'posts'));
 
 	for (const post of posts) {
 		post.markdown = String(

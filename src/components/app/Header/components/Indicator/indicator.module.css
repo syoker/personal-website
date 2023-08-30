@@ -1,0 +1,16 @@
+.span {
+	bottom: 0;
+	position: absolute;
+
+	opacity: 1;
+	margin: auto;
+
+	height: 3px;
+	border-radius: 10rem;
+
+	width: calc(var(--width) - 2rem);
+	left: calc(1rem + var(--position));
+
+	background-color: var(--color-primary);
+	transition: left var(--transition-default), width var(--transition-default);
+}

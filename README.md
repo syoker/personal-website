@@ -1,8 +1,8 @@
 # Personal Website
 
-This is my personal page made in React with NextJS and TypeScript, using MDX for the articles, and Next-Translate to support English and Spanish.
+This is my personal website written in React with NextJS and TypeScript, using MDX for the articles, and next-translate to support English and Spanish.
 
-![project image](https://raw.githubusercontent.com/Syoker/personal-website/main/.github/img/image.png)
+![project image](https://raw.githubusercontent.com/Syoker/personal-website/main/.github/images/image.png)
 
 ## Requirements to build the project
 

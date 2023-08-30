@@ -1,24 +1,14 @@
 import { Fragment } from 'react';
-import { usePagesProvider } from 'src/hooks/pages';
+import { usePageData } from '~/providers';
+import { getPostsToRender } from './posts.functions';
 
-import dayjs from 'dayjs';
-import Post from './components/Post/Post';
-import Wrapper from './components/Wrapper';
+import Post from './post/post';
+import styles from './posts.module.css';
 
 const Posts = () => {
-	const { tag, posts, category } = usePagesProvider();
+	const { posts, tag } = usePageData();
 
-	const activeCategory = category ? posts.filter((post) => post.category === category) : posts;
-	const activeTag = tag ? activeCategory.filter((renderPost) => renderPost.tags.includes(tag)) : activeCategory;
-
-	const renderPosts = activeTag
-		.sort((a, b) => (dayjs(b.created).isBefore(dayjs(a.created)) ? -1 : 1))
-		.map((post, index) => (
-			<Fragment key={index}>
-				<Post key={index} category={post.category} tag={tag || post.tags[0]} post={post} />
-				{activeTag.length > index + 1 && <span className="line" />}
-			</Fragment>
-		));
+	const renderPosts = getPostsToRender(posts, tag);
 
 	const gridTemplateColumnsOne =
 		renderPosts.length === 1 ? 'repeat(2, minmax(21rem, 1fr))' : 'repeat(auto-fit, minmax(21rem, 1fr))';
@@ -31,8 +21,17 @@ const Posts = () => {
 		'--grid-template-columns-2': gridTemplateColumnsTwo,
 	};
 
-	// @ts-expect-error ignore
-	return <Wrapper style={style}>{renderPosts}</Wrapper>;
+	return (
+		// @ts-expect-error ignore
+		<section className={styles['posts']} style={style}>
+			{renderPosts.map((post, index) => (
+				<Fragment key={index}>
+					<Post key={index} tag={tag || post.tags[0]} post={post} />
+					{renderPosts.length > index + 1 && <span className={styles['line']} />}
+				</Fragment>
+			))}
+		</section>
+	);
 };
 
 export default Posts;

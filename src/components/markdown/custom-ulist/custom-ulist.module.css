@@ -1,0 +1,25 @@
+.ul > li {
+	margin-bottom: 0.2rem;
+}
+
+.ul > li > code {
+	margin: 0.4rem 0rem;
+}
+
+.ul > li > img {
+	margin: 0.4rem 0rem;
+}
+
+.ul > li > video {
+	margin: 0.4rem 0rem;
+}
+
+.ul > li > blockquote {
+	margin-bottom: 0.5rem;
+}
+
+@media (min-width: 80rem) {
+	.ul {
+		padding-inline-start: 1.5rem;
+	}
+}

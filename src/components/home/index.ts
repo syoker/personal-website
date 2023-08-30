@@ -1,1 +1,1 @@
-export { default as Wrapper } from './Wrapper';
+export { default as ProjectCard } from './project-card/project-card';

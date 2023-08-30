@@ -1,30 +1,19 @@
-import { Section } from 'src/components/error';
-import { NameHead } from 'src/components/shared';
-import type { Translations } from 'src/types/error';
+import { METADATA } from '~/constants/error';
+import { CustomHead } from '~/components/shared';
 
 import useTranslation from 'next-translate/useTranslation';
+
+import styles from '~/styles/error.module.css';
 
 export default function Error404() {
 	const { lang } = useTranslation();
 
-	const translations: Translations = {
-		en: {
-			nameHead: 'Error 500 | Internal server error',
-			title: '500',
-			description: 'Internal server error',
-		},
-		es: {
-			nameHead: 'Error 500 | Error interno del servidor',
-			title: '500',
-			description: 'Error interno del servidor',
-		},
-	};
-
 	return (
-		<Section>
-			<NameHead>{translations[lang].nameHead}</NameHead>
-			<h1>{translations[lang].title}</h1>
-			<p>{translations[lang].description}</p>
-		</Section>
+		<CustomHead properties={METADATA.error500[lang]}>
+			<main className={styles['error']}>
+				<h1>500</h1>
+				<p>{METADATA.error500[lang].description}</p>
+			</main>
+		</CustomHead>
 	);
 }

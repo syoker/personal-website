@@ -1,1 +1,2 @@
-export * from './ReactElement';
+export * from './metadata';
+export * from './react-element';

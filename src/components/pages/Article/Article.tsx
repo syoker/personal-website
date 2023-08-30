@@ -1,35 +1,37 @@
+import { runSync } from '@mdx-js/mdx';
 import { useRouter } from 'next/router';
-import { runSync } from '@mdx-js/mdx/lib/run';
-import { usePagesProvider } from 'src/hooks/pages';
-import { NameHead, RouteHead, DescriptionHead } from 'src/components/shared';
-
-import Wrapper from './components/Wrapper';
-import MarkdownComponents from 'src/components/markdown';
-import useTranslation from 'next-translate/useTranslation';
-import Introduction from './components/Introduction/Introduction';
+import { CustomHead } from '~/components/shared';
+import { usePageData } from '~/providers';
 
 import * as runtime from 'react/jsx-runtime';
+
+import styles from './article.module.css';
+import components from '~/components/markdown';
+import Introduction from './introduction/introduction';
+import useTranslation from 'next-translate/useTranslation';
 
 const Article = () => {
 	const { asPath } = useRouter();
 	const { lang } = useTranslation();
-	const { tag, posts, category } = usePagesProvider();
+	const { posts, tag } = usePageData();
 
-	const post = posts.filter((post) => `/${category}/${tag}/${post.alias}` === asPath)[0];
+	const post = posts.filter((post) => `/blog/${tag}/${post.alias}` === asPath)[0];
 
 	const { default: RenderMarkdown } = runSync(post.markdown, runtime);
 
-	return (
-		<>
-			<NameHead>{post.title}</NameHead>
-			<RouteHead>{`https://syoker.vercel.app${lang === 'es' ? '/es' : ''}/${category}/${tag}`}</RouteHead>
-			<DescriptionHead>{post.description}</DescriptionHead>
+	const properties = {
+		title: post.title,
+		description: post.description,
+		url: `https://syoker.vercel.app${lang === 'es' ? '/es' : ''}/blog/${tag}`,
+	};
 
+	return (
+		<CustomHead properties={properties}>
 			<Introduction post={post} />
-			<Wrapper>
-				<RenderMarkdown components={MarkdownComponents} />
-			</Wrapper>
-		</>
+			<article className={styles['article']}>
+				<RenderMarkdown components={components} />
+			</article>
+		</CustomHead>
 	);
 };
 

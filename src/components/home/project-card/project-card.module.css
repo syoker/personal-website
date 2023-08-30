@@ -1,0 +1,248 @@
+.project {
+	outline: none;
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	width: 100%;
+	padding: 1rem;
+
+	user-select: none;
+}
+
+.project > .background {
+	top: 0;
+	left: 0;
+	z-index: 2;
+	position: absolute;
+
+	width: 100%;
+	height: 100%;
+
+	transition: background-color var(--transition-default);
+	background-color: rgba(var(--color-object-hover-rgb), 0);
+}
+
+.project:active > .background {
+	background-color: rgba(var(--color-object-hover-rgb), 0.12);
+}
+
+.project > .banner {
+	width: 100%;
+	height: auto;
+
+	border-radius: 0.5rem;
+}
+
+.project > .host {
+	top: 1.5rem;
+	right: 1.5rem;
+	position: absolute;
+
+	font-weight: 600;
+	font-size: 0.9rem;
+
+	white-space: nowrap;
+
+	padding: 0.3rem 0.6rem;
+	border-radius: 0.5rem;
+
+	color: var(--color-on-surface-variant);
+	background-color: var(--color-surface-variant);
+	transition: color var(--transition-default), background-color var(--transition-default);
+}
+
+.project > .info {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	width: 100%;
+}
+
+.project > .info > .title {
+	top: -1.8rem;
+	position: relative;
+
+	hyphens: none;
+	text-align: center;
+
+	width: 90%;
+	font-size: 1.2rem;
+	font-weight: 700;
+
+	padding: 0.8rem 1rem;
+	border-radius: 0.5rem;
+
+	box-shadow: var(--elevation-level-1);
+	color: var(--color-on-surface-variant);
+	background-color: var(--color-surface-variant);
+	transition: color var(--transition-default), background-color var(--transition-default);
+}
+
+.project > .info > .description {
+	top: -1rem;
+	position: relative;
+
+	hyphens: none;
+	font-size: 1rem;
+	text-align: start;
+
+	color: var(--color-on-background);
+	transition: color var(--transition-default), background-color var(--transition-default);
+}
+
+.project > .info > .tags {
+	position: relative;
+
+	width: 100%;
+
+	gap: 0.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.project > .info > .tags > .tag {
+	font-weight: 600;
+	font-size: 0.9rem;
+
+	white-space: nowrap;
+
+	padding: 0.3rem 0.6rem;
+	border-radius: 0.5rem;
+
+	color: var(--color-on-surface-variant);
+	background-color: var(--color-surface-variant);
+	transition: color var(--transition-default), background-color var(--transition-default);
+}
+
+@media (min-width: 80rem) {
+	.project {
+		gap: 0.5rem;
+		flex-direction: row;
+		border-radius: 0.5rem;
+
+		align-items: flex-start;
+
+		transition: filter var(--transition-default), box-shadow var(--transition-default),
+			background-color var(--transition-default);
+	}
+
+	.project-reverse {
+		flex-direction: row-reverse;
+	}
+
+	.project:hover {
+		background-color: rgba(var(--color-object-hover-rgb), 0.05);
+		box-shadow: 0 0 #0000, 0 0 #0000, inset 0 1px 0 0 rgba(148, 163, 184, 0.1);
+		filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
+	}
+
+	.project:focus-visible {
+		background-color: rgba(var(--color-object-hover-rgb), 0.1);
+		box-shadow: 0 0 #0000, 0 0 #0000, inset 0 1px 0 0 rgba(148, 163, 184, 0.1);
+		filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
+	}
+
+	.project > .banner {
+		width: var(--width, 60%);
+		height: auto;
+
+		border-radius: 0.5rem;
+	}
+
+	.project > .background {
+		display: none;
+	}
+
+	.project > .host {
+		top: 1.5rem;
+		left: 1.5rem;
+
+		padding: 0.4rem 0.8rem;
+
+		right: auto;
+	}
+
+	.project > .host-reverse {
+		left: auto;
+		right: 1.5rem;
+	}
+
+	.project > .info {
+		align-items: flex-end;
+		justify-content: flex-start;
+
+		flex-direction: column-reverse;
+	}
+
+	.project > .info-reverse {
+		align-items: flex-start;
+	}
+
+	.project > .info > .title {
+		top: auto;
+		width: auto;
+		padding: 0rem;
+		background-color: transparent;
+
+		text-align: end;
+
+		font-size: 2rem;
+		font-weight: 700;
+
+		box-shadow: none;
+		color: var(--color-on-background);
+	}
+
+	.project > .info > .title-reverse {
+		text-align: start;
+	}
+
+	.project > .info > .description {
+		top: auto;
+		right: 1rem;
+		bottom: 1.5rem;
+		position: absolute;
+
+		width: 50%;
+		padding: 1rem;
+		border-radius: 0.5rem;
+
+		box-shadow: var(--elevation-level-1);
+		background-color: var(--color-surface-variant);
+	}
+
+	.project > .info > .description-reverse {
+		left: 1rem;
+
+		right: auto;
+	}
+
+	.project > .info > .tags {
+		gap: 0.8rem;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row-reverse;
+		justify-content: flex-start;
+	}
+
+	.project > .info > .tags-reverse {
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+
+	.project > .info > .tags > .tag {
+		padding: 0rem;
+		border-radius: 0.5rem;
+
+		font-weight: 600;
+		font-size: 0.9rem;
+
+		color: var(--color-primary);
+		background-color: transparent;
+	}
+}

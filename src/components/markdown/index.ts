@@ -1,31 +1,28 @@
-import CustomParagraph from './CustomParagraph/CustomParagraph';
-import CustomH1 from './CustomH1/CustomH1';
-import CustomH2 from './CustomH2/CustomH2';
-import CustomLi from './CustomLi/CustomLi';
-import CustomImage from './CustomImage/CustomImage';
-import CustomAnchor from './CustomAnchor/CustomAnchor';
-import CustomCode from './CustomCode/CustomCode';
-import CustomBlockquote from './CustomBlockquote/CustomBlockquote';
-import CustomOList from './CustomOList/CustomOList';
-import CustomPre from './CustomPre/CustomPre';
-import CustomVideo from './CustomVideo/CustomVideo';
-import CustomUList from './CustomUList/CustomUList';
+import CustomAnchor from './custom-anchor/custom-anchor';
+import CustomBlockquote from './custom-blockquote/custom-blockquote';
+import CustomCode from './custom-code/custom-code';
+import CustomHeading from './custom-heading/custom-heading';
+import CustomImage from './custom-image/custom-image';
+import CustomLi from './custom-li/custom-li';
+import CustomOList from './custom-olist/custom-olist';
+import CustomParagraph from './custom-paragraph/custom-paragraph';
+import CustomPre from './custom-pre/custom-pre';
+import CustomUList from './custom-ulist/custom-ulist';
+import CustomVideo from './custom-video/custom-video';
 
 const components = {
+	a: CustomAnchor,
 	p: CustomParagraph,
-	h1: CustomH1,
-	h2: CustomH2,
+	h1: CustomHeading.H1,
+	h2: CustomHeading.H2,
 	li: CustomLi,
 	ol: CustomOList,
 	ul: CustomUList,
-	pre: CustomPre,
-	a: CustomAnchor,
 	img: CustomImage,
+	pre: CustomPre,
 	code: CustomCode,
-	CustomAnchor: CustomAnchor,
-	CustomCode: CustomCode,
-	CustomVideo: CustomVideo,
 	blockquote: CustomBlockquote,
+	CustomVideo: CustomVideo,
 };
 
 export default components;

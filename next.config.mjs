@@ -4,7 +4,6 @@ import nextTranslate from 'next-translate-plugin';
 
 const nextConfig = nextTranslate({
 	reactStrictMode: true,
-	pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
 	images: {
 		remotePatterns: [
 			{
@@ -14,7 +13,8 @@ const nextConfig = nextTranslate({
 			{
 				protocol: 'https',
 				hostname: 'raw.githubusercontent.com',
-				pathname: '/Syoker/**',
+				port: '',
+				pathname: '/rickruad/proyecto-de-residencias/main/.github/images/**',
 			},
 			{
 				protocol: 'https',
@@ -27,6 +27,10 @@ const nextConfig = nextTranslate({
 			{
 				protocol: 'https',
 				hostname: 'avatars.githubusercontent.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'repository-images.githubusercontent.com',
 			},
 		],
 	},

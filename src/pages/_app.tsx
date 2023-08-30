@@ -1,16 +1,10 @@
-import '/public/fonts/heavitas.css';
-
-import 'src/styles/app/fonts.css';
-import 'src/styles/app/theme.css';
-import 'src/styles/app/reset.css';
-import 'src/styles/app/layout.css';
-import 'src/styles/app/globals.css';
-import 'src/styles/app/animations.css';
-import 'src/styles/app/elevations.css';
+import '~/styles/app/reset.css';
+import '~/styles/app/theme.css';
+import '~/styles/app/globals.css';
 
 import type { AppProps } from 'next/app';
 import { Analytics } from '@vercel/analytics/react';
-import { Languages, Header, Toaster } from 'src/components/app';
+import { CustomToaster, Languages, Header } from '~/components/app';
 
 import dayjs from 'dayjs';
 import localizedFormat from 'dayjs/plugin/localizedFormat';
@@ -20,10 +14,10 @@ export default function App({ Component, pageProps }: AppProps) {
 
 	return (
 		<Languages validLanguages={['en', 'es']}>
-			<Toaster />
 			<Header />
-			<Component {...pageProps} />
 			<Analytics />
+			<CustomToaster />
+			<Component {...pageProps} />
 		</Languages>
 	);
 }

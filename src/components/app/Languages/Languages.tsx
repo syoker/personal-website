@@ -1,5 +1,5 @@
+import { compareArrays } from '~/functions/app';
 import { useState, useEffect } from 'react';
-import { compareArrays } from 'src/utils/shared';
 import type { ReactNode } from '@mdx-js/react/lib';
 
 import setLanguage from 'next-translate/setLanguage';

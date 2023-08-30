@@ -1,0 +1,96 @@
+.error {
+	top: 0;
+	left: 0;
+	z-index: 200;
+	position: fixed;
+
+	gap: 0rem;
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	justify-content: center;
+
+	background-color: var(--color-background);
+	transition: background-color var(--transition-default);
+}
+
+.error > h1 {
+	font-size: 3.5625rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 4rem;
+	letter-spacing: -0.01563rem;
+
+	transition: color var(--transition-default);
+	animation: fade-in var(--transition-default);
+
+	color: var(--color-on-background);
+}
+
+.error > p {
+	margin-bottom: 0.8rem;
+}
+
+.error > .redirect {
+	hyphens: none;
+
+	display: none;
+
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.5rem;
+	text-align: center;
+
+	margin-inline: 1rem;
+
+	padding: 1rem;
+	border-radius: 0.5rem;
+
+	box-shadow: var(--elevation-level-1);
+	color: var(--color-on-surface-variant);
+	animation: fade-in var(--transition-default);
+	background-color: var(--color-surface-variant);
+	transition: color var(--transition-default), background-color var(--transition-default);
+}
+
+.error > .show {
+	display: block;
+}
+
+.error > .redirect > a {
+	text-decoration: underline;
+	text-decoration-color: transparent;
+
+	color: var(--color-primary);
+	transition: color var(--transition-default), text-decoration-color var(--transition-default);
+}
+
+.error > .redirect > a:active {
+	text-decoration-color: var(--color-primary);
+}
+
+@media (min-width: 80rem) {
+	.error > .redirect > a:hover {
+		text-decoration-color: var(--color-primary);
+	}
+
+	.error > .redirect > a:focus-visible {
+		text-decoration-color: var(--color-primary);
+	}
+}
+
+@media (max-width: 20.625rem) {
+	.error > .redirect {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.error > .redirect > a {
+		word-break: break-word;
+	}
+}
