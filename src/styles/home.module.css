@@ -31,9 +31,11 @@
 	font-weight: 700;
 	font-size: 1.2rem;
 	letter-spacing: 0.4rem;
-	line-height: 0.2rem;
 	white-space: nowrap;
 	text-transform: uppercase;
+
+	top: 0.7rem;
+	position: relative;
 
 	color: var(--color-on-surface-variant);
 	transition: color var(--transition-default);
@@ -43,7 +45,6 @@
 	font-family: Heavitas;
 	font-size: 4.2rem;
 	white-space: nowrap;
-	line-height: 1.2em;
 	text-align: center;
 
 	transition: color var(--transition-default);
@@ -52,11 +53,68 @@
 .home > .presentation > .developer {
 	font-family: Heavitas;
 	font-size: 4.5rem;
-	line-height: 0.6em;
 	text-align: center;
+
+	top: -1.2rem;
+	position: relative;
 
 	color: var(--color-tertiary);
 	transition: color var(--transition-default);
+}
+
+@media only screen and (hover: none) and (pointer: coarse) {
+	.home > .presentation > .name {
+		top: 0.3rem;
+	}
+
+	@media screen and (orientation: landscape) {
+		.home > .presentation > .developer {
+			top: -1.2rem;
+		}
+	}
+}
+
+@media (max-width: 34.375rem) {
+	.home > .presentation > .name {
+		font-size: 1rem;
+	}
+
+	.home > .presentation > .full-stack {
+		font-size: 3.1rem;
+	}
+
+	.home > .presentation > .developer {
+		top: -1rem;
+		font-size: 3.4rem;
+	}
+}
+
+@media (max-width: 24.375rem) {
+	.home > .presentation > .name {
+		font-size: 0.8rem;
+	}
+
+	.home > .presentation > .full-stack {
+		font-size: 2.7rem;
+	}
+
+	.home > .presentation > .developer {
+		font-size: 2.9rem;
+	}
+}
+
+@media (max-width: 21.25rem) {
+	.home > .presentation > .name {
+		font-size: 0.8rem;
+	}
+
+	.home > .presentation > .full-stack {
+		font-size: 2rem;
+	}
+
+	.home > .presentation > .developer {
+		font-size: 2.2rem;
+	}
 }
 
 .home > .pointers {
@@ -279,62 +337,5 @@
 
 	.footer > .text > .link:focus-visible {
 		color: var(--color-primary);
-	}
-}
-
-@media (max-width: 34.375rem) {
-	.home > .presentation > .name {
-		font-size: 1rem;
-
-		line-height: 1rem;
-	}
-
-	.home > .presentation > .full-stack {
-		font-size: 3.1rem;
-	}
-
-	.home > .presentation > .developer {
-		font-size: 3.4rem;
-	}
-}
-
-@media (max-width: 24.375rem) {
-	.home > .presentation > .name {
-		font-size: 0.8rem;
-
-		line-height: 0.8rem;
-	}
-
-	.home > .presentation > .full-stack {
-		font-size: 2.7rem;
-	}
-
-	.home > .presentation > .developer {
-		font-size: 2.9rem;
-	}
-}
-
-@media (max-width: 21.25rem) {
-	.home > .presentation > .name {
-		font-size: 0.8rem;
-
-		line-height: 0.6rem;
-	}
-
-	.home > .presentation > .full-stack {
-		font-size: 2rem;
-	}
-
-	.home > .presentation > .developer {
-		font-size: 2.2rem;
-	}
-
-	.home > .presentation > .social {
-		margin-top: 0.5rem;
-	}
-
-	.home > .presentation > .social > a > svg {
-		width: 1.8rem;
-		height: 1.8rem;
 	}
 }
