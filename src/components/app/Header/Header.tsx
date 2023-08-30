@@ -1,8 +1,8 @@
 import { useState, useRef } from 'react';
 import { useReactElement } from '~/hooks/shared';
 
-import Button from './components/button/button';
-import Indicator from './components/indicator/indicator';
+import Button from './button/button';
+import Indicator from './indicator/indicator';
 
 import styles from './header.module.css';
 
