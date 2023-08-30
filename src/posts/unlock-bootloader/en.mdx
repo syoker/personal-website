@@ -1,0 +1,175 @@
+!--
+author: syoker
+title: How to unlock the bootloader
+banner: /images/posts/unlock-bootloader.webp
+description: Guide to unlock bootloader on Motorola One Fusion | Astro
+tags: astro, guide
+created: July 20, 2021
+!--
+
+In this guide, I will show you how to unlock the bootloader of our device. This process will format your device, so I recommend you to make a backup before.
+
+All this is at your own risk, I'm not responsible for any damage caused to your device.
+
+## **¿What I need?**
+
+- ### **SDK Platform Tools**
+
+  The _Android SDK Platform Tools_ are a component of the Android SDK. They include tools that interact with the Android platform, such as [adb](https://developer.android.com/studio/command-line/adb"), [fastboot](https://android.googlesource.com/platform/system/core/+/master/fastboot/#fastboot) and [systrace](https://developer.android.com/topic/performance/tracing/command-line). These tools are required for Android app development, or if you want to unlock the bootloader of your device and update it with a new system image.
+
+  Download link - [SDK Platform Tools](https://developer.android.com/studio/releases/platform-tools)
+
+- ### **Motorola Drivers**
+
+  This contains the USB drivers so that the PC can recognize your device and work with it when it is in Bootloader or Fastbootd.
+
+  Download link - [Motorola](https://motorola-global-es-latam.custhelp.com/app/answers/detail/a_id/89882)
+
+- ### **Official firmware**
+
+  You will need to download official firmware corresponding to your software channel for your device, **NEVER DOWNLOAD A FIRMWARE FROM ANOTHER CHANNEL.** To find out which firmware corresponds to your device, you need to look at the channel it belongs to in the settings app, under "About phone" in "Software Channel".
+
+  Download link - [Mirrors Lolinet](https://mirrors.lolinet.com/firmware/moto/astro/official/)
+
+- ### **Windows Terminal (optional)**
+
+  If you have windows 8, 8.1 or 10, download this terminal from the Windows Store, as you will get a feature that you will need in this guide. Once you have obtained the terminal, configure it so that the default profile is the command prompt (CMD).
+
+  Download link - [Microsoft Store](https://www.microsoft.com/store/productId/9N0DX20HK701)
+
+- ### **USB debugging (optional)**
+
+  In this guide we will use USB debugging to access the bootloader mode, it is not necessary if you are already in bootloader mode or if you are going to access it in another way (with a buttons combination), but I recommend the way it is going to be shown in this guide.
+
+  To enable USB debugging, you have to go to the settings app, in the "About phone" section under "Build number" and tap 7 times. Then, you have to access the "Developer options" in the settings app under "System" and enable "USB debugging".
+
+- ### **Activate "OEM Unlock"**
+
+  Go to "Settings/System/Advanced Settings/Developer" and there, look for the "OEM Unlock" option to activate it.
+
+## **Procedure for unlocking the bootloader**
+
+1.  Unzip the platform-tools folder you got from the **Android Developers** page.
+
+    ![Example folder](/images/guides/guide-examplefolder.webp)
+
+    > Example folder
+
+2.  If you have the **Windows Terminal** obtained from the **Microsoft Store**, simply open the CMD inside the folder by right-clicking on an empty part of the folder and selecting the "Open in Terminal" option.
+
+    <CustomVideo src="/video/opencommandprompt.mp4" autoPlay loop muted />
+
+    > Demostration video
+
+    If you don't have the **Windows Terminal**, inside the folder in an empty space do shift + right click and select the option "Open in PowerShell window here", type `cmd` inside the window and press enter.
+
+    <CustomVideo src="/video/openwindowspowershell.mp4" autoPlay loop muted />
+
+    > Demostration video
+
+3.  Now connect the device to the PC and type in CMD
+
+    ```bash
+    adb devices
+    ```
+
+    > The device has to be powered on for this command to work, in case it is already in bootloader, type `fastboot devices`.
+
+    If the console does not return
+
+    ```bash
+    List of devices attached
+    ZE222BZWFF device
+    ```
+
+    then make sure that you have the device properly connected, or that USB debugging is enabled.
+
+4.  Now proceed to reboot the device to go to bootloader with the following command
+
+    ```bash
+    adb reboot bootloader
+    ```
+
+    > You can also access this mode with the power + volume down key combination.
+
+    You will know you are in bootloader mode as it has a screen with text and the Android robot lying down with an open lid.
+
+5.  Inside the previously opened terminal, type
+
+    > The next steps (included this one) will be on [this](https://en-us.support.motorola.com/app/standalone%2Fbootloader%2Funlock-your-device-b) Motorola page, but I'll explain it anyway.
+
+    ```bash
+    fastboot oem get_unlock_data
+    ```
+
+    This command will drop your device ID into the terminal, which you will need to obtain an unlock code.
+
+    ```bash
+    (bootloader) 0A40040192024205#4C4D3556313230
+    (bootloader) 30373731363031303332323239#BD00
+    (bootloader) 8A672BA4746C2CE02328A2AC0C39F95
+    (bootloader) 1A3E5#1F53280002000000000000000
+    (bootloader) 0000000
+    ```
+
+    And as follows in MAC:
+
+    ```bash
+    INFO0A40040192024205#4C4D3556313230
+    INFO30373731363031303332323239#BD00
+    INFO8A672BA4746C2CE02328A2AC0C39F95
+    INFO1A3E5#1F53280002000000000000000
+    INFO0000000
+    ```
+
+6.  You will need to generate your unlock code from what the CMD returned, to do this, you will need to paste the 5 lines of output into a continuous string with no "bootloader or info" or blanks. The code should look like this:
+
+    ```bash
+    0A40040192024205#4C4D355631323030373731363031303332323239#BD008A672BA4746C2CE02328A2AC0C39F951A3E5#1F532800020000000000000000000000
+    ```
+
+7.  Paste the code you made into the text field on the [Motorola page](https://en-us.support.motorola.com/app/standalone%2Fbootloader%2Funlock-your-device-b) that says "MAKE SURE YOUR DEVICE IS UNLOCKABLE".
+
+    Then, click on the button that says "Can my device be unlocked?
+
+    You will receive a code by mail from Motorola within the next few minutes.
+
+8.  Once you have received the email with the code, type in the terminal
+
+    ```bash
+    fastboot oem unlock "code".
+    ```
+
+    > Where "code" is the code that was sent to you by email, without the inverted commas.
+
+9.  Now on the phone you will get a screen that will ask you to confirm if you really want to unlock the bootloader, on this screen you will have to navigate with the volume keys and you can confirm with the power button. Confirm and wait for about 20 seconds until the console displays a
+
+    ```bash
+    OKAY
+    ```
+
+10. Now, simply reboot the system with
+
+    ```bash
+    fastboot reboot
+    ```
+
+    and you are done
+
+## **Block the bootloader**
+
+**NOTE:** This procedure has a risk of bricking the device, so it is not recommended.
+
+1.  If for some reason you want to relock the bootloader of the device, simply type
+
+    ```bash
+    fastboot oem lock
+    ```
+
+    On the device you will get a confirmation screen, navigate as you did when unlocking and select the option to lock bootlaoder. Now wait until the terminal says
+
+    ```bash
+    OKAY
+    ```
+
+If you have any questions, please visit the Telegram group in Spanish (currently doesn't exist in English) of our device [Motorola One Fusion | Español™](https://t.me/MotorolaOneFusionES) (If you find any translation errors, let me know via [GitHub Issues](https://github.com/Syoker/personal-website/issues)).

@@ -1,0 +1,37 @@
+.tag {
+	position: relative;
+
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.25rem;
+	letter-spacing: 0.00625rem;
+	text-align: center;
+	white-space: nowrap;
+
+	outline: none;
+
+	border-radius: 0.5rem;
+	padding: 0.375rem 0.75rem;
+
+	color: var(--text-color);
+	background-color: transparent;
+	border: 1px solid var(--border-color);
+
+	transition: color var(--transition-default), border var(--transition-default),
+		background-color var(--transition-default);
+}
+
+.tag:active {
+	background-color: rgba(var(--color-object-hover-rgb), 0.12);
+}
+
+@media (min-width: 80rem) {
+	.tag:hover {
+		background-color: rgba(var(--color-object-hover-rgb), 0.08);
+	}
+
+	.tag:focus-visible {
+		background-color: rgba(var(--color-object-hover-rgb), 0.12);
+	}
+}

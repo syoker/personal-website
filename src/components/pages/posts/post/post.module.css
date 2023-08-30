@@ -1,0 +1,123 @@
+.post {
+	position: relative;
+
+	width: 100%;
+	padding: 1rem;
+
+	outline: none;
+}
+
+.post > .background {
+	top: 0;
+	left: 0;
+	position: absolute;
+
+	width: 100%;
+	height: 100%;
+
+	transition: background-color var(--transition-default);
+	background-color: rgba(var(--color-object-hover-rgb), 0);
+}
+
+.post:active > .background {
+	background-color: rgba(var(--color-object-hover-rgb), 0.12);
+}
+
+.post > .content {
+	gap: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	width: 100%;
+	height: 100%;
+}
+
+.post > .content > .info {
+	gap: 0.5rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.post > .content > .info > .banner {
+	width: 100%;
+	height: auto;
+
+	user-select: none;
+	border-radius: 8px;
+}
+
+.post > .content > .info > .tags {
+	gap: 0.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.post > .content > .info > .tags > .tag {
+	list-style: none;
+	font-size: 0.85rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1rem;
+	letter-spacing: 0.03125rem;
+	white-space: nowrap;
+
+	border-radius: 8px;
+	padding: 0.5rem 1rem;
+
+	color: var(--color-on-surface-variant);
+	background-color: var(--color-surface-variant);
+	transition: color var(--transition-default), background-color var(--transition-default);
+}
+
+.post > .content > .info > .title {
+	font-size: 1.2rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.5rem;
+	letter-spacing: 0.00938rem;
+
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+
+	color: var(--color-on-background);
+	transition: color var(--transition-default);
+}
+
+.post > .content > .info > .description {
+	hyphens: none;
+
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.25rem;
+	letter-spacing: 0.00625rem;
+
+	transition: color var(--transition-default);
+	color: rgba(var(--color-on-background-rgb), 0.8);
+}
+
+.post > .content > .date {
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.25rem;
+	letter-spacing: 0.00625rem;
+
+	text-align: end;
+
+	transition: color var(--transition-default);
+	color: rgba(var(--color-on-background-rgb), 0.6);
+}
+
+@media (min-width: 80rem) {
+	.post:hover > .background {
+		background-color: rgba(var(--color-object-hover-rgb), 0.08);
+	}
+
+	.post:focus-visible > .background {
+		background-color: rgba(var(--color-object-hover-rgb), 0.12);
+	}
+}
