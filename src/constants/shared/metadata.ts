@@ -40,13 +40,13 @@ const METADATA: METADATA = {
 			title: 'Motorola One Fusion',
 			description: 'All my posts about the Motorola One Fusion',
 			url: 'https://syoker.vercel.app/blog/astro',
-			thumbnail: 'https://raw.githubusercontent.com/syoker/personal-website/main/public/images/social-share.png',
+			thumbnail: 'https://raw.githubusercontent.com/syoker/personal-website/main/public/images/astro.png',
 		},
 		es: {
 			title: 'Motorola One Fusion',
 			description: 'Todos mis posts sobre el Motorola One Fusion',
 			url: 'https://syoker.vercel.app/es/blog/astro',
-			thumbnail: 'https://raw.githubusercontent.com/syoker/personal-website/main/public/images/social-share.png',
+			thumbnail: 'https://raw.githubusercontent.com/syoker/personal-website/main/public/images/astro.png',
 		},
 	},
 	'/blog/guide': {

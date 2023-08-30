@@ -13,8 +13,12 @@ const nextConfig = nextTranslate({
 			{
 				protocol: 'https',
 				hostname: 'raw.githubusercontent.com',
-				port: '',
 				pathname: '/rickruad/proyecto-de-residencias/main/.github/images/**',
+			},
+			{
+				protocol: 'https',
+				hostname: 'raw.githubusercontent.com',
+				pathname: '/syoker/personal-website/main/public/images/posts/**',
 			},
 			{
 				protocol: 'https',
