@@ -1,5 +1,7 @@
-import { useState, useRef } from 'react';
+import { useRouter } from 'next/router';
 import { useReactElement } from '~/hooks/shared';
+import { INDICATORVALUES } from './header.constants';
+import { useState, useRef } from 'react';
 
 import Button from './button/button';
 import Indicator from './indicator/indicator';
@@ -8,7 +10,7 @@ import styles from './header.module.css';
 
 const Header = () => {
 	const [buttonWidth, setButtonWidth] = useState(0);
-	const [buttonPosition, setButtonPosition] = useState(0);
+	const [, setButtonPosition] = useState(0);
 
 	const reference = useRef<HTMLDivElement | null>(null);
 	const nav = useReactElement(reference);
@@ -25,6 +27,11 @@ const Header = () => {
 		}
 	};
 
+	const { asPath } = useRouter();
+
+	const width = asPath === '/' ? INDICATORVALUES['home'].width : INDICATORVALUES['blog'].width;
+	const position = asPath === '/' ? INDICATORVALUES['home'].position : INDICATORVALUES['blog'].position;
+
 	return (
 		<header className={styles['header']}>
 			<section>
@@ -34,7 +41,7 @@ const Header = () => {
 							{text}
 						</Button>
 					))}
-					<Indicator width={buttonWidth} position={buttonPosition} />
+					<Indicator width={width} position={position} />
 				</nav>
 			</section>
 		</header>
