@@ -11,7 +11,7 @@
 .tags {
 	gap: 0.5rem;
 	display: flex;
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 1rem 1rem 1rem;
 
 	overflow-x: auto;
 	overflow-y: hidden;
@@ -21,4 +21,6 @@
 	margin-top: 0.5rem;
 
 	animation: fade-in var(--transition-default);
+	transition: border-bottom var(--transition-default);
+	border-bottom: 2px solid var(--color-outline-variant);
 }
