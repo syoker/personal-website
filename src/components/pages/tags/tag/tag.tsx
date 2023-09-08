@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { getPath, getBorderColor, getTextColor } from './tag.functions';
+import { getPath, getBorderColor, getTextColor, getBackgroundColor } from './tag.functions';
 
 import Link from 'next/link';
 import useTranslation from 'next-translate/useTranslation';
@@ -13,10 +13,15 @@ const Tag = ({ children }: { children: string }) => {
 	const path = getPath(children);
 	const textColor = getTextColor(path, asPath);
 	const borderColor = getBorderColor(path, asPath);
+	const backgroundColor = getBackgroundColor(path, asPath);
 
 	return (
-		// @ts-expect-error ignore
-		<Link className={styles['tag']} href={path} style={{ '--text-color': textColor, '--border-color': borderColor }}>
+		<Link
+			className={styles['tag']}
+			href={path}
+			// @ts-expect-error ignore
+			style={{ '--text-color': textColor, '--border-color': borderColor, '--background-color': backgroundColor }}
+		>
 			{t(children)}
 		</Link>
 	);
