@@ -27,7 +27,7 @@
 
 	--elevation-level-1: 0px 3px 7px rgba(var(--color-shadow-rgb), 0.1);
 
-	--transition-default: 200ms ease;
+	--transition-default: 200ms ease forwards;
 }
 
 @supports (font-variation-settings: normal) {
