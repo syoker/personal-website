@@ -10,7 +10,7 @@
 	overflow-x: auto;
 
 	border: 1px solid var(--color-outline);
-	transition: border var(--transition-default), background-color var(--transition-default);
+	transition: border var(--transition), background-color var(--transition);
 }
 
 .pre > code {

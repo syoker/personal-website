@@ -27,7 +27,8 @@
 
 	--elevation-level-1: 0px 3px 7px rgba(var(--color-shadow-rgb), 0.1);
 
-	--transition-default: 200ms ease forwards;
+	--transition: 200ms ease;
+	--transition-page: 300ms ease forwards;
 }
 
 @supports (font-variation-settings: normal) {
@@ -77,7 +78,7 @@ body {
 
 	color: var(--color-on-background);
 	background-color: var(--color-background);
-	transition: background-color var(--transition-default);
+	transition: background-color var(--transition);
 }
 
 p {
@@ -86,6 +87,6 @@ p {
 	font-weight: 500;
 	line-height: 1.75rem;
 
-	transition: color var(--transition-default);
-	animation: fade-in var(--transition-default);
+	transition: color var(--transition);
+	animation: fade-in var(--transition-page);
 }

@@ -20,7 +20,7 @@
 	margin: auto;
 	margin-top: 0.5rem;
 
-	animation: fade-in var(--transition-default);
-	transition: border-bottom var(--transition-default);
+	animation: fade-in var(--transition-page);
+	transition: border-bottom var(--transition);
 	border-bottom: 2px solid var(--color-outline-variant);
 }

@@ -11,7 +11,7 @@
 	background-color: var(--color-background);
 	border-bottom: 1px solid var(--color-outline);
 
-	transition: background-color var(--transition-default), border var(--transition-default);
+	transition: background-color var(--transition), border var(--transition);
 }
 
 .header > .container {
@@ -30,7 +30,7 @@
 	padding: 0rem;
 
 	color: var(--color-on-surface-variant);
-	transition: color var(--transition-default);
+	transition: color var(--transition);
 }
 
 .header > .container > h3 {
@@ -42,7 +42,7 @@
 
 	font-family: Inter;
 	color: var(--color-on-background);
-	transition: color var(--transition-default);
+	transition: color var(--transition);
 }
 
 .header > .icon-button {
@@ -64,7 +64,7 @@
 	overflow: hidden;
 
 	background-color: transparent;
-	transition: background-color var(--transition-default);
+	transition: background-color var(--transition);
 }
 
 .header > .icon-button:active {
@@ -76,7 +76,7 @@
 	height: 1.25rem;
 
 	color: var(--color-on-background);
-	transition: color var(--transition-default);
+	transition: color var(--transition);
 }
 
 @media (min-width: 80rem) {

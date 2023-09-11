@@ -12,5 +12,5 @@
 	left: calc(1rem + var(--position));
 
 	background-color: var(--color-primary);
-	transition: left var(--transition-default), width var(--transition-default);
+	transition: left var(--transition), width var(--transition);
 }

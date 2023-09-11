@@ -12,5 +12,5 @@
 	padding-inline: 1rem;
 	padding-bottom: 3rem;
 
-	animation: fade-in var(--transition-default);
+	animation: fade-in var(--transition-page);
 }

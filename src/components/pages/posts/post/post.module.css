@@ -15,7 +15,7 @@
 	width: 100%;
 	height: 100%;
 
-	transition: background-color var(--transition-default);
+	transition: background-color var(--transition);
 	background-color: rgba(var(--color-object-hover-rgb), 0);
 }
 
@@ -68,7 +68,7 @@
 
 	color: var(--color-on-surface-variant);
 	background-color: var(--color-surface-variant);
-	transition: color var(--transition-default), background-color var(--transition-default);
+	transition: color var(--transition), background-color var(--transition);
 }
 
 .post > .content > .info > .title {
@@ -83,7 +83,7 @@
 	text-overflow: ellipsis;
 
 	color: var(--color-on-background);
-	transition: color var(--transition-default);
+	transition: color var(--transition);
 }
 
 .post > .content > .info > .description {
@@ -95,7 +95,7 @@
 	line-height: 1.25rem;
 	letter-spacing: 0.00625rem;
 
-	transition: color var(--transition-default);
+	transition: color var(--transition);
 	color: rgba(var(--color-on-background-rgb), 0.8);
 }
 
@@ -108,7 +108,7 @@
 
 	text-align: end;
 
-	transition: color var(--transition-default);
+	transition: color var(--transition);
 	color: rgba(var(--color-on-background-rgb), 0.6);
 }
 

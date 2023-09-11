@@ -18,8 +18,7 @@
 	background-color: var(--background-color);
 	border: 1px solid var(--border-color);
 
-	transition: color var(--transition-default), border var(--transition-default),
-		background-color var(--transition-default);
+	transition: color var(--transition), border var(--transition), background-color var(--transition);
 }
 
 .tag:active {

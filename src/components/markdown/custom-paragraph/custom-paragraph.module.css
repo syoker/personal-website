@@ -10,7 +10,7 @@
 	margin: 1rem 0rem;
 
 	color: var(--color-on-background);
-	transition: color var(--transition-default);
+	transition: color var(--transition);
 }
 
 .image-container {

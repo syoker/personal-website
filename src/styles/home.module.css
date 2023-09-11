@@ -12,7 +12,7 @@
 	margin: auto;
 	max-width: 80rem;
 
-	animation: fade-in var(--transition-default);
+	animation: fade-in var(--transition-page);
 }
 
 .home > .presentation {
@@ -39,7 +39,7 @@
 	top: 1rem;
 
 	color: var(--color-on-surface-variant);
-	transition: color var(--transition-default);
+	transition: color var(--transition);
 }
 
 .home > .presentation > .full-stack {
@@ -48,7 +48,7 @@
 	white-space: nowrap;
 	text-align: center;
 
-	transition: color var(--transition-default);
+	transition: color var(--transition);
 }
 
 .home > .presentation > .developer {
@@ -61,7 +61,7 @@
 	top: -1.5rem;
 
 	color: var(--color-tertiary);
-	transition: color var(--transition-default);
+	transition: color var(--transition);
 }
 
 @media (max-width: 40rem) {
@@ -142,7 +142,7 @@
 	border-radius: 100%;
 
 	background-color: rgba(var(--color-on-surface-variant-rgb), 0.3);
-	transition: background-color var(--transition-default);
+	transition: background-color var(--transition);
 }
 
 .home > .projects {
@@ -218,7 +218,7 @@
 
 	color: var(--color-on-primary);
 	background-color: var(--color-primary);
-	transition: color var(--transition-default), background-color var(--transition-default);
+	transition: color var(--transition), background-color var(--transition);
 }
 
 .home > .projects > .button > .background {
@@ -231,7 +231,7 @@
 
 	outline: none;
 
-	transition: background-color var(--transition-default);
+	transition: background-color var(--transition);
 	background-color: rgba(var(--color-object-hover-invert-rgb), 0);
 }
 
@@ -244,7 +244,7 @@
 	padding: 3rem 1rem;
 
 	background-color: var(--color-surface-variant);
-	transition: background-color var(--transition-default);
+	transition: background-color var(--transition);
 }
 
 .footer > nav {
@@ -262,7 +262,7 @@
 	height: 2rem;
 
 	fill: var(--color-on-surface-variant);
-	transition: fill var(--transition-default);
+	transition: fill var(--transition);
 }
 
 .footer > nav > a:active > svg {
@@ -286,7 +286,7 @@
 .footer > .text > .link {
 	font-weight: 700;
 	white-space: nowrap;
-	transition: color var(--transition-default);
+	transition: color var(--transition);
 	color: rgba(var(--color-on-surface-variant-rgb), 0.8);
 }
 

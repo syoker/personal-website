@@ -21,7 +21,7 @@
 	width: 100%;
 	height: 100%;
 
-	transition: background-color var(--transition-default);
+	transition: background-color var(--transition);
 	background-color: rgba(var(--color-object-hover-rgb), 0);
 }
 
@@ -51,7 +51,7 @@
 
 	color: var(--color-on-surface-variant);
 	background-color: var(--color-surface-variant);
-	transition: color var(--transition-default), background-color var(--transition-default);
+	transition: color var(--transition), background-color var(--transition);
 }
 
 .project > .info {
@@ -79,7 +79,7 @@
 	box-shadow: var(--elevation-level-1);
 	color: var(--color-on-surface-variant);
 	background-color: var(--color-surface-variant);
-	transition: color var(--transition-default), background-color var(--transition-default);
+	transition: color var(--transition), background-color var(--transition);
 }
 
 .project > .info > .description {
@@ -91,7 +91,7 @@
 	text-align: start;
 
 	color: var(--color-on-background);
-	transition: color var(--transition-default), background-color var(--transition-default);
+	transition: color var(--transition), background-color var(--transition);
 }
 
 .project > .info > .tags {
@@ -116,7 +116,7 @@
 
 	color: var(--color-on-surface-variant);
 	background-color: var(--color-surface-variant);
-	transition: color var(--transition-default), background-color var(--transition-default);
+	transition: color var(--transition), background-color var(--transition);
 }
 
 @media (min-width: 80rem) {
@@ -127,8 +127,7 @@
 
 		align-items: flex-start;
 
-		transition: filter var(--transition-default), box-shadow var(--transition-default),
-			background-color var(--transition-default);
+		transition: filter var(--transition), box-shadow var(--transition), background-color var(--transition);
 	}
 
 	.project-reverse {

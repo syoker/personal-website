@@ -97,7 +97,7 @@
 .hljs-string,
 .hljs-number,
 .hljs-built_in {
-	transition: color var(--transition-default);
+	transition: color var(--transition);
 }
 
 .hljs-equal {

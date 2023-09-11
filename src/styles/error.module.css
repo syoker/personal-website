@@ -15,7 +15,7 @@
 	justify-content: center;
 
 	background-color: var(--color-background);
-	transition: background-color var(--transition-default);
+	transition: background-color var(--transition);
 }
 
 .error > h1 {
@@ -25,8 +25,8 @@
 	line-height: 4rem;
 	letter-spacing: -0.01563rem;
 
-	transition: color var(--transition-default);
-	animation: fade-in var(--transition-default);
+	transition: color var(--transition);
+	animation: fade-in var(--transition-page);
 
 	color: var(--color-on-background);
 }
@@ -53,9 +53,9 @@
 
 	box-shadow: var(--elevation-level-1);
 	color: var(--color-on-surface-variant);
-	animation: fade-in var(--transition-default);
+	animation: fade-in var(--transition);
 	background-color: var(--color-surface-variant);
-	transition: color var(--transition-default), background-color var(--transition-default);
+	transition: color var(--transition), background-color var(--transition);
 }
 
 .error > .show {
@@ -67,7 +67,7 @@
 	text-decoration-color: transparent;
 
 	color: var(--color-primary);
-	transition: color var(--transition-default), text-decoration-color var(--transition-default);
+	transition: color var(--transition), text-decoration-color var(--transition);
 }
 
 .error > .redirect > a:active {

@@ -17,8 +17,8 @@
 	padding-bottom: 1rem;
 	margin-bottom: 2.5rem;
 
-	animation: fade-in var(--transition-default);
-	transition: border var(--transition-default);
+	animation: fade-in var(--transition-page);
+	transition: border var(--transition);
 	border-bottom: 2px solid var(--color-outline-variant);
 }
 
@@ -43,7 +43,7 @@
 
 	color: var(--color-on-surface-variant);
 	background-color: var(--color-surface-variant);
-	transition: color var(--transition-default), background-color var(--transition-default);
+	transition: color var(--transition), background-color var(--transition);
 }
 
 .introduction > .tags > .tag:active {
@@ -61,7 +61,7 @@
 	margin: 0.2rem 0rem 0.6rem 0rem;
 
 	color: var(--color-on-background);
-	transition: color var(--transition-default);
+	transition: color var(--transition);
 }
 
 .introduction > .description {
@@ -74,7 +74,7 @@
 	letter-spacing: 0.01563rem;
 
 	color: var(--color-on-surface-variant);
-	transition: color var(--transition-default);
+	transition: color var(--transition);
 }
 
 .introduction > .banner {
@@ -140,7 +140,7 @@
 	text-transform: uppercase;
 
 	color: var(--color-on-surface-variant);
-	transition: border var(--transition-default), color var(--transition-default);
+	transition: border var(--transition), color var(--transition);
 }
 
 @media (min-width: 23.438rem) {
