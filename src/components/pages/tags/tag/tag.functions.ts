@@ -7,9 +7,9 @@ export const getTextColor = (path: string, currentPath: string) => {
 };
 
 export const getBorderColor = (path: string, currentPath: string) => {
-	return path === currentPath ? 'transparent' : 'var(--color-outline)';
+	return path === currentPath ? 'rgba(var(--color-primary-rgb), 0.2)' : 'var(--color-outline)';
 };
 
 export const getBackgroundColor = (path: string, currentPath: string) => {
-	return path === currentPath ? 'rgba(var(--color-primary-rgb), 0.3)' : 'transparent';
+	return path === currentPath ? 'rgba(var(--color-primary-rgb), 0.2)' : 'transparent';
 };
