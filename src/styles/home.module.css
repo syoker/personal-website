@@ -76,11 +76,11 @@
 
 @media (max-width: 32.813rem) {
 	.home > .presentation > .name {
-		top: 0.75rem;
+		top: 0.3rem;
 	}
 
 	.home > .presentation > .developer {
-		top: -1.2rem;
+		top: -1rem;
 	}
 }
 
@@ -91,6 +91,18 @@
 
 	.home > .presentation > .developer {
 		top: -0.9rem;
+	}
+
+	@media (hover: none) and (pointer: coarse) {
+		.home > .presentation > .name {
+			top: 0.3rem;
+		}
+
+		@media screen and (orientation: landscape) {
+			.home > .presentation > .developer {
+				top: -1.2rem;
+			}
+		}
 	}
 }
 
