@@ -1,4 +1,5 @@
 import { runSync } from '@mdx-js/mdx';
+import { Fragment } from 'react';
 import { useRouter } from 'next/router';
 import { CustomHead } from '~/components/shared';
 import { usePageData } from '~/providers';
@@ -17,7 +18,7 @@ const Article = () => {
 
 	const post = posts.filter((post) => `/blog/${tag}/${post.alias}` === asPath)[0];
 
-	const { default: RenderMarkdown } = runSync(post.markdown, runtime);
+	const { default: RenderMarkdown } = runSync(post.markdown, { Fragment, ...runtime });
 
 	const properties = {
 		title: post.title,

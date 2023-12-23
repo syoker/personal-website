@@ -66,7 +66,7 @@ export default function Home() {
 					<Link href="https://twitter.com/syoker_" title="Twitter" target="_blank" rel="noopener noreferrer">
 						<BrandIcons icon="twitter" />
 					</Link>
-					<Link href="https://www.youtube.com/@syoker6621" title="YouTube" target="_blank" rel="noopener noreferrer">
+					<Link href="https://www.youtube.com/@syoker" title="YouTube" target="_blank" rel="noopener noreferrer">
 						<BrandIcons icon="youtube" />
 					</Link>
 					<Link href="mailto:syoker@outlook.com" title="Mail">
